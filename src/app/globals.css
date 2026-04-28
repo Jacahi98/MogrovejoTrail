@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans-custom: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono-custom: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-display-custom: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+
+  /* LIGHT THEME */
+  --bg-primary-light: #ffffff;
+  --bg-secondary-light: #f5f5f5;
+  --bg-tertiary-light: #efefef;
+  --text-primary-light: #1a1a1a;
+  --text-secondary-light: #666666;
+  --accent-primary: #5a7d6a;
+  --accent-secondary: #7a9d8a;
+  --border-color-light: #ddd;
+
+  /* DARK THEME */
+  --bg-primary-dark: #1a1a1a;
+  --bg-secondary-dark: #242424;
+  --bg-tertiary-dark: #2d2d2d;
+  --text-primary-dark: #ffffff;
+  --text-secondary-dark: #b0b0b0;
+  --border-color-dark: #3a3a3a;
+
+  /* DEFAULTS */
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --bg-tertiary: var(--bg-tertiary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --border-color: var(--border-color-light);
+}
+
+html.dark {
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-tertiary: var(--bg-tertiary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border-color: var(--border-color-dark);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-sans-custom);
+  --font-mono: var(--font-mono-custom);
+  --font-roboto-condensed: var(--font-display-custom);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans-custom);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
 }
