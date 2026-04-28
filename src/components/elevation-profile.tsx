@@ -22,7 +22,7 @@ export function ElevationProfile({
 }: ElevationProfileProps) {
   const width = 800;
   const height = 300;
-  const padding = { top: 20, right: 20, bottom: 40, left: 60 };
+  const padding = { top: 20, right: 20, bottom: 56, left: 60 };
   const graphWidth = width - padding.left - padding.right;
   const graphHeight = height - padding.top - padding.bottom;
 
@@ -93,7 +93,7 @@ export function ElevationProfile({
               strokeDasharray="4"
             />
             <text
-              x={padding.left - 10}
+              x={padding.left - 16}
               y={y}
               textAnchor="end"
               dominantBaseline="middle"
@@ -113,7 +113,7 @@ export function ElevationProfile({
           <g key={`dist-${ratio}`}>
             <text
               x={x}
-              y={height - 10}
+              y={height - 24}
               textAnchor="middle"
               className="text-xs fill-[var(--text-secondary)]"
             >
@@ -125,17 +125,16 @@ export function ElevationProfile({
 
       {/* Label Y */}
       <text
-        x={20}
+        x={8}
         y={height / 2}
         textAnchor="middle"
         dominantBaseline="middle"
-        transform={`rotate(-90 20 ${height / 2})`}
+        transform={`rotate(-90 8 ${height / 2})`}
         className="text-xs fill-[var(--text-secondary)]"
       >
         Altitud (m)
       </text>
 
-      {/* Label X */}
       <text x={width / 2} y={height - 5} textAnchor="middle" className="text-xs fill-[var(--text-secondary)]">
         Distancia (km)
       </text>
