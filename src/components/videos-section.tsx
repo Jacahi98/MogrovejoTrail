@@ -21,7 +21,7 @@ const videosData: Video[] = [
   },
   {
     id: 2,
-    title: 'Ruta 50K - Highlights Técnico',
+    title: 'Recorrido 10K - Panorámica Mogrovejo',
     youtubeId: 'jNQXAC9IVRw',
     thumbnail: 'https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg',
   },

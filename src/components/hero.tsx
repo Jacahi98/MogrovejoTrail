@@ -77,7 +77,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2d5016] to-[#1a1410] py-20">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2d5016] via-[#1a2a14] to-[#0f1a0c] py-20">
       {/* Fondo decorativo sutíl */}
       <div className="absolute inset-0 opacity-10">
         <svg
@@ -105,6 +105,14 @@ export function Hero() {
         initial="hidden"
         animate="visible"
       >
+        {/* Logo */}
+        <motion.img
+          src="/logos/mogrovejo-trail-logo.png"
+          alt="Mogrovejo Trail Logo"
+          className="w-full max-w-2xl h-auto -mt-8 -mb-4"
+          variants={itemVariants}
+        />
+
         {/* Título */}
         <motion.h1
           className="font-roboto-condensed text-6xl sm:text-7xl font-bold text-white leading-tight"

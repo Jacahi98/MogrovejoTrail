@@ -30,7 +30,7 @@ export function SiteSectionsOverview() {
   const { t } = useLanguage();
 
   return (
-    <section className="border-b border-[var(--border-color)] bg-[var(--bg-primary)] py-16">
+    <section className="border-b border-[var(--border-color)] bg-[var(--bg-accent-orange)] py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 max-w-3xl">
           <h2 className="font-roboto-condensed text-4xl font-bold text-[var(--text-primary)]">

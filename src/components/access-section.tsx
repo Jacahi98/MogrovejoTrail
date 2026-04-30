@@ -75,7 +75,7 @@ export function AccessSection() {
   };
 
   return (
-    <section id="acceso" className="py-16 bg-[var(--bg-primary)] border-b border-[var(--border-color)]">
+    <section id="acceso" className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <motion.h2

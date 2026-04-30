@@ -125,19 +125,16 @@ export function ElevationProfile({
 
       {/* Label Y */}
       <text
-        x={8}
+        x={-10}
         y={height / 2}
         textAnchor="middle"
         dominantBaseline="middle"
-        transform={`rotate(-90 8 ${height / 2})`}
+        transform={`rotate(-90 -10 ${height / 2})`}
         className="text-xs fill-[var(--text-secondary)]"
       >
         Altitud (m)
       </text>
 
-      <text x={width / 2} y={height - 5} textAnchor="middle" className="text-xs fill-[var(--text-secondary)]">
-        Distancia (km)
-      </text>
     </svg>
   );
 }

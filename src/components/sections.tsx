@@ -13,7 +13,7 @@ export function InformationSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="informacion" className="py-16 bg-[var(--bg-primary)] border-b border-[var(--border-color)]">
+    <section id="informacion" className="py-16 bg-[var(--bg-accent-green)] border-b border-[var(--border-color)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <motion.h2
@@ -131,7 +131,7 @@ export function SponsorsSection() {
   ];
 
   return (
-    <section id="sponsors" className="py-16 bg-[var(--bg-secondary)] border-b border-[var(--border-color)]">
+    <section id="sponsors" className="py-16 bg-[var(--bg-accent-orange)] border-b border-[var(--border-color)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <motion.h2
@@ -221,6 +221,7 @@ export function Footer() {
       items: [
         { label: t('footer.inscriptions'), href: '/' },
         { label: t('footer.routes'), href: '/informacion' },
+        { label: 'Resultados', href: '/resultados' },
         { label: t('footer.faq'), href: '/informacion#faq' },
         { label: t('footer.gallery'), href: '/media' },
       ],
@@ -228,7 +229,7 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contacto" className="bg-[var(--bg-secondary)] border-t border-[var(--border-color)]">
+    <footer id="contacto" className="bg-gradient-to-br from-[#1a3a1a] to-[#0f2410] border-t border-[var(--border-color)] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Grid de columnas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
@@ -240,7 +241,7 @@ export function Footer() {
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="font-roboto-condensed font-bold text-[var(--text-primary)] mb-4">
+              <h3 className="font-roboto-condensed font-bold text-white mb-4">
                 {section.title}
               </h3>
               {section.custom && section.render ? (
@@ -251,7 +252,7 @@ export function Footer() {
                     <li key={itemIdx}>
                       <Link
                         href={item.href}
-                        className="flex items-center gap-2 text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent-primary)]"
+                        className="flex items-center gap-2 text-sm text-gray-200 transition-colors hover:text-[var(--accent-primary)]"
                       >
                         {item.icon && <item.icon className="w-4 h-4" />}
                         {item.label}
@@ -265,7 +266,7 @@ export function Footer() {
         </div>
 
         {/* Separador y copyright */}
-        <div className="border-t border-[var(--border-color)] pt-8 text-center text-[var(--text-secondary)] text-sm">
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-300 text-sm">
           <p>{t('footer.copyright')}</p>
         </div>
       </div>

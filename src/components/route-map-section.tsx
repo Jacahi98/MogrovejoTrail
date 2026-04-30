@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useLanguage } from '@/contexts/language-context';
-import { MapPin, Download, ExternalLink, Mountain } from 'lucide-react';
+import { Download, ExternalLink } from 'lucide-react';
 import { ElevationProfile } from './elevation-profile';
 
 interface RouteData {
@@ -11,142 +10,185 @@ interface RouteData {
   elevationGain: number;
   maxAltitude: number;
   minAltitude: number;
-  description: string;
   wikiloc: string;
   elevationProfile: Array<{ distance: number; altitude: number }>;
+  location: string;
+  date: string;
 }
 
 const routeData: RouteData = {
   distance: '10K',
-  totalDistance: 10,
-  elevationGain: 800,
-  maxAltitude: 1200,
-  minAltitude: 320,
-  description: 'Mogrovejo 10k trail oficial en Wikiloc. Ruta técnica de iniciación por los bosques de pinos de Mogrovejo con ascenso constante y vistas panorámicas.',
+  totalDistance: 8.77,
+  elevationGain: 410,
+  maxAltitude: 956,
+  minAltitude: 546,
   wikiloc: 'https://www.wikiloc.com/running-trails/mogrovejo-10k-trail-141347749?h=3p7yarw26p&wa=so&la=en',
+  location: 'Mogrovejo, Cantabria',
+  date: '30 de junio de 2024',
   elevationProfile: [
-    { distance: 0, altitude: 320 },
-    { distance: 2, altitude: 550 },
-    { distance: 4, altitude: 850 },
-    { distance: 6, altitude: 1050 },
-    { distance: 7, altitude: 1200 },
-    { distance: 8, altitude: 1100 },
-    { distance: 10, altitude: 320 },
+    { distance: 0.0, altitude: 643 },
+    { distance: 0.3, altitude: 647 },
+    { distance: 0.7, altitude: 613 },
+    { distance: 1.0, altitude: 583 },
+    { distance: 1.3, altitude: 581 },
+    { distance: 1.6, altitude: 555 },
+    { distance: 2.0, altitude: 586 },
+    { distance: 2.3, altitude: 614 },
+    { distance: 2.6, altitude: 664 },
+    { distance: 3.0, altitude: 680 },
+    { distance: 3.3, altitude: 714 },
+    { distance: 3.6, altitude: 740 },
+    { distance: 4.0, altitude: 768 },
+    { distance: 4.3, altitude: 812 },
+    { distance: 4.6, altitude: 836 },
+    { distance: 4.9, altitude: 854 },
+    { distance: 5.3, altitude: 881 },
+    { distance: 5.6, altitude: 916 },
+    { distance: 5.9, altitude: 929 },
+    { distance: 6.3, altitude: 918 },
+    { distance: 6.6, altitude: 946 },
+    { distance: 6.9, altitude: 933 },
+    { distance: 7.2, altitude: 906 },
+    { distance: 7.6, altitude: 891 },
+    { distance: 7.9, altitude: 863 },
+    { distance: 8.2, altitude: 825 },
+    { distance: 8.6, altitude: 807 },
+    { distance: 8.9, altitude: 788 },
+    { distance: 9.2, altitude: 750 },
+    { distance: 9.6, altitude: 693 },
+    { distance: 9.9, altitude: 654 },
   ],
 };
 
 export function RouteMapSection() {
-  const { t } = useLanguage();
 
   return (
-    <section id="recorrido" className="py-16 bg-[var(--bg-primary)] border-b border-[var(--border-color)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Título */}
-        <motion.h2
-          className="font-roboto-condensed text-4xl font-bold text-[var(--text-primary)] mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          {t('recorrido.title')}
-        </motion.h2>
+    <section id="recorrido" className="relative border-t border-[var(--border-color)] bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))]">
+      <div className="py-16 relative">
+        {/* Destellos decorativos muy sutiles */}
+        <div className="absolute top-20 left-12 w-32 h-32 bg-[#ff6b35] opacity-2 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 bg-[#5a8a3a] opacity-2 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-[#ff6b35] opacity-2 rounded-full blur-3xl"></div>
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="space-y-8">
+            {/* Sección: Calendario y Ubicación - Calendario pequeño, mapa grande */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          >
+          {/* Calendario Mensual */}
+          <div className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-4 sm:p-6 border-3 border-[#5a8a3a]">
+            <h3 className="text-center font-roboto-condensed text-lg sm:text-xl font-bold text-[#1a3a1a] dark:text-[#1a3a1a] mb-4 sm:mb-5">AGOSTO 2026</h3>
+            <div className="grid grid-cols-7 gap-1 sm:gap-2">
+              {/* Encabezados de días */}
+              {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((day, idx) => (
+                <div key={`header-${idx}`} className="text-center text-[10px] sm:text-xs font-bold text-[#5a8a3a] py-1 sm:py-2 uppercase">
+                  {day}
+                </div>
+              ))}
+              {/* Espacios vacíos para antes del 1 (jueves = 3) */}
+              {[...Array(3)].map((_, i) => (
+                <div key={`empty-${i}`} className="text-center py-1 sm:py-2"></div>
+              ))}
+              {/* Días del mes */}
+              {[...Array(31)].map((_, i) => {
+                const day = i + 1;
+                const isFirstDay = day === 1;
+                return (
+                  <div
+                    key={day}
+                    className={`text-center py-2 sm:py-3 px-1 rounded font-bold transition-all ${
+                      isFirstDay
+                        ? 'bg-[#ff6b35] text-white text-sm sm:text-base shadow-lg'
+                        : 'text-[#1a3a1a] dark:text-[#1a3a1a] text-xs sm:text-sm hover:bg-[#e8f3ea]'
+                    }`}
+                  >
+                    {day}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Ubicación - Mapa */}
+          <div className="md:col-span-2 rounded-xl shadow-lg overflow-hidden border-3 border-[#ff6b35] h-72 sm:h-[450px]">
+            <iframe
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.4821394842906!2d-3.1619450!3d43.15988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4166e3f3c3c3c3d%3A0x1234567890abcdef!2sMogrovejo%2C%20Cantabria!5e0!3m2!1ses!2ses!4v1234567890"
+            ></iframe>
+          </div>
+        </motion.div>
+
+        {/* Sección: Perfil de la Carrera */}
         <motion.div
-          className="space-y-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          transition={{ delay: 0.1 }}
+          className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-8 border-3 border-[#5a8a3a]"
         >
-          <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-6">
-            <ElevationProfile
-              data={routeData.elevationProfile}
-              maxAltitude={routeData.maxAltitude}
-              minAltitude={routeData.minAltitude}
-              totalDistance={routeData.totalDistance}
-            />
-          </div>
+          <h3 className="font-roboto-condensed text-2xl font-bold text-[#1a3a1a] mb-6">PERFIL DE LA CARRERA</h3>
+          <ElevationProfile
+            data={routeData.elevationProfile}
+            maxAltitude={routeData.maxAltitude}
+            minAltitude={routeData.minAltitude}
+            totalDistance={routeData.totalDistance}
+          />
 
-          <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-6">
-            <h3 className="font-roboto-condensed text-xl font-bold text-[var(--text-primary)] mb-4">
-              Descripción
-            </h3>
-            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
-              {routeData.description}
-            </p>
+          {/* Datos y botones en la misma fila - ancho completo */}
+          <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-8 pt-8 border-t-2 border-[#5a8a3a]">
+            {/* Datos de la ruta - más pequeños */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 flex-1 w-full">
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Distancia</p>
+                <p className="text-base sm:text-lg font-bold text-[#ff6b35]">{routeData.totalDistance}km</p>
+              </div>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Desnivel</p>
+                <p className="text-base sm:text-lg font-bold text-[#ff6b35]">{routeData.elevationGain}m</p>
+              </div>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Máx.</p>
+                <p className="text-base sm:text-lg font-bold text-[#5a8a3a]">{routeData.maxAltitude}m</p>
+              </div>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Mín.</p>
+                <p className="text-base sm:text-lg font-bold text-[#5a8a3a]">{routeData.minAltitude}m</p>
+              </div>
+            </div>
 
-            <div className="space-y-2 mb-6">
+            {/* Botones de acción */}
+            <div className="flex gap-2 sm:gap-3 w-full sm:w-auto">
+              <a
+                href="/gpx/mogrovejo-10k.gpx"
+                download
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 bg-[#ff6b35] hover:bg-[#ff5520] text-white font-bold text-sm rounded-lg transition-all shadow-lg whitespace-nowrap"
+              >
+                <Download className="w-4 h-4" />
+                GPX
+              </a>
               <a
                 href={routeData.wikiloc}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[var(--accent-primary)] hover:text-[var(--accent-secondary)] font-semibold transition-colors"
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 border-2 border-[#5a8a3a] text-[#5a8a3a] dark:text-[#5a8a3a] hover:bg-[#f0f5f2] dark:hover:bg-[#f0f5f2] font-bold text-sm rounded-lg transition-all whitespace-nowrap"
               >
                 <ExternalLink className="w-4 h-4" />
-                {t('recorrido.wikiloc')}
+                Wikiloc
               </a>
-            </div>
-
-            <a
-              href="/gpx/mogrovejo-10k.gpx"
-              download
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold rounded transition-all"
-            >
-              <Download className="w-4 h-4" />
-              {t('recorrido.gpx')}
-            </a>
-
-            <div className="grid grid-cols-2 gap-3 mt-6">
-              <motion.div className="bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg p-4">
-                <p className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wide mb-2">
-                  {t('recorrido.maxAlt')}
-                </p>
-                <p className="text-2xl font-bold text-[var(--text-primary)]">
-                  {routeData.maxAltitude}m
-                </p>
-              </motion.div>
-
-              <motion.div className="bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg p-4">
-                <p className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wide mb-2">
-                  {t('recorrido.minAlt')}
-                </p>
-                <p className="text-2xl font-bold text-[var(--text-primary)]">
-                  {routeData.minAltitude}m
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="grid grid-cols-1 gap-3 mt-3">
-              <motion.div className="bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <Mountain className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-wide">
-                      Desnivel Positivo
-                    </p>
-                    <p className="text-3xl font-bold text-[var(--text-primary)]">
-                      {routeData.elevationGain.toLocaleString()}m
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div className="bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-secondary)] uppercase tracking-wide">
-                      Distancia Total
-                    </p>
-                    <p className="text-3xl font-bold text-[var(--text-primary)]">
-                      {routeData.totalDistance}km
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

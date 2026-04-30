@@ -19,12 +19,6 @@ const faqData: FAQItem[] = [
       'No hay restricción específica de marca, pero recomendamos zapatillas de trail running con buen agarre y protección. Idealmente con suela Vibram o similar para terreno técnico. Prueba tus zapatillas en entrenamientos largos antes del día de la carrera.',
   },
   {
-    id: 2,
-    question: '¿Puedo hacer la carrera de 25K si es mi primera vez en trail?',
-    answer:
-      'La categoría de 25K es Intermedia y requiere experiencia previa en trail running. Si es tu primera vez, te recomendamos empezar por los 10K. La diferencia en desnivel (+1800m vs +800m) es significativa y puede resultar excesiva sin aclimatación.',
-  },
-  {
     id: 3,
     question: '¿Hay servicio médico en la carrera?',
     answer:
@@ -64,7 +58,7 @@ const faqData: FAQItem[] = [
     id: 9,
     question: '¿Es obligatorio llevar mochila?',
     answer:
-      'Sí, mínimo 5L. Debe contener: agua (1.5L min), silbato, botiquín básico, teléfono, alimento de emergencia. En la categoría de 50K es obligatorio kit de emergencia más completo.',
+      'Sí, mínimo 5L. Debe contener: agua (1.5L min), silbato, botiquín básico, teléfono, alimento de emergencia y una chaqueta cortavientos.',
   },
   {
     id: 10,
@@ -110,7 +104,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-16 bg-[var(--bg-primary)] border-b border-[var(--border-color)]">
+    <section id="faq" className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <motion.h2

@@ -30,12 +30,12 @@ const translations = {
     // Hero
     'hero.title': 'MOGROVEJO TRAIL 2026',
     'hero.date': '1 de agosto',
-    'hero.location': 'Picos de Europa',
-    'hero.distances': '3 modalidades técnicas',
+    'hero.location': 'Mogrovejo',
+    'hero.distances': '10K Trail',
     'hero.cta': 'Inscribirse',
 
     // Modalidades
-    'modalidades.title': 'Modalidades de Carrera',
+    'modalidades.title': 'El Recorrido',
     'modalidades.distance': 'Distancia',
     'modalidades.elevation': 'Desnivel +',
     'modalidades.pace': 'Ritmo Técnico',
@@ -191,12 +191,12 @@ const translations = {
     // Hero
     'hero.title': 'MOGROVEJO TRAIL 2026',
     'hero.date': 'August 1st',
-    'hero.location': 'Picos de Europa',
-    'hero.distances': '3 technical categories',
+    'hero.location': 'Mogrovejo',
+    'hero.distances': '10K Trail',
     'hero.cta': 'Register Now',
 
     // Modalidades
-    'modalidades.title': 'Race Categories',
+    'modalidades.title': 'The Race',
     'modalidades.distance': 'Distance',
     'modalidades.elevation': 'Elevation +',
     'modalidades.pace': 'Technical Pace',
@@ -352,12 +352,12 @@ const translations = {
     // Hero
     'hero.title': 'MOGROVEJO TRAIL 2026',
     'hero.date': '1er août',
-    'hero.location': 'Picos de Europa',
-    'hero.distances': '3 catégories techniques',
+    'hero.location': 'Mogrovejo',
+    'hero.distances': '10K Trail',
     'hero.cta': 'S\'inscrire',
 
     // Modalidades
-    'modalidades.title': 'Catégories de Course',
+    'modalidades.title': 'La Course',
     'modalidades.distance': 'Distance',
     'modalidades.elevation': 'Dénivelé +',
     'modalidades.pace': 'Rythme Technique',

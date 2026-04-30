@@ -25,7 +25,7 @@ export function RegulationSection() {
             El siguiente material es <strong>obligatorio</strong> para todas las modalidades:
           </p>
           <ul className="space-y-2 list-disc list-inside text-[var(--text-secondary)]">
-            <li>Mochila mínimo 5L (10K), 10L (25K), 15L (50K)</li>
+            <li>Mochila mínimo 5L</li>
             <li>Silbato audible</li>
             <li>Botella/reservoir con mínimo 1.5L de agua</li>
             <li>Identificación con número de participante (brazalete)</li>
@@ -49,29 +49,17 @@ export function RegulationSection() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-[var(--border-color)]">
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Modalidad</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">10K Mogrovejo Trail</th>
                 <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Precio Base</th>
                 <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Early Bird (-20%)</th>
                 <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Plazo</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-[var(--border-color)]">
-                <td className="py-3">10K</td>
+              <tr>
+                <td className="py-3">Inscripción</td>
                 <td className="py-3">€25</td>
                 <td className="py-3">€20</td>
-                <td className="py-3">Hasta 15 julio</td>
-              </tr>
-              <tr className="border-b border-[var(--border-color)]">
-                <td className="py-3">25K</td>
-                <td className="py-3">€40</td>
-                <td className="py-3">€32</td>
-                <td className="py-3">Hasta 15 julio</td>
-              </tr>
-              <tr>
-                <td className="py-3">50K</td>
-                <td className="py-3">€65</td>
-                <td className="py-3">€52</td>
                 <td className="py-3">Hasta 15 julio</td>
               </tr>
             </tbody>
@@ -94,34 +82,12 @@ export function RegulationSection() {
             Los <strong>tiempos límite</strong> son obligatorios por seguridad. Si no pasas un control dentro del plazo,
             serás retirado.
           </p>
-          <div className="space-y-3 mt-4">
-            <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)]">
-              <h4 className="font-bold text-[var(--text-primary)] mb-2">10K (Iniciación)</h4>
-              <div className="text-sm text-[var(--text-secondary)]">
-                <p>Control 3.5km: 1h 15m</p>
-                <p>Control 7km: 2h 30m</p>
-                <p>Meta 10km: 3h 30m (corte final)</p>
-              </div>
-            </div>
-            <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)]">
-              <h4 className="font-bold text-[var(--text-primary)] mb-2">25K (Intermedia)</h4>
-              <div className="text-sm text-[var(--text-secondary)]">
-                <p>Control 5km: 1h 30m</p>
-                <p>Control 12km: 3h 30m</p>
-                <p>Control 18km: 5h 30m</p>
-                <p>Meta 25km: 7h 30m (corte final)</p>
-              </div>
-            </div>
-            <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)]">
-              <h4 className="font-bold text-[var(--text-primary)] mb-2">50K (Avanzada/Experta)</h4>
-              <div className="text-sm text-[var(--text-secondary)]">
-                <p>Control 8km: 2h</p>
-                <p>Control 16km: 4h 30m</p>
-                <p>Control 24km: 7h</p>
-                <p>Control 32km: 10h</p>
-                <p>Control 40km: 12h 30m</p>
-                <p>Meta 50km: 15h (corte final)</p>
-              </div>
+          <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)]">
+            <h4 className="font-bold text-[var(--text-primary)] mb-2">10K Mogrovejo Trail</h4>
+            <div className="text-sm text-[var(--text-secondary)]">
+              <p>Control 3.5km: 1h 15m</p>
+              <p>Control 7km: 2h 30m</p>
+              <p>Meta 10km: 3h 30m (corte final)</p>
             </div>
           </div>
         </div>
@@ -138,7 +104,7 @@ export function RegulationSection() {
   return (
     <section
       id="reglamento"
-      className="py-16 bg-[var(--bg-primary)] border-b border-[var(--border-color)]"
+      className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}

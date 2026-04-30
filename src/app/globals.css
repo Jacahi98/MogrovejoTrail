@@ -3,22 +3,27 @@
 :root {
   --font-sans-custom: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono-custom: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  --font-display-custom: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  --font-display-custom: "Righteous", Arial, sans-serif;
+  --font-body: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* LIGHT THEME */
-  --bg-primary-light: #ffffff;
-  --bg-secondary-light: #f5f5f5;
-  --bg-tertiary-light: #efefef;
+  --bg-primary-light: #fafafa;
+  --bg-secondary-light: #f5f2f0;
+  --bg-tertiary-light: #efe8e0;
+  --bg-accent-green-light: #f0f5f2;
+  --bg-accent-orange-light: #fff8f3;
   --text-primary-light: #1a1a1a;
   --text-secondary-light: #666666;
-  --accent-primary: #5a7d6a;
-  --accent-secondary: #7a9d8a;
-  --border-color-light: #ddd;
+  --accent-primary: #ff6b35;
+  --accent-secondary: #5a7d6a;
+  --border-color-light: #d8d0c8;
 
   /* DARK THEME */
   --bg-primary-dark: #1a1a1a;
   --bg-secondary-dark: #242424;
   --bg-tertiary-dark: #2d2d2d;
+  --bg-accent-green-dark: #1a3a2a;
+  --bg-accent-orange-dark: #3a2a1a;
   --text-primary-dark: #ffffff;
   --text-secondary-dark: #b0b0b0;
   --border-color-dark: #3a3a3a;
@@ -27,6 +32,8 @@
   --bg-primary: var(--bg-primary-light);
   --bg-secondary: var(--bg-secondary-light);
   --bg-tertiary: var(--bg-tertiary-light);
+  --bg-accent-green: var(--bg-accent-green-light);
+  --bg-accent-orange: var(--bg-accent-orange-light);
   --text-primary: var(--text-primary-light);
   --text-secondary: var(--text-secondary-light);
   --border-color: var(--border-color-light);
@@ -36,6 +43,8 @@ html.dark {
   --bg-primary: var(--bg-primary-dark);
   --bg-secondary: var(--bg-secondary-dark);
   --bg-tertiary: var(--bg-tertiary-dark);
+  --bg-accent-green: var(--bg-accent-green-dark);
+  --bg-accent-orange: var(--bg-accent-orange-dark);
   --text-primary: var(--text-primary-dark);
   --text-secondary: var(--text-secondary-dark);
   --border-color: var(--border-color-dark);
@@ -52,8 +61,13 @@ html.dark {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-sans-custom);
+  font-family: var(--font-body);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display-custom);
+  text-transform: uppercase;
 }
 
 /* Scrollbar styling */
