@@ -29,8 +29,8 @@ const translations = {
 
     // Hero
     'hero.title': 'MOGROVEJO TRAIL 2026',
-    'hero.date': '1 de agosto',
-    'hero.location': 'Mogrovejo',
+    'hero.date': '25 de julio',
+    'hero.location': 'Mogrovejo, Cantabria',
     'hero.distances': '10K Trail',
     'hero.cta': 'Inscribirse',
 
@@ -190,8 +190,8 @@ const translations = {
 
     // Hero
     'hero.title': 'MOGROVEJO TRAIL 2026',
-    'hero.date': 'August 1st',
-    'hero.location': 'Mogrovejo',
+    'hero.date': 'July 25th',
+    'hero.location': 'Mogrovejo, Cantabria',
     'hero.distances': '10K Trail',
     'hero.cta': 'Register Now',
 
@@ -351,8 +351,8 @@ const translations = {
 
     // Hero
     'hero.title': 'MOGROVEJO TRAIL 2026',
-    'hero.date': '1er août',
-    'hero.location': 'Mogrovejo',
+    'hero.date': '25 juillet',
+    'hero.location': 'Mogrovejo, Cantabria',
     'hero.distances': '10K Trail',
     'hero.cta': 'S\'inscrire',
 

@@ -28,7 +28,7 @@ export function Hero() {
   // Calcula la cuenta atrás en tiempo real
   useEffect(() => {
     const updateCountdown = () => {
-      const eventDate = new Date('2026-08-01').getTime();
+      const eventDate = new Date('2026-07-25').getTime();
       const now = new Date().getTime();
       const distance = eventDate - now;
 

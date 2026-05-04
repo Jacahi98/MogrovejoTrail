@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/contexts/theme-context";
 import { LanguageProvider } from "@/contexts/language-context";
 import { Header } from "@/components/header";
 import { ProgressBar } from "@/components/progress-bar";
+import { Footer } from "@/components/sections";
 import "./globals.css";
 
 export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
@@ -14,7 +15,7 @@ export const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MogrovejoTrail 2026 | Carrera de Trail Running",
-  description: "Únete a la carrera de trail más espectacular de las montañas de Mogrovejo. 1 de agosto de 2026. Varias modalidades para todos los niveles.",
+  description: "Únete a la carrera de trail más espectacular de las montañas de Mogrovejo. 25 de julio de 2026. Varias modalidades para todos los niveles.",
   keywords: ["trail running", "carrera de montaña", "mogrovejo", "trail"],
   openGraph: {
     title: "MogrovejoTrail 2026",
@@ -40,6 +41,7 @@ export default function RootLayout({
             <Header />
             <ProgressBar />
             <main className="flex-1">{children}</main>
+            <Footer />
           </LanguageProvider>
         </ThemeProvider>
       </body>

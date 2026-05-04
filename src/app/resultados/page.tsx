@@ -1,6 +1,6 @@
 import { PageIntro } from '@/components/page-intro';
 import { ResultsSection } from '@/components/results-section';
-import { SponsorsSection, Footer, CookieBanner } from '@/components/sections';
+import { CookieBanner } from '@/components/sections';
 import { FloatingCTA } from '@/components/floating-cta';
 
 export default function ResultadosPage() {
@@ -12,8 +12,6 @@ export default function ResultadosPage() {
         description="Consulta los resultados de todas las ediciones del Mogrovejo Trail"
       />
       <ResultsSection />
-      <SponsorsSection />
-      <Footer />
       <CookieBanner />
       <FloatingCTA />
     </>

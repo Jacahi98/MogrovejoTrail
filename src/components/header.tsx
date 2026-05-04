@@ -10,7 +10,7 @@ import { useLanguage } from '@/contexts/language-context';
 
 const navItems = [
   { key: 'nav.home', href: '/' },
-  { key: 'nav.infoPage', href: '/informacion' },
+  { key: 'nav.infoPage', href: '/info' },
   { key: 'nav.mediaPage', href: '/media' },
   { key: 'nav.contactPage', href: '/contacto' },
 ] as const;

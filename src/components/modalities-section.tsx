@@ -3,26 +3,26 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
 
-interface Route {
-  id: number;
-  title: string;
-  distance: string;
-  elevation: string;
-  pace: string;
-  difficulty: 'easy' | 'medium' | 'hard' | 'extreme';
-}
-
 /**
- * Sección de Modalidades con tarjetas de rutas
- * Datos técnicos: Distancia, Desnivel, Ritmo, Clasificación
- * Tono: Profesional e institucional
+ * Sección de Modalidades
+ * Presenta las dos formas de participar en la carrera
  */
 export function ModalitiesSection() {
   const { t } = useLanguage();
 
-  const routes: Route[] = [
-    { id: 1, title: '10K Mogrovejo Trail', distance: '10 km', elevation: '+800m', pace: 'Moderado', difficulty: 'easy' },
+  const modalities = [
+    { id: 1, title: '10K Trail', description: 'Para corredores' },
+    { id: 2, title: '10K Andarines', description: 'Para senderistas' },
   ];
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,15 +31,6 @@ export function ModalitiesSection() {
       transition: {
         staggerChildren: 0.2,
       },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
     },
   };
 
@@ -56,39 +47,65 @@ export function ModalitiesSection() {
           {t('modalidades.title')}
         </motion.h2>
 
-        {/* Grid de tarjetas */}
+        {/* Tarjeta de información del recorrido */}
         <motion.div
-          className="flex justify-center"
+          className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-8 mb-12"
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+            <div className="flex flex-col items-center sm:items-start">
+              <p className="text-[var(--text-secondary)] text-sm uppercase tracking-wide mb-2">
+                Distancia
+              </p>
+              <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
+                10 km
+              </p>
+            </div>
+            <div className="flex flex-col items-center sm:items-start">
+              <p className="text-[var(--text-secondary)] text-sm uppercase tracking-wide mb-2">
+                Desnivel
+              </p>
+              <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
+                +800m
+              </p>
+            </div>
+            <div className="flex justify-center sm:justify-end">
+              <a
+                href="https://www.wikiloc.com/running-trails/mogrovejo-10k-trail-141347749?h=3p7yarw26p&wa=so"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold rounded transition-colors text-sm"
+              >
+                Ver ruta en Wikiloc →
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Dos opciones de modalidades */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {routes.map((route) => (
+          {modalities.map((modality) => (
             <motion.div
-              key={route.id}
-              className="w-full max-w-2xl bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg overflow-hidden hover:border-[var(--text-primary)] transition-all duration-300 p-8"
-              variants={cardVariants}
+              key={modality.id}
+              className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-8 hover:border-[var(--accent-primary)] transition-all duration-300"
+              variants={itemVariants}
               whileHover={{ y: -4 }}
             >
-              <h3 className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)] mb-4">
-                {route.title}
-              </h3>
-
-              <div className="flex items-center gap-6 text-[var(--text-secondary)] mb-8 text-lg">
-                <span>{route.distance}</span>
-                <span className="text-[var(--border-color)]">•</span>
-                <span>{route.elevation}</span>
-              </div>
-
-              <a
-                href="https://www.wikiloc.com/running-trails/mogrovejo-10k-trail-141347749?h=3p7yarw26p&wa=so"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 rounded bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold transition-colors"
-              >
-                Ver ruta en Wikiloc
-              </a>
+              <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)] mb-2 hover:text-[var(--accent-primary)] transition-colors">
+                {modality.title}
+              </p>
+              <p className="text-[var(--text-secondary)]">
+                {modality.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>

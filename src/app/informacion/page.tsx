@@ -1,5 +1,5 @@
 import { PageIntro } from '@/components/page-intro';
-import { SponsorsSection, Footer, CookieBanner } from '@/components/sections';
+import { CookieBanner } from '@/components/sections';
 import { RouteMapSection } from '@/components/route-map-section';
 import { RegulationSection } from '@/components/regulation-section';
 import { AccessSection } from '@/components/access-section';
@@ -17,8 +17,6 @@ export default function InformacionPage() {
       <RegulationSection />
       <AccessSection />
       <FAQSection />
-      <SponsorsSection />
-      <Footer />
       <CookieBanner />
       <FloatingCTA />
     </>
