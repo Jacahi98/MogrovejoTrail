@@ -1,17 +1,30 @@
-import { RouteMapSection } from '@/components/route-map-section';
-import { SupplySection } from '@/components/supply-section';
+'use client';
+
+import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { ModilitiesDetailSection } from '@/components/modalities-detail-section';
 import { RegulationSection } from '@/components/regulation-section';
 import { FAQSection } from '@/components/faq-section';
-import { TeamSection } from '@/components/team-section';
+import { VolunteersSection } from '@/components/volunteers-section';
+
+function InfoPageContent() {
+  const searchParams = useSearchParams();
+  const initialModality = searchParams.get('modality');
+
+  return (
+    <>
+      <ModilitiesDetailSection initialModality={initialModality || undefined} />
+      <RegulationSection />
+      <FAQSection />
+      <VolunteersSection />
+    </>
+  );
+}
 
 export default function InfoPage() {
   return (
-    <>
-      <RouteMapSection />
-      <SupplySection />
-      <RegulationSection />
-      <FAQSection />
-      <TeamSection />
-    </>
+    <Suspense>
+      <InfoPageContent />
+    </Suspense>
   );
 }

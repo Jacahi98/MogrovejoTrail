@@ -19,7 +19,7 @@ export function ContactForm() {
     setLoading(true);
 
     try {
-      const mailtoLink = `mailto:info@mogrovejo.com?subject=Contacto%20desde%20web:%20${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`)}`;
+      const mailtoLink = `mailto:Mogrovejo10ktrail@gmail.com?subject=Contacto%20desde%20web:%20${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`)}`;
       window.location.href = mailtoLink;
 
       setSubmitted(true);

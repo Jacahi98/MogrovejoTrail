@@ -44,6 +44,21 @@ const translations = {
     'modalidades.hard': 'Avanzada',
     'modalidades.extreme': 'Experta',
 
+    // Modalities Detail
+    'modalities.title': 'Elige tu Modalidad',
+    'modalities.trail.title': '10K Trail',
+    'modalities.trail.description': 'Una carrera de montaña para corredores con experiencia. Recorrido técnico y exigente a través de senderos alpinos con vistas panorámicas.',
+    'modalities.andarines.title': '10K Andarines',
+    'modalities.andarines.description': 'Una marcha a pie de montaña para senderistas y caminantes. Mismo recorrido que el Trail pero a ritmo de marcha, perfecto para disfrutar del paisaje sin prisas.',
+    'modalities.infantiles.title': 'Carreras Infantiles',
+    'modalities.infantiles.description': 'Competiciones para niños de 3 a 16 años. Distancias adaptadas a cada categoría de edad para que los más pequeños disfruten de la carrera.',
+    'modalities.profile': 'Perfil de la Carrera',
+    'modalities.distance': 'Distancia',
+    'modalities.elevation': 'Desnivel',
+    'modalities.supplies': 'Avituallamiento',
+    'modalities.max': 'Cota Máxima',
+    'modalities.min': 'Cota Mínima',
+
     // Information
     'info.title': 'El Recorrido',
     'info.subtitle': 'Alta Montaña, Pura Adrenalina',
@@ -129,7 +144,14 @@ const translations = {
     // FAQ
     'faq.title': 'Preguntas Frecuentes',
     'faq.contact': '¿Más dudas? Escríbenos',
-    'faq.email': 'info@mogrovejo.com',
+    'faq.email': 'Mogrovejo10ktrail@gmail.com',
+
+    // Volunteers / Voluntarios
+    'volunteers.title': 'Nuestros Voluntarios',
+    'volunteers.count': '15 voluntarios',
+    'volunteers.text1': 'El Mogrovejo Trail es posible gracias a la dedicación y entrega de aproximadamente __COUNT__ que hacen posible este evento cada año.',
+    'volunteers.text2': 'Desde la organización previa, pasando por la señalización del recorrido, los avituallamientos, la seguridad en los controles, hasta el montaje y desmontaje del evento, estos voluntarios son el corazón de la prueba. Les expresamos nuestro más profundo agradecimiento por su compromiso con la montaña, la comunidad de Mogrovejo y la promoción de eventos sostenibles en la región.',
+    'volunteers.cta': 'Si quieres sumarte como voluntario en futuras ediciones, ¡contáctanos!',
 
     // Team / Equipo
     'equipo.title': 'El Equipo',
@@ -204,6 +226,21 @@ const translations = {
     'modalidades.medium': 'Intermediate',
     'modalidades.hard': 'Advanced',
     'modalidades.extreme': 'Expert',
+
+    // Modalities Detail
+    'modalities.title': 'Choose Your Modality',
+    'modalities.trail.title': '10K Trail',
+    'modalities.trail.description': 'A mountain race for experienced runners. Technical and demanding course through alpine trails with panoramic views.',
+    'modalities.andarines.title': '10K Walkers',
+    'modalities.andarines.description': 'A mountain walk for hikers and trekkers. Same route as the Trail but at hiking pace, perfect to enjoy the landscape without rushing.',
+    'modalities.infantiles.title': 'Kids Races',
+    'modalities.infantiles.description': 'Competitions for children ages 3 to 16. Distances adapted to each age group so kids can enjoy the race.',
+    'modalities.profile': 'Race Profile',
+    'modalities.distance': 'Distance',
+    'modalities.elevation': 'Elevation',
+    'modalities.supplies': 'Aid Stations',
+    'modalities.max': 'Max Altitude',
+    'modalities.min': 'Min Altitude',
 
     // Information
     'info.title': 'The Route',
@@ -290,7 +327,14 @@ const translations = {
     // FAQ
     'faq.title': 'Frequently Asked Questions',
     'faq.contact': 'More questions? Write us',
-    'faq.email': 'info@mogrovejo.com',
+    'faq.email': 'Mogrovejo10ktrail@gmail.com',
+
+    // Volunteers / Voluntarios
+    'volunteers.title': 'Our Volunteers',
+    'volunteers.count': '15 volunteers',
+    'volunteers.text1': 'Mogrovejo Trail is possible thanks to the dedication and commitment of approximately __COUNT__ who make this event possible every year.',
+    'volunteers.text2': 'From prior organization, route marking, aid stations, safety at control points, to event setup and takedown, these volunteers are the heart of the race. We express our deepest gratitude for their commitment to the mountains, the Mogrovejo community, and the promotion of sustainable events in the region.',
+    'volunteers.cta': 'If you want to join us as a volunteer in future editions, contact us!',
 
     // Team / Equipo
     'equipo.title': 'The Team',
@@ -365,6 +409,21 @@ const translations = {
     'modalidades.medium': 'Intermédiaire',
     'modalidades.hard': 'Avancé',
     'modalidades.extreme': 'Expert',
+
+    // Modalities Detail
+    'modalities.title': 'Choisissez Votre Modalité',
+    'modalities.trail.title': '10K Trail',
+    'modalities.trail.description': 'Une course de montagne pour les coureurs expérimentés. Parcours technique et exigeant à travers les sentiers alpins avec des vues panoramiques.',
+    'modalities.andarines.title': '10K Randonneurs',
+    'modalities.andarines.description': 'Une marche de montagne pour les randonneurs et marcheurs. Même parcours que le Trail mais à rythme de marche, parfait pour profiter du paysage sans stress.',
+    'modalities.infantiles.title': 'Courses Enfants',
+    'modalities.infantiles.description': 'Compétitions pour les enfants de 3 à 16 ans. Distances adaptées à chaque catégorie d\'âge pour que les plus jeunes profitent de la course.',
+    'modalities.profile': 'Profil de la Course',
+    'modalities.distance': 'Distance',
+    'modalities.elevation': 'Dénivelé',
+    'modalities.supplies': 'Ravitaillement',
+    'modalities.max': 'Altitude Max',
+    'modalities.min': 'Altitude Min',
 
     // Information
     'info.title': 'Le Parcours',
@@ -451,7 +510,14 @@ const translations = {
     // FAQ
     'faq.title': 'Questions Fréquemment Posées',
     'faq.contact': 'Plus de questions? Écrivez-nous',
-    'faq.email': 'info@mogrovejo.com',
+    'faq.email': 'Mogrovejo10ktrail@gmail.com',
+
+    // Volunteers / Voluntarios
+    'volunteers.title': 'Nos Bénévoles',
+    'volunteers.count': '15 bénévoles',
+    'volunteers.text1': 'Le Mogrovejo Trail est possible grâce au dévouement et à l\'engagement d\'environ __COUNT__ qui rendent cet événement possible chaque année.',
+    'volunteers.text2': 'De l\'organisation préalable, en passant par le balisage du parcours, les ravitaillements, la sécurité aux postes de contrôle, jusqu\'à la mise en place et au démontage de l\'événement, ces bénévoles sont le cœur de la course. Nous leur exprimons notre plus profonde gratitude pour leur engagement envers la montagne, la communauté de Mogrovejo et la promotion d\'événements durables dans la région.',
+    'volunteers.cta': 'Si tu veux nous rejoindre en tant que bénévole pour les éditions futures, contacte-nous!',
 
     // Team / Equipo
     'equipo.title': 'L\'Équipe',
