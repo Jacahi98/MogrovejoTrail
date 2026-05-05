@@ -208,7 +208,7 @@ export function HeroSection() {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* CTA principal - GedSports */}
             <a
-              href="https://gedsports.com"
+              href="https://www.gedsports.com/race/mogrovejo-trail-2026"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"

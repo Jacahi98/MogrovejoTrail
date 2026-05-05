@@ -123,7 +123,7 @@ export function ContactSection() {
             </div>
 
             <a
-              href="https://gedsports.com"
+              href="https://www.gedsports.com/race/mogrovejo-trail-2026"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center rounded-lg bg-[var(--accent-primary)] px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)]"

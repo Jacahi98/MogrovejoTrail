@@ -76,7 +76,7 @@ export function Header() {
           </select>
 
           <a
-            href="https://gedsports.com"
+            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-[var(--accent-primary)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)]"
@@ -147,7 +147,7 @@ export function Header() {
               </div>
 
               <a
-                href="https://gedsports.com"
+                href="https://www.gedsports.com/race/mogrovejo-trail-2026"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block rounded-lg bg-[var(--accent-primary)] px-4 py-3 text-center text-sm font-semibold text-white"

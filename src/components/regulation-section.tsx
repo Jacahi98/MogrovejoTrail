@@ -166,7 +166,7 @@ export function RegulationSection() {
             ¿Listo para correr? Completa tu inscripción en GedSports
           </p>
           <a
-            href="https://gedsports.com"
+            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold rounded transition-all uppercase tracking-wide"

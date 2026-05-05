@@ -75,7 +75,7 @@ export function Navbar() {
 
           {/* CTA Button Desktop */}
           <a
-            href="https://gedsports.com"
+            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex px-6 py-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-orange-500/50 transition-all"
@@ -117,7 +117,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="https://gedsports.com"
+                href="https://www.gedsports.com/race/mogrovejo-trail-2026"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full px-6 py-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold text-center text-sm hover:shadow-lg transition-all mt-4"

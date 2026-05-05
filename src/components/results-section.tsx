@@ -37,7 +37,7 @@ export function ResultsSection() {
           </p>
 
           <a
-            href="https://gedsports.com"
+            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[var(--accent-primary)] px-6 py-3 font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)]"

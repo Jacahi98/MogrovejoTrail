@@ -166,7 +166,7 @@ export function Hero() {
 
         {/* CTA Button */}
         <motion.a
-          href="https://gedsports.com"
+          href="https://www.gedsports.com/race/mogrovejo-trail-2026"
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}
