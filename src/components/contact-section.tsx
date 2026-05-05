@@ -9,15 +9,15 @@ const contactCards = [
     icon: Mail,
     titleKey: 'contact.cards.email.title',
     textKey: 'contact.cards.email.text',
-    href: 'mailto:info@mogrovejotrail.com',
-    hrefLabel: 'info@mogrovejotrail.com',
+    href: 'mailto:Mogrovejo10ktrail@gmail.com',
+    hrefLabel: 'Mogrovejo10ktrail@gmail.com',
   },
   {
     icon: Phone,
     titleKey: 'contact.cards.phone.title',
     textKey: 'contact.cards.phone.text',
-    href: 'tel:+34942123456',
-    hrefLabel: '+34 942 123 456',
+    href: 'tel:+34633165086',
+    hrefLabel: '633 165 086',
   },
   {
     icon: MapPin,
@@ -30,7 +30,7 @@ const contactCards = [
     icon: TimerReset,
     titleKey: 'contact.cards.reply.title',
     textKey: 'contact.cards.reply.text',
-    href: 'mailto:info@mogrovejotrail.com?subject=Consulta%20Mogrovejo%20Trail',
+    href: 'mailto:Mogrovejo10ktrail@gmail.com?subject=Consulta%20Mogrovejo%20Trail',
     hrefLabel: 'Enviar consulta',
   },
 ] as const;
@@ -94,7 +94,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.08 }}
-          className="rounded-lg border border-[var(--border-color)] bg-[linear-gradient(180deg,rgba(90,125,106,0.14),transparent),var(--bg-secondary)] p-8"
+          className="rounded-lg border border-[var(--border-color)] bg-[linear-gradient(180deg,rgba(44,74,111,0.14),transparent),var(--bg-secondary)] p-8"
         >
           <h3 className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
             {t('contact.box.title')}

@@ -63,12 +63,12 @@ const routeData: RouteData = {
 export function RouteMapSection() {
 
   return (
-    <section id="recorrido" className="relative border-t border-[var(--border-color)] bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))]">
+    <section id="recorrido" className="relative border-t border-[var(--border-color)] bg-[radial-gradient(circle_at_top_left,_rgba(44,74,111,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))]">
       <div className="py-16 relative">
         {/* Destellos decorativos muy sutiles */}
-        <div className="absolute top-20 left-12 w-32 h-32 bg-[#ff6b35] opacity-2 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-40 h-40 bg-[#5a8a3a] opacity-2 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-[#ff6b35] opacity-2 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-12 w-32 h-32 bg-[#2C4A6F] opacity-2 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 bg-[#4A6FA0] opacity-2 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-[#2C4A6F] opacity-2 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="space-y-8">
@@ -80,12 +80,12 @@ export function RouteMapSection() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
           {/* Calendario Mensual */}
-          <div className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-4 sm:p-6 border-3 border-[#5a8a3a]">
-            <h3 className="text-center font-roboto-condensed text-lg sm:text-xl font-bold text-[#1a3a1a] dark:text-[#1a3a1a] mb-4 sm:mb-5">AGOSTO 2026</h3>
+          <div className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-4 sm:p-6 border-3 border-[#2C4A6F]">
+            <h3 className="text-center font-roboto-condensed text-lg sm:text-xl font-bold text-[#2C4A6F] dark:text-[#2C4A6F] mb-4 sm:mb-5">AGOSTO 2026</h3>
             <div className="grid grid-cols-7 gap-1 sm:gap-2">
               {/* Encabezados de días */}
               {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((day, idx) => (
-                <div key={`header-${idx}`} className="text-center text-[10px] sm:text-xs font-bold text-[#5a8a3a] py-1 sm:py-2 uppercase">
+                <div key={`header-${idx}`} className="text-center text-[10px] sm:text-xs font-bold text-[#2C4A6F] py-1 sm:py-2 uppercase">
                   {day}
                 </div>
               ))}
@@ -102,8 +102,8 @@ export function RouteMapSection() {
                     key={day}
                     className={`text-center py-2 sm:py-3 px-1 rounded font-bold transition-all ${
                       isFirstDay
-                        ? 'bg-[#ff6b35] text-white text-sm sm:text-base shadow-lg'
-                        : 'text-[#1a3a1a] dark:text-[#1a3a1a] text-xs sm:text-sm hover:bg-[#e8f3ea]'
+                        ? 'bg-[#2C4A6F] text-white text-sm sm:text-base shadow-lg'
+                        : 'text-[#2C4A6F] dark:text-[#2C4A6F] text-xs sm:text-sm hover:bg-[#e8f3f8]'
                     }`}
                   >
                     {day}
@@ -114,7 +114,7 @@ export function RouteMapSection() {
           </div>
 
           {/* Ubicación - Mapa */}
-          <div className="md:col-span-2 rounded-xl shadow-lg overflow-hidden border-3 border-[#ff6b35] h-72 sm:h-[450px]">
+          <div className="md:col-span-2 rounded-xl shadow-lg overflow-hidden border-3 border-[#2C4A6F] h-72 sm:h-[450px]">
             <iframe
               width="100%"
               height="100%"
@@ -133,9 +133,9 @@ export function RouteMapSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-8 border-3 border-[#5a8a3a]"
+          className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-8 border-3 border-[#2C4A6F]"
         >
-          <h3 className="font-roboto-condensed text-2xl font-bold text-[#1a3a1a] mb-6">PERFIL DE LA CARRERA</h3>
+          <h3 className="font-roboto-condensed text-2xl font-bold text-[#2C4A6F] mb-6">PERFIL DE LA CARRERA</h3>
           <ElevationProfile
             data={routeData.elevationProfile}
             maxAltitude={routeData.maxAltitude}
@@ -144,24 +144,24 @@ export function RouteMapSection() {
           />
 
           {/* Datos y botones en la misma fila - ancho completo */}
-          <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-8 pt-8 border-t-2 border-[#5a8a3a]">
+          <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-8 pt-8 border-t-2 border-[#2C4A6F]">
             {/* Datos de la ruta - más pequeños */}
             <div className="flex flex-wrap gap-2 sm:gap-3 flex-1 w-full">
-              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
-                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Distancia</p>
-                <p className="text-base sm:text-lg font-bold text-[#ff6b35]">{routeData.totalDistance}km</p>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#2C4A6F] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#2C4A6F] uppercase tracking-wide mb-1">Distancia</p>
+                <p className="text-base sm:text-lg font-bold text-[#2C4A6F]">{routeData.totalDistance}km</p>
               </div>
-              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
-                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Desnivel</p>
-                <p className="text-base sm:text-lg font-bold text-[#ff6b35]">{routeData.elevationGain}m</p>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#2C4A6F] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#2C4A6F] uppercase tracking-wide mb-1">Desnivel</p>
+                <p className="text-base sm:text-lg font-bold text-[#2C4A6F]">{routeData.elevationGain}m</p>
               </div>
-              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
-                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Máx.</p>
-                <p className="text-base sm:text-lg font-bold text-[#5a8a3a]">{routeData.maxAltitude}m</p>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#2C4A6F] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#2C4A6F] uppercase tracking-wide mb-1">Máx.</p>
+                <p className="text-base sm:text-lg font-bold text-[#2C4A6F]">{routeData.maxAltitude}m</p>
               </div>
-              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#5a8a3a] flex-1 min-w-[100px]">
-                <p className="text-[10px] sm:text-xs font-semibold text-[#5a8a3a] uppercase tracking-wide mb-1">Mín.</p>
-                <p className="text-base sm:text-lg font-bold text-[#5a8a3a]">{routeData.minAltitude}m</p>
+              <div className="text-center bg-white dark:bg-white rounded-lg p-2 sm:p-3 border-2 border-[#2C4A6F] flex-1 min-w-[100px]">
+                <p className="text-[10px] sm:text-xs font-semibold text-[#2C4A6F] uppercase tracking-wide mb-1">Mín.</p>
+                <p className="text-base sm:text-lg font-bold text-[#2C4A6F]">{routeData.minAltitude}m</p>
               </div>
             </div>
 
@@ -170,7 +170,7 @@ export function RouteMapSection() {
               <a
                 href="/gpx/mogrovejo-10k.gpx"
                 download
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 bg-[#ff6b35] hover:bg-[#ff5520] text-white font-bold text-sm rounded-lg transition-all shadow-lg whitespace-nowrap"
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 bg-[#2C4A6F] hover:bg-[#1f3650] text-white font-bold text-sm rounded-lg transition-all shadow-lg whitespace-nowrap"
               >
                 <Download className="w-4 h-4" />
                 GPX
@@ -179,7 +179,7 @@ export function RouteMapSection() {
                 href={routeData.wikiloc}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 border-2 border-[#5a8a3a] text-[#5a8a3a] dark:text-[#5a8a3a] hover:bg-[#f0f5f2] dark:hover:bg-[#f0f5f2] font-bold text-sm rounded-lg transition-all whitespace-nowrap"
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-3 border-2 border-[#2C4A6F] text-[#2C4A6F] dark:text-[#2C4A6F] hover:bg-[#f0f5f8] dark:hover:bg-[#f0f5f8] font-bold text-sm rounded-lg transition-all whitespace-nowrap"
               >
                 <ExternalLink className="w-4 h-4" />
                 Wikiloc

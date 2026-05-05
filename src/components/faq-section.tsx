@@ -13,70 +13,40 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    id: 1,
-    question: '¿Cuál es la distancia máxima permitida para las zapatiillas de trail?',
-    answer:
-      'No hay restricción específica de marca, pero recomendamos zapatillas de trail running con buen agarre y protección. Idealmente con suela Vibram o similar para terreno técnico. Prueba tus zapatillas en entrenamientos largos antes del día de la carrera.',
-  },
-  {
-    id: 3,
-    question: '¿Hay servicio médico en la carrera?',
-    answer:
-      'Sí, tenemos equipo médico en avituallamiento principales y un helicóptero en standby para emergencias. Todos los voluntarios están entrenados en primeros auxilios. Por seguridad, es obligatorio llevar un silbato en la mochila.',
-  },
-  {
     id: 4,
     question: '¿Qué pasa si no hago el corte de tiempo?',
     answer:
-      'Si no alcanzas el avituallamiento siguiente dentro del límite de tiempo, serás retirado de la carrera por seguridad. Los límites están establecidos considerando un ritmo sostenible. Consulta el reglamento para ver tiempos exactos por modalidad.',
+      'La organización se reserva el derecho a retirar de la prueba a los corredores y andarines que no cumplan con las expectativas de los tiempos en los controles de cronometraje, por razones de seguridad.',
   },
   {
     id: 5,
     question: '¿Puedo llevar perro o mascota?',
     answer:
-      'No. Por seguridad del animal y otros participantes, no se permiten mascotas en la carrera. Si necesitas cuidado especial, contacta con organización.',
+      'En la modalidad de Andarines (marcha a pie), sí se pueden llevar animales atados, siempre que no molesten al resto de participantes. En el Trail de 10km está prohibida la participación con animales.',
   },
   {
     id: 6,
     question: '¿Hay límite de edad?',
     answer:
-      'Edad mínima: 16 años (con consentimiento parental). Edad máxima: ninguna. Hemos tenido participantes de 70+ años. Se requiere certificado médico de aptitud para todas las modalidades.',
+      'Debes ser mayor de 18 años para participar. Los menores de edad pueden participar en ambas modalidades (Trail y Andarines) siempre acompañados de un adulto responsable que firme una autorización previa.',
   },
   {
     id: 7,
-    question: '¿Puedo dejarme acompañar por un pacer?',
+    question: '¿Qué material recomendado debo llevar en Andarines?',
     answer:
-      'Sí, pero el pacer debe estar inscrito en la misma modalidad. No está permitido que una persona acompañe a múltiples competidores. Ambos deben cumplir con todos los requisitos técnicos.',
+      'Para la marcha de Andarines (9km) recomendamos: Agua: Lleva una botella reutilizable (recomendado en nuestro reglamento para evitar residuos plásticos). Comida: Energéticos como frutos secos, barras energéticas, frutas o sandwiches ligeros. Protección solar: Protector solar, gorro o gafas de sol. Ropa cómoda: Ropa transpirable y calzado de montaña cómodo. Mochila ligera: Para llevar tus pertenencias. Botiquín básico: Tiritas, analgésicos y vendas. Identificación: Lleva tu DNI o documento de identidad. El dorsal es obligatorio y debe estar visible en todo momento.',
   },
   {
     id: 8,
-    question: '¿Qué debo comer en los avituallamiento?',
+    question: '¿Cuáles son los tiempos récord del Mogrovejo Trail?',
     answer:
-      'Ofrecemos agua, bebida isotónica, plátano, barras energéticas y geles. Recomendamos probar en entrenamientos qué te sienta mejor. Algunos corredores traen sus propios geles o snacks. Nuestro equipo puede ayudarte con preferencias dietéticas especiales.',
+      'Los tiempos récord en la modalidad de 10K Trail son: Masculino: 0:34:48 y Femenino: 0:44:46. Si consigues batir estos tiempos, ¡podrías ganar un premio especial! Consulta con la organización para más detalles sobre los premios a tiempo récord.',
   },
   {
     id: 9,
-    question: '¿Es obligatorio llevar mochila?',
+    question: '¿Hay premios y trofeos?',
     answer:
-      'Sí, mínimo 5L. Debe contener: agua (1.5L min), silbato, botiquín básico, teléfono, alimento de emergencia y una chaqueta cortavientos.',
-  },
-  {
-    id: 10,
-    question: '¿Cuándo se publicarán los resultados oficiales?',
-    answer:
-      'Los resultados provisionales se publicarán dentro de las 4 horas tras el cierre de la carrera. Los resultados oficiales, tras revisión y validación, en el plazo de 48-72 horas. Se enviará email a todos los participantes.',
-  },
-  {
-    id: 11,
-    question: '¿Se pueden cancelar las inscripciones?',
-    answer:
-      'Sí, hasta 2 semanas antes de la carrera. Después, solo en caso de justificante médico. El reembolso será del 80% en caso de cancelación por causas no imputables a la organización.',
-  },
-  {
-    id: 12,
-    question: '¿Hay trofeos o premios?',
-    answer:
-      'Sí, para los 3 primeros clasificados de cada modalidad. Además, todos los finalizadores reciben finisher medal. Hay premios especiales para oldest, youngest, y premios por club.',
+      'En la modalidad de 10K Trail hay reconocimientos en las siguientes categorías: Categoría Absoluta (masculino y femenino): 1º, 2º y 3º puesto. Categoría Sub-21 (masculino y femenino): 1º, 2º y 3º puesto. Categoría Veteranos +45 años (masculino y femenino): 1º, 2º y 3º puesto. Además, hay un premio especial de 100€ patrocinado por Materiales de Construcción Zurro para quien bata el récord en 10K. En cambio, la marcha de Andarines no tiene reconocimientos por posiciones, ya que es una actividad lúdica enfocada en el disfrute y la convivencia, no en la competencia.',
   },
 ];
 
@@ -104,7 +74,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]">
+    <section id="faq" className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(44,74,111,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <motion.h2
@@ -170,7 +140,7 @@ export function FAQSection() {
         >
           <p className="text-[var(--text-secondary)] mb-4">{t('faq.contact')}</p>
           <a
-            href="mailto:info@mogrovejo.com"
+            href="mailto:Mogrovejo10ktrail@gmail.com"
             className="inline-block px-6 py-2 bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold rounded transition-all"
           >
             {t('faq.email')}

@@ -77,26 +77,21 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2d5016] via-[#1a2a14] to-[#0f1a0c] py-20">
-      {/* Fondo decorativo sutíl */}
-      <div className="absolute inset-0 opacity-10">
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 1200 600"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <defs>
-            <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#5a7d6a" stopOpacity="1" />
-              <stop offset="100%" stopColor="#2a3a2a" stopOpacity="1" />
-            </linearGradient>
-          </defs>
-          <polygon
-            points="0,350 300,150 600,250 900,100 1200,300 1200,600 0,600"
-            fill="url(#mountainGrad)"
-          />
-        </svg>
-      </div>
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2C4A6F] via-[#1a2f4a] to-[#0f1820] py-20">
+      {/* Vídeo de fondo */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+      >
+        <source src="/media/MOGROVEJO TRAIL '25 4K v2.mov" type="video/quicktime" />
+        <source src="/media/MOGROVEJO TRAIL '25 4K v2.mov" type="video/mp4" />
+      </video>
+
+      {/* Overlay para oscurecer el vídeo */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2C4A6F]/80 via-[#1a2f4a]/80 to-[#0f1820]/80"></div>
 
       {/* Contenido */}
       <motion.div
@@ -107,9 +102,9 @@ export function Hero() {
       >
         {/* Logo */}
         <motion.img
-          src="/logos/mogrovejo-trail-logo.png"
+          src="/logos/nuevo logo mogrovejo trail CIRCULO 3.png"
           alt="Mogrovejo Trail Logo"
-          className="w-full max-w-2xl h-auto -mt-8 -mb-4"
+          className="w-full max-w-sm h-auto -mt-4 mb-4"
           variants={itemVariants}
         />
 
@@ -124,17 +119,17 @@ export function Hero() {
         {/* Meta información con iconos - tono profesional */}
         <motion.div className="flex gap-8 text-white/90 flex-wrap justify-center text-sm" variants={itemVariants}>
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-[var(--accent-primary)]" />
+            <Calendar className="w-4 h-4 text-white" />
             <span>{t('hero.date')}</span>
           </div>
           <span className="text-white/40">•</span>
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-[var(--accent-primary)]" />
+            <MapPin className="w-4 h-4 text-white" />
             <span>{t('hero.location')}</span>
           </div>
           <span className="text-white/40">•</span>
           <div className="flex items-center gap-2">
-            <Mountain className="w-4 h-4 text-[var(--accent-primary)]" />
+            <Mountain className="w-4 h-4 text-white" />
             <span>{t('hero.distances')}</span>
           </div>
         </motion.div>
@@ -151,12 +146,12 @@ export function Hero() {
               <motion.div
                 key={item.label}
                 variants={countdownVariants}
-                className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-colors"
+                className="bg-white/25 backdrop-blur-md rounded-lg p-4 border border-white/30 hover:bg-white/35 transition-colors"
               >
-                <div className="text-3xl sm:text-4xl font-bold text-transparent bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text">
+                <div className="text-4xl sm:text-5xl font-bold text-white">
                   {String(item.value).padStart(2, '0')}
                 </div>
-                <div className="text-xs text-gray-300 uppercase tracking-wider mt-2">
+                <div className="text-xs text-white uppercase tracking-wider mt-2">
                   {item.label}
                 </div>
               </motion.div>

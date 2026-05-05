@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
-import { Droplets, UtensilsCrossed, HeartPulse, Package } from 'lucide-react';
+import { Droplets, UtensilsCrossed } from 'lucide-react';
 
 interface SupplyPoint {
   id: number;
   km: number;
   name: string;
   elevation: number;
+  label: string;
   services: {
     water: boolean;
     food: boolean;
@@ -19,32 +20,28 @@ interface SupplyPoint {
 
 const supplyPoints: SupplyPoint[] = [
   {
-    id: 1,
+    id: 0,
     km: 0,
-    name: 'Salida',
-    elevation: 320,
-    services: { water: true, food: true, medical: true, dropbag: false },
+    name: '',
+    elevation: 546,
+    label: 'Inicio',
+    services: { water: false, food: false, medical: false, dropbag: false },
+  },
+  {
+    id: 1,
+    km: 5,
+    name: 'Líquidos',
+    elevation: 850,
+    label: '5',
+    services: { water: true, food: false, medical: false, dropbag: false },
   },
   {
     id: 2,
-    km: 3.5,
-    name: 'Control Técnico',
-    elevation: 850,
-    services: { water: true, food: true, medical: true, dropbag: false },
-  },
-  {
-    id: 3,
-    km: 7,
-    name: 'Cumbre Mogrovejo',
-    elevation: 1200,
-    services: { water: true, food: true, medical: true, dropbag: false },
-  },
-  {
-    id: 4,
-    km: 10,
-    name: 'Meta',
-    elevation: 320,
-    services: { water: true, food: true, medical: true, dropbag: false },
+    km: 9,
+    name: 'Sólidos y Líquidos',
+    elevation: 546,
+    label: 'Fin',
+    services: { water: true, food: true, medical: false, dropbag: false },
   },
 ];
 
@@ -100,6 +97,7 @@ export function SupplySection() {
             viewport={{ once: true }}
           />
 
+
           {/* Puntos de avituallamiento */}
           <div className="relative flex justify-between">
             {supplyPoints.map((point, index) => (
@@ -114,45 +112,21 @@ export function SupplySection() {
               >
                 {/* Círculo del punto */}
                 <div className="w-12 h-12 rounded-full bg-[var(--accent-primary)] border-4 border-[var(--bg-primary)] flex items-center justify-center text-white font-bold text-sm z-10">
-                  {point.km}
+                  {point.label}
                 </div>
 
                 {/* Info del punto */}
                 <div className="mt-6 text-center max-w-xs">
-                  <h3 className="font-roboto-condensed font-bold text-[var(--text-primary)] text-sm mb-2">
-                    {point.name}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] mb-3">
-                    {point.elevation}m
-                  </p>
-
-                  {/* Servicios */}
-                  <div className="flex justify-center gap-2 flex-wrap">
-                    {point.services.water && (
-                      <div className="flex items-center gap-1 bg-[var(--bg-secondary)] px-2 py-1 rounded text-xs">
-                        <Droplets className="w-3 h-3 text-blue-500" />
-                        <span className="text-[var(--text-secondary)]">{t('avit.water')}</span>
-                      </div>
-                    )}
-                    {point.services.food && (
-                      <div className="flex items-center gap-1 bg-[var(--bg-secondary)] px-2 py-1 rounded text-xs">
-                        <UtensilsCrossed className="w-3 h-3 text-orange-500" />
-                        <span className="text-[var(--text-secondary)]">{t('avit.food')}</span>
-                      </div>
-                    )}
-                    {point.services.medical && (
-                      <div className="flex items-center gap-1 bg-[var(--bg-secondary)] px-2 py-1 rounded text-xs">
-                        <HeartPulse className="w-3 h-3 text-red-500" />
-                        <span className="text-[var(--text-secondary)]">{t('avit.medical')}</span>
-                      </div>
-                    )}
-                    {point.services.dropbag && (
-                      <div className="flex items-center gap-1 bg-[var(--bg-secondary)] px-2 py-1 rounded text-xs">
-                        <Package className="w-3 h-3 text-purple-500" />
-                        <span className="text-[var(--text-secondary)]">{t('avit.dropbag')}</span>
-                      </div>
-                    )}
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    {point.services.water && <Droplets className="w-4 h-4 text-blue-500" />}
+                    {point.services.food && <UtensilsCrossed className="w-4 h-4 text-orange-500" />}
+                    <h3 className="font-roboto-condensed font-bold text-[var(--text-primary)] text-sm">
+                      {point.name}
+                    </h3>
                   </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    ↑ {point.elevation}m
+                  </p>
                 </div>
               </motion.div>
             ))}

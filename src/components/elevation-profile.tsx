@@ -46,12 +46,12 @@ export function ElevationProfile({
       {/* Gradiente de fondo */}
       <defs>
         <linearGradient id="elevationGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="rgba(90, 125, 106, 0.4)" />
-          <stop offset="100%" stopColor="rgba(90, 125, 106, 0.1)" />
+          <stop offset="0%" stopColor="rgba(44, 74, 111, 0.4)" />
+          <stop offset="100%" stopColor="rgba(44, 74, 111, 0.1)" />
         </linearGradient>
         <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#5a7d6a" />
-          <stop offset="100%" stopColor="#7a9d8a" />
+          <stop offset="0%" stopColor="#2C4A6F" />
+          <stop offset="100%" stopColor="#4A6FA0" />
         </linearGradient>
       </defs>
 

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
 import { useEffect, useState } from 'react';
-import { Mail, Phone, Instagram, Facebook, Twitter, Youtube } from 'lucide-react';
+import { Mail, Phone, Instagram } from 'lucide-react';
 
 /**
  * Sección de Información sobre el recorrido
@@ -46,8 +46,8 @@ export function InformationSection() {
                   <stop offset="100%" stopColor="#4a6741" stopOpacity="1" />
                 </linearGradient>
                 <linearGradient id="mountainGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#5a8a3a" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#2d4a1a" stopOpacity="1" />
+                  <stop offset="0%" stopColor="#4A6FA0" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#1f3650" stopOpacity="1" />
                 </linearGradient>
               </defs>
               {/* Cielo */}
@@ -175,18 +175,15 @@ export function Footer() {
   const { t } = useLanguage();
 
   const socialIcons = [
-    { Icon: Instagram, label: t('footer.instagram'), href: '#' },
-    { Icon: Facebook, label: t('footer.facebook'), href: '#' },
-    { Icon: Twitter, label: t('footer.twitter'), href: '#' },
-    { Icon: Youtube, label: t('footer.youtube'), href: '#' },
+    { Icon: Instagram, label: t('footer.instagram'), href: 'https://www.instagram.com/mogrovejo_trail?igsh=OWt2bmZ2Nzd3b2kz' },
   ];
 
   const footerSections = [
     {
       title: t('footer.contact'),
       items: [
-        { label: 'info@mogrovejotrail.com', href: 'mailto:info@mogrovejotrail.com', icon: Mail },
-        { label: '+34 942 123 456', href: 'tel:+34942123456', icon: Phone },
+        { label: 'Mogrovejo10ktrail@gmail.com', href: 'mailto:Mogrovejo10ktrail@gmail.com', icon: Mail },
+        { label: '633 165 086', href: 'tel:+34633165086', icon: Phone },
       ],
     },
     {
@@ -198,10 +195,14 @@ export function Footer() {
             <a
               key={label}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               title={label}
-              className="w-10 h-10 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-color)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-colors"
+              className="group w-14 h-14 rounded-full bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] p-0.5 flex items-center justify-center hover:shadow-lg hover:shadow-[#833AB4]/50 transition-all duration-300 transform hover:scale-110"
             >
-              <Icon className="w-5 h-5" />
+              <div className="w-full h-full rounded-full bg-[#0f1820] flex items-center justify-center">
+                <Icon className="w-7 h-7 text-white group-hover:text-[#FCAF45] transition-colors" />
+              </div>
             </a>
           ))}
         </div>
@@ -211,28 +212,18 @@ export function Footer() {
       title: t('footer.legal'),
       items: [
         { label: t('footer.legal.notice'), href: '/legal/notice' },
-        { label: t('footer.legal.privacy'), href: '/privacy/policy' },
+        { label: t('footer.legal.privacy'), href: '/privacy' },
         { label: t('footer.legal.cookies'), href: '/privacy/cookies' },
-        { label: t('footer.legal.regulation'), href: '/legal/regulation' },
-      ],
-    },
-    {
-      title: t('footer.info'),
-      items: [
-        { label: t('footer.inscriptions'), href: '/' },
-        { label: t('footer.routes'), href: '/informacion' },
-        { label: 'Resultados', href: '/resultados' },
-        { label: t('footer.faq'), href: '/informacion#faq' },
-        { label: t('footer.gallery'), href: '/media' },
+        { label: t('footer.legal.regulation'), href: '/media/Reglamento IX Mogrovejo Trail 2026 10k.docx.pdf', download: true },
       ],
     },
   ];
 
   return (
-    <footer id="contacto" className="bg-gradient-to-br from-[#1a3a1a] to-[#0f2410] border-t border-[var(--border-color)] text-white">
+    <footer id="contacto" className="bg-gradient-to-br from-[#1a2f4a] to-[#0f1820] border-t border-[var(--border-color)] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Grid de columnas */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-8">
           {footerSections.map((section, idx) => (
             <motion.div
               key={idx}
@@ -248,15 +239,26 @@ export function Footer() {
                 section.render()
               ) : (
                 <ul className="space-y-2">
-                  {section.items?.map((item: { label: string; href: string; icon?: React.ComponentType<{ className: string }> }, itemIdx: number) => (
+                  {section.items?.map((item: { label: string; href: string; icon?: React.ComponentType<{ className: string }>; download?: boolean }, itemIdx: number) => (
                     <li key={itemIdx}>
-                      <Link
-                        href={item.href}
-                        className="flex items-center gap-2 text-sm text-gray-200 transition-colors hover:text-[var(--accent-primary)]"
-                      >
-                        {item.icon && <item.icon className="w-4 h-4" />}
-                        {item.label}
-                      </Link>
+                      {item.download ? (
+                        <a
+                          href={item.href}
+                          download
+                          className="flex items-center gap-2 text-sm text-gray-200 transition-colors hover:text-[var(--accent-primary)]"
+                        >
+                          {item.icon && <item.icon className="w-4 h-4" />}
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="flex items-center gap-2 text-sm text-gray-200 transition-colors hover:text-[var(--accent-primary)]"
+                        >
+                          {item.icon && <item.icon className="w-4 h-4" />}
+                          {item.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

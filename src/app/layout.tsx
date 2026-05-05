@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/contexts/language-context";
 import { Header } from "@/components/header";
 import { ProgressBar } from "@/components/progress-bar";
 import { Footer } from "@/components/sections";
+import { FloatingCTA } from "@/components/floating-cta";
 import "./globals.css";
 
 export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
@@ -42,6 +43,7 @@ export default function RootLayout({
             <ProgressBar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <FloatingCTA />
           </LanguageProvider>
         </ThemeProvider>
       </body>

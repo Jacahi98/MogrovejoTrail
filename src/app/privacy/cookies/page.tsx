@@ -127,8 +127,8 @@ export default function CookiesPolicy() {
               <li>Retirar consentimiento en cualquier momento</li>
             </ul>
             <p className="text-[var(--text-secondary)] leading-relaxed mt-4">
-              Contacta: <a href="mailto:privacy@mogrovejo.com" className="text-[var(--accent-primary)] hover:underline">
-                privacy@mogrovejo.com
+              Contacta: <a href="mailto:Mogrovejo10ktrail@gmail.com" className="text-[var(--accent-primary)] hover:underline">
+                Mogrovejo10ktrail@gmail.com
               </a>
             </p>
           </section>
@@ -146,8 +146,8 @@ export default function CookiesPolicy() {
           <section className="bg-[var(--bg-secondary)] p-6 rounded-lg border border-[var(--border-color)]">
             <p className="text-[var(--text-secondary)] text-sm">
               <strong>¿Dudas?</strong> Contacta a nuestro equipo legal en{' '}
-              <a href="mailto:legal@mogrovejo.com" className="text-[var(--accent-primary)] hover:underline">
-                legal@mogrovejo.com
+              <a href="mailto:Mogrovejo10ktrail@gmail.com" className="text-[var(--accent-primary)] hover:underline">
+                Mogrovejo10ktrail@gmail.com
               </a>
             </p>
           </section>

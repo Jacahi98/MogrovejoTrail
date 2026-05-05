@@ -1,11 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/language-context';
 import { ContactForm } from '@/components/contact-form';
 import { CookieBanner } from '@/components/sections';
-import { TeamSection } from '@/components/team-section';
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+
   return (
     <>
       <section id="contacto" className="py-16 bg-[var(--bg-primary)] border-b border-[var(--border-color)]">
@@ -15,7 +17,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Contacto
+            {t('nav.contacto')}
           </motion.h1>
           <motion.p
             className="text-[var(--text-secondary)] mb-12 text-lg"
@@ -23,7 +25,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            ¿Tienes preguntas? Ponte en contacto con nosotros. Estaremos encantados de ayudarte.
+            {t('contact.description')}
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -37,31 +39,31 @@ export default function ContactPage() {
             >
               <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-6">
                 <h3 className="font-roboto-condensed text-lg font-bold text-[var(--text-primary)] mb-3">
-                  Email
+                  {t('contact.cards.email.title')}
                 </h3>
                 <a
-                  href="mailto:info@mogrovejo.com"
+                  href="mailto:Mogrovejo10ktrail@gmail.com"
                   className="text-[var(--accent-primary)] hover:text-[var(--accent-secondary)] transition-colors"
                 >
-                  info@mogrovejo.com
+                  Mogrovejo10ktrail@gmail.com
                 </a>
               </div>
 
               <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-6">
                 <h3 className="font-roboto-condensed text-lg font-bold text-[var(--text-primary)] mb-3">
-                  Teléfono
+                  {t('contact.cards.phone.title')}
                 </h3>
                 <a
-                  href="tel:+34123456789"
+                  href="tel:+34633165086"
                   className="text-[var(--accent-primary)] hover:text-[var(--accent-secondary)] transition-colors"
                 >
-                  +34 123 456 789
+                  633 165 086
                 </a>
               </div>
 
               <div className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-6">
                 <h3 className="font-roboto-condensed text-lg font-bold text-[var(--text-primary)] mb-3">
-                  Ubicación
+                  {t('contact.cards.location.title')}
                 </h3>
                 <p className="text-[var(--text-secondary)] text-sm">
                   Mogrovejo, Picos de Europa
@@ -74,7 +76,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <TeamSection />
       <CookieBanner />
     </>
   );

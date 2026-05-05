@@ -18,26 +18,26 @@ export function RegulationSection() {
   const regulationPanels: RegulationPanel[] = [
     {
       id: 0,
-      title: t('reglamento.gear'),
+      title: 'Horarios y Recogida de Dorsales',
       content: (
         <div className="space-y-4">
-          <p className="text-[var(--text-secondary)] leading-relaxed">
-            El siguiente material es <strong>obligatorio</strong> para todas las modalidades:
-          </p>
-          <ul className="space-y-2 list-disc list-inside text-[var(--text-secondary)]">
-            <li>Mochila mínimo 5L</li>
-            <li>Silbato audible</li>
-            <li>Botella/reservoir con mínimo 1.5L de agua</li>
-            <li>Identificación con número de participante (brazalete)</li>
-            <li>Frontal o luz frontal (activado después del atardecer)</li>
-            <li>Chaqueta cortavientos mínimo 200g (obligatoria de 18:00 en adelante)</li>
-            <li>Botiquín básico (vendas, tiritas, analgésicos)</li>
-            <li>Teléfono móvil con batería (recomendado)</li>
-          </ul>
-          <p className="text-sm text-[var(--text-secondary)] mt-4">
-            <strong>Nota:</strong> Se hará control de material en salida y avituallamiento. Quién carezca de material
-            obligatorio será rechazado o retirado.
-          </p>
+          <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">Recogida de Dorsales</h4>
+            <p className="text-[var(--text-secondary)] text-sm mb-3">
+              <strong>Sábado 25 de julio de 2026</strong> de <strong>09:00 a 11:15 h.</strong>
+            </p>
+            <p className="text-[var(--text-secondary)] text-sm">
+              Se retiran en el arco de salida (finca junto al pueblo de Mogrovejo)
+            </p>
+          </div>
+          <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">Horarios de Salida</h4>
+            <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+              <li>🏃 <strong>Trail 10km:</strong> 11:30 h.</li>
+              <li>🚶 <strong>Andarines 10km:</strong> 11:35 h.</li>
+              <li>👶 <strong>Carreras infantiles:</strong> entre 10:30 y 11:00 h. (horario flexible)</li>
+            </ul>
+          </div>
         </div>
       ),
     },
@@ -49,47 +49,89 @@ export function RegulationSection() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-[var(--border-color)]">
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">10K Mogrovejo Trail</th>
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Precio Base</th>
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Early Bird (-20%)</th>
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Plazo</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Modalidad</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Hasta 25 jun</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Después 25 jun</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="py-3">Inscripción</td>
-                <td className="py-3">€25</td>
-                <td className="py-3">€20</td>
-                <td className="py-3">Hasta 15 julio</td>
+                <td className="py-3">10K Trail</td>
+                <td className="py-3">15€</td>
+                <td className="py-3">20€</td>
+              </tr>
+              <tr>
+                <td className="py-3">10K Andarines</td>
+                <td className="py-3">15€</td>
+                <td className="py-3">20€</td>
               </tr>
             </tbody>
           </table>
           <p className="text-[var(--text-secondary)] text-sm mt-4">
-            Incluye: seguro responsabilidad civil, timing electrónico, finisher medal, y acceso a avituallamiento.
+            <strong>Incluye:</strong> seguro de accidentes, dorsal, bolsa del corredor y acceso a avituallamiento.
           </p>
           <p className="text-[var(--text-secondary)] text-sm">
-            Inscripción: <strong>www.gedsports.com</strong> (pago online seguro con tarjeta)
+            Inscripción: <strong>www.gedsports.com/race/mogrovejo-trail-2026</strong>
           </p>
         </div>
       ),
     },
     {
       id: 2,
-      title: t('reglamento.cutoffs'),
+      title: 'Información Importante',
       content: (
         <div className="space-y-4">
-          <p className="text-[var(--text-secondary)] leading-relaxed">
-            Los <strong>tiempos límite</strong> son obligatorios por seguridad. Si no pasas un control dentro del plazo,
-            serás retirado.
-          </p>
-          <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)]">
-            <h4 className="font-bold text-[var(--text-primary)] mb-2">10K Mogrovejo Trail</h4>
-            <div className="text-sm text-[var(--text-secondary)]">
-              <p>Control 3.5km: 1h 15m</p>
-              <p>Control 7km: 2h 30m</p>
-              <p>Meta 10km: 3h 30m (corte final)</p>
-            </div>
+          <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)] text-sm text-[var(--text-secondary)]">
+            <p className="mb-2"><strong>✓ Dorsal obligatorio:</strong> Debe llevarse visible en todo momento</p>
+            <p className="mb-2"><strong>✓ Ropa obligatoria:</strong> Prohibido correr sin camiseta ni pantalón</p>
+            <p className="mb-2"><strong>✓ En la marcha (Andarines):</strong> Se permite participar con animales (atados)</p>
+            <p className="mb-2"><strong>✓ En el Trail:</strong> Prohibida la participación con animales</p>
+            <p className="mb-2"><strong>✓ Seguro:</strong> Incluido en la inscripción para todos los participantes</p>
+            <p><strong>✓ Menores:</strong> Pueden participar acompañados por un adulto responsable</p>
           </div>
+        </div>
+      ),
+    },
+    {
+      id: 3,
+      title: 'Avituallamientos',
+      content: (
+        <div className="space-y-4">
+          <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">Trail 10km</h4>
+            <ul className="space-y-1 text-sm text-[var(--text-secondary)]">
+              <li>• <strong>~5km:</strong> Punto de líquidos</li>
+              <li>• <strong>Meta:</strong> Sólidos y líquidos</li>
+            </ul>
+          </div>
+          <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">Marcha Andarines</h4>
+            <p className="text-sm text-[var(--text-secondary)]">
+              Un punto de avituallamiento al inicio/fin de la prueba
+            </p>
+          </div>
+          <p className="text-xs text-[var(--text-secondary)] italic">
+            💡 Se recomienda llevar un recipiente reutilizable para evitar residuos plásticos
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      title: 'Política de Devoluciones',
+      content: (
+        <div className="space-y-4 text-sm text-[var(--text-secondary)]">
+          <p className="leading-relaxed">
+            <strong>Las inscripciones son definitivas</strong> y no se realizará devolución en caso de no poder participar.
+          </p>
+          <p className="leading-relaxed">
+            <strong>Excepciones:</strong> Se considerará devolución en caso de suspensión de la prueba por:
+          </p>
+          <ul className="space-y-1 list-disc list-inside">
+            <li>Falta de permisos necesarios</li>
+            <li>Prohibiciones de autoridades competentes</li>
+            <li>Restricciones de tráfico</li>
+          </ul>
         </div>
       ),
     },
@@ -104,7 +146,7 @@ export function RegulationSection() {
   return (
     <section
       id="reglamento"
-      className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(90,125,106,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]"
+      className="py-16 bg-[radial-gradient(circle_at_top_left,_rgba(44,74,111,0.24),_transparent_42%),linear-gradient(180deg,var(--bg-primary),var(--bg-secondary))] border-b border-[var(--border-color)]"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}

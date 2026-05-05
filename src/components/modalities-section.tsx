@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
 
@@ -11,8 +12,9 @@ export function ModalitiesSection() {
   const { t } = useLanguage();
 
   const modalities = [
-    { id: 1, title: '10K Trail', description: 'Para corredores' },
-    { id: 2, title: '10K Andarines', description: 'Para senderistas' },
+    { id: 1, title: '10K Trail', description: 'Para corredores', modalityId: 'trail' },
+    { id: 2, title: '10K Andarines', description: 'Para senderistas', modalityId: 'andarines' },
+    { id: 3, title: 'Carreras Infantiles', description: 'Para niños (3-16 años)', modalityId: 'infantiles' },
   ];
 
   const itemVariants = {
@@ -61,7 +63,7 @@ export function ModalitiesSection() {
                 Distancia
               </p>
               <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
-                10 km
+                9 km
               </p>
             </div>
             <div className="flex flex-col items-center sm:items-start">
@@ -85,28 +87,29 @@ export function ModalitiesSection() {
           </div>
         </motion.div>
 
-        {/* Dos opciones de modalidades */}
+        {/* Modalidades */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {modalities.map((modality) => (
-            <motion.div
-              key={modality.id}
-              className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-8 hover:border-[var(--accent-primary)] transition-all duration-300"
-              variants={itemVariants}
-              whileHover={{ y: -4 }}
-            >
-              <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)] mb-2 hover:text-[var(--accent-primary)] transition-colors">
-                {modality.title}
-              </p>
-              <p className="text-[var(--text-secondary)]">
-                {modality.description}
-              </p>
-            </motion.div>
+            <Link key={modality.id} href={`/info?modality=${modality.modalityId}`}>
+              <motion.div
+                className="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-8 hover:border-[var(--accent-primary)] transition-all duration-300 cursor-pointer h-full"
+                variants={itemVariants}
+                whileHover={{ y: -4 }}
+              >
+                <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)] mb-2 hover:text-[var(--accent-primary)] transition-colors">
+                  {modality.title}
+                </p>
+                <p className="text-[var(--text-secondary)]">
+                  {modality.description}
+                </p>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
