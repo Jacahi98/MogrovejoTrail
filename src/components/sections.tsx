@@ -214,7 +214,7 @@ export function Footer() {
         { label: t('footer.legal.notice'), href: '/legal/notice' },
         { label: t('footer.legal.privacy'), href: '/privacy' },
         { label: t('footer.legal.cookies'), href: '/privacy/cookies' },
-        { label: t('footer.legal.regulation'), href: '/media/Reglamento IX Mogrovejo Trail 2026 10k.docx.pdf', download: true },
+        { label: t('footer.legal.regulation'), href: '/documents/Reglamento IX Mogrovejo Trail 2026 10k.docx.pdf', download: true },
       ],
     },
   ];
