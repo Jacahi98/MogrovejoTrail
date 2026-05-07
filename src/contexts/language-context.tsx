@@ -59,6 +59,17 @@ const translations = {
     'modalities.max': 'Cota Máxima',
     'modalities.min': 'Cota Mínima',
 
+    // Modalities Section Short Info
+    'modalities.trail.shortTitle': '10K Trail',
+    'modalities.trail.shortDesc': 'Para corredores',
+    'modalities.andarines.shortTitle': '10K Andarines',
+    'modalities.andarines.shortDesc': 'Para senderistas',
+    'modalities.infantiles.shortTitle': 'Carreras Infantiles',
+    'modalities.infantiles.shortDesc': 'Para niños (3-16 años)',
+    'modalities.routeCard.distance': 'Distancia',
+    'modalities.routeCard.elevation': 'Desnivel',
+    'modalities.routeCard.wikiloc': 'Ver ruta en Wikiloc →',
+
     // Information
     'info.title': 'El Recorrido',
     'info.subtitle': 'Alta Montaña, Pura Adrenalina',
@@ -127,13 +138,6 @@ const translations = {
     'acceso.train': 'En Tren',
     'acceso.capacity': 'Capacidad',
 
-    // Regulation / Reglamento
-    'reglamento.title': 'Reglamento',
-    'reglamento.gear': 'Material Obligatorio',
-    'reglamento.prices': 'Precios e Inscripción',
-    'reglamento.cutoffs': 'Tiempos de Corte',
-    'reglamento.cta': 'Inscribirse en GedSports',
-
     // Supply / Avituallamiento
     'avit.title': 'Avituallamiento',
     'avit.water': 'Agua',
@@ -193,6 +197,127 @@ const translations = {
     'contact.box.topicsLabel': 'Temas habituales',
     'contact.box.topics': 'Inscripciones, prensa, patrocinio, voluntariado y logística de carrera',
     'contact.box.cta': 'Ir a inscripciones',
+
+    // Contact Form
+    'contact.form.title': 'Envíanos un mensaje',
+    'contact.form.name': 'Nombre',
+    'contact.form.namePlaceholder': 'Tu nombre',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'tu@email.com',
+    'contact.form.message': 'Mensaje',
+    'contact.form.messagePlaceholder': 'Cuéntanos...',
+    'contact.form.success': '¡Gracias! Tu mensaje ha sido enviado correctamente.',
+    'contact.form.sending': 'Enviando...',
+    'contact.form.submit': 'Enviar mensaje',
+
+    // Hero Countdown
+    'hero.countdown.days': 'Días',
+    'hero.countdown.hours': 'Horas',
+    'hero.countdown.minutes': 'Minutos',
+    'hero.countdown.seconds': 'Segundos',
+
+    // Modalities Start Times
+    'modalities.trail.startTime': 'Antes de la carrera: 11:30 h.',
+    'modalities.andarines.startTime': 'Antes de la carrera: 11:35 h.',
+    'modalities.infantiles.startTime': 'Antes de la carrera: 10:30 - 11:00 h.',
+
+    // Workshop
+    'workshop.title': 'Charla Técnica Previa',
+    'workshop.subtitle': 'Técnica de Carrera, Calentamiento y Pisada',
+    'workshop.date': '25 de julio de 2026',
+    'workshop.time': '09:00 h.',
+    'workshop.location': 'Arco de Salida',
+    'workshop.description': 'Aprende técnicas esenciales de trail running directamente de un instructor especializado. Esta charla previa a la carrera cubre calentamiento adecuado, técnica de pisada en montaña y consejos prácticos para optimizar tu rendimiento. Perfecta para participantes de todas las modalidades.',
+    'workshop.instructor': 'Instructor especializado en trail running',
+    'workshop.cta': 'Inscribirse a la Charla',
+    'workshop.form.name': 'Tu inscripción es importante para nosotros',
+    'workshop.label.date': 'Fecha',
+    'workshop.label.time': 'Hora',
+    'workshop.label.location': 'Ubicación',
+    'workshop.label.instructor': 'Instructor',
+    'workshop.noLimit': '✓ Sin límite de inscripciones',
+
+    // FAQ with extended Q&A
+    'faq.q4.question': '¿Qué pasa si no hago el corte de tiempo?',
+    'faq.q4.answer': 'Entendemos que el trail puede ser exigente. Si no alcanzas un control en el tiempo establecido, nuestro equipo de seguridad te acompañará al siguiente punto. Tu seguridad es prioritaria.',
+    'faq.q5.question': '¿Puedo llevar perro o mascota?',
+    'faq.q5.answer': 'En la modalidad Andarines sí, siempre que tu mascota esté controlada. En el Trail no está permitido por seguridad de todos los participantes.',
+    'faq.q6.question': '¿Hay límite de edad?',
+    'faq.q6.answer': 'Los menores de 18 años deben ir acompañados de un adulto responsable. No hay límite máximo de edad, ¡somos inclusivos!',
+    'faq.q7.question': '¿Qué material recomendado debo llevar en Andarines?',
+    'faq.q7.answer': 'Calzado cómodo de montaña, ropa por capas, protección solar, agua y algo de comida energética. El clima en altura puede cambiar rápidamente.',
+    'faq.q8.question': '¿Cuáles son los tiempos récord?',
+    'faq.q8.answer': 'Los mejores tiempos rondan 1 hora para Trail y 2:30 horas para Andarines. Pero recuerda, el objetivo es disfrutar y terminar con seguridad.',
+    'faq.q9.question': '¿Hay premios y trofeos?',
+    'faq.q9.answer': 'Sí, tenemos premios para los primeros clasificados en cada categoría. Todos los finalizadores reciben un diploma y un recordatorio especial del evento.',
+
+    // Reglamento
+    'reglamento.title': 'Reglamento',
+    'reglamento.schedule.title': 'Horarios y Recogida de Dorsales',
+    'reglamento.schedule.bibPickup': 'Recogida de Dorsales',
+    'reglamento.schedule.bibDate': 'Sábado 25 de julio de 2026',
+    'reglamento.schedule.bibTime': '09:00 a 11:15 h.',
+    'reglamento.schedule.bibLocation': 'Se retiran en el arco de salida (finca junto al pueblo de Mogrovejo)',
+    'reglamento.schedule.startTimes': 'Horarios de Salida',
+    'reglamento.schedule.startTrail': '🏃 Trail 10km: 11:30 h.',
+    'reglamento.schedule.startAndarines': '🚶 Andarines 10km: 11:35 h.',
+    'reglamento.schedule.startKids': '👶 Carreras infantiles: entre 10:30 y 11:00 h. (horario flexible)',
+    'reglamento.prices': 'Precios e Inscripción',
+    'reglamento.prices.colModality': 'Modalidad',
+    'reglamento.prices.colBefore': 'Hasta 25 jun',
+    'reglamento.prices.colAfter': 'Después 25 jun',
+    'reglamento.prices.includes': 'Incluye: seguro de accidentes, dorsal, bolsa del corredor y acceso a avituallamiento.',
+    'reglamento.prices.register': 'Inscripción: www.gedsports.com/race/mogrovejo-trail-2026',
+    'reglamento.prices.modal10k': '10K Trail',
+    'reglamento.prices.andarines10k': '10K Andarines',
+    'reglamento.prices.early': '15€',
+    'reglamento.prices.late': '20€',
+    'reglamento.important.title': 'Información Importante',
+    'reglamento.important.bib': '✓ Dorsal obligatorio: Debe llevarse visible en todo momento',
+    'reglamento.important.clothing': '✓ Ropa obligatoria: Prohibido correr sin camiseta ni pantalón',
+    'reglamento.important.animals': '✓ En la marcha (Andarines): Se permite participar con animales (atados)',
+    'reglamento.important.noAnimals': '✓ En el Trail: Prohibida la participación con animales',
+    'reglamento.important.insurance': '✓ Seguro: Incluido en la inscripción para todos los participantes',
+    'reglamento.important.minors': '✓ Menores: Pueden participar acompañados por un adulto responsable',
+    'reglamento.supplies.title': 'Avituallamientos',
+    'reglamento.supplies.trail': 'Trail 10km',
+    'reglamento.supplies.at5km': '~5km: Punto de líquidos',
+    'reglamento.supplies.atFinish': 'Meta: Sólidos y líquidos',
+    'reglamento.supplies.andarines': 'Marcha Andarines',
+    'reglamento.supplies.andarinesText': 'Un punto de avituallamiento al inicio/fin de la prueba',
+    'reglamento.supplies.tip': '💡 Se recomienda llevar un recipiente reutilizable para evitar residuos plásticos',
+    'reglamento.refund.title': 'Política de Devoluciones',
+    'reglamento.refund.noRefund': 'Las inscripciones son definitivas y no se realizará devolución en caso de no poder participar.',
+    'reglamento.refund.exceptions': 'Excepciones: Se considerará devolución en caso de suspensión de la prueba por:',
+    'reglamento.refund.noPermit': 'Falta de permisos necesarios',
+    'reglamento.refund.authority': 'Prohibiciones de autoridades competentes',
+    'reglamento.refund.traffic': 'Restricciones de tráfico',
+    'reglamento.cta': 'Inscribirse en GedSports',
+    'reglamento.readyToRace': '¿Listo para correr? Completa tu inscripción en GedSports',
+
+    // Supply Points
+    'modalities.supply.start': 'Inicio',
+    'modalities.supply.startLabel': 'Inicio',
+    'modalities.supply.liquids': 'Líquidos',
+    'modalities.supply.at4km': '4km',
+    'modalities.supply.solidsLiquids': 'Sólidos y Líquidos',
+    'modalities.supply.finish': 'Meta',
+
+    // Gallery
+    'gallery.title': 'Galería Memorias de MogrovejoTrail 2025',
+
+    // Team
+    'team.role.raceDirector': 'Director de Carrera',
+    'team.role.supplyCoordinator': 'Coordinadora Avituallamiento',
+    'team.role.securityManager': 'Responsable Seguridad',
+    'team.role.volunteersCoordinator': 'Coordinadora Voluntarios',
+    'team.role.technicalDirector': 'Director Técnico',
+    'team.role.medicalManager': 'Responsable Médico',
+    'team.volunteers.title': 'Voluntarios',
+    'team.volunteers.text': 'Gracias a más de 50 voluntarios que hacen posible cada edición del Mogrovejo Trail.',
+
+    // Video Section
+    'videoSection.title': 'Mogrovejo Trail 2025',
   },
   en: {
     // Navigation
@@ -241,6 +366,17 @@ const translations = {
     'modalities.supplies': 'Aid Stations',
     'modalities.max': 'Max Altitude',
     'modalities.min': 'Min Altitude',
+
+    // Modalities Section Short Info
+    'modalities.trail.shortTitle': '10K Trail',
+    'modalities.trail.shortDesc': 'For runners',
+    'modalities.andarines.shortTitle': '10K Walkers',
+    'modalities.andarines.shortDesc': 'For hikers',
+    'modalities.infantiles.shortTitle': 'Kids Races',
+    'modalities.infantiles.shortDesc': 'For kids (3-16)',
+    'modalities.routeCard.distance': 'Distance',
+    'modalities.routeCard.elevation': 'Elevation',
+    'modalities.routeCard.wikiloc': 'View route on Wikiloc →',
 
     // Information
     'info.title': 'The Route',
@@ -310,24 +446,12 @@ const translations = {
     'acceso.train': 'By Train',
     'acceso.capacity': 'Capacity',
 
-    // Regulation / Reglamento
-    'reglamento.title': 'Regulation',
-    'reglamento.gear': 'Mandatory Gear',
-    'reglamento.prices': 'Prices & Registration',
-    'reglamento.cutoffs': 'Time Limits',
-    'reglamento.cta': 'Register on GedSports',
-
     // Supply / Avituallamiento
     'avit.title': 'Aid Stations',
     'avit.water': 'Water',
     'avit.food': 'Food',
     'avit.medical': 'Medical',
     'avit.dropbag': 'Drop Bag',
-
-    // FAQ
-    'faq.title': 'Frequently Asked Questions',
-    'faq.contact': 'More questions? Write us',
-    'faq.email': 'Mogrovejo10ktrail@gmail.com',
 
     // Volunteers / Voluntarios
     'volunteers.title': 'Our Volunteers',
@@ -376,6 +500,130 @@ const translations = {
     'contact.box.topicsLabel': 'Common topics',
     'contact.box.topics': 'Registration, press, sponsorship, volunteering, and race logistics',
     'contact.box.cta': 'Go to registration',
+
+    // Contact Form
+    'contact.form.title': 'Send us a message',
+    'contact.form.name': 'Name',
+    'contact.form.namePlaceholder': 'Your name',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'your@email.com',
+    'contact.form.message': 'Message',
+    'contact.form.messagePlaceholder': 'Tell us...',
+    'contact.form.success': 'Thank you! Your message has been sent.',
+    'contact.form.sending': 'Sending...',
+    'contact.form.submit': 'Send message',
+
+    // Hero Countdown
+    'hero.countdown.days': 'Days',
+    'hero.countdown.hours': 'Hours',
+    'hero.countdown.minutes': 'Minutes',
+    'hero.countdown.seconds': 'Seconds',
+
+    // Modalities Start Times
+    'modalities.trail.startTime': 'Before the race: 11:30 AM',
+    'modalities.andarines.startTime': 'Before the race: 11:35 AM',
+    'modalities.infantiles.startTime': 'Before the race: 10:30 - 11:00 AM',
+
+    // Workshop
+    'workshop.title': 'Pre-Race Technical Talk',
+    'workshop.subtitle': 'Running Technique, Warmup and Footwork',
+    'workshop.date': 'July 25th, 2026',
+    'workshop.time': '9:00 AM',
+    'workshop.location': 'Start Line',
+    'workshop.description': 'Learn essential trail running techniques directly from a specialized instructor. This pre-race talk covers proper warmup, mountain running footwork, and practical tips to optimize your performance. Perfect for participants of all modalities.',
+    'workshop.instructor': 'Trail running specialist instructor',
+    'workshop.cta': 'Register for the Talk',
+    'workshop.form.name': 'Your registration is important to us',
+    'workshop.label.date': 'Date',
+    'workshop.label.time': 'Time',
+    'workshop.label.location': 'Location',
+    'workshop.label.instructor': 'Instructor',
+    'workshop.noLimit': '✓ No registration limit',
+
+    // FAQ
+    'faq.title': 'Frequently Asked Questions',
+    'faq.contact': 'More questions? Contact us',
+    'faq.email': 'Mogrovejo10ktrail@gmail.com',
+    'faq.q4.question': 'What if I miss the time cut?',
+    'faq.q4.answer': 'We understand that trail running can be demanding. If you don\'t reach a control within the established time, our safety team will accompany you to the next point. Your safety is our priority.',
+    'faq.q5.question': 'Can I bring a dog or pet?',
+    'faq.q5.answer': 'In the Andarines modality yes, as long as your pet is under control. In the Trail it is not permitted for everyone\'s safety.',
+    'faq.q6.question': 'Is there an age limit?',
+    'faq.q6.answer': 'Minors under 18 must be accompanied by a responsible adult. There is no maximum age limit, we are inclusive!',
+    'faq.q7.question': 'What recommended gear should I bring for Andarines?',
+    'faq.q7.answer': 'Comfortable mountain footwear, layered clothing, sun protection, water and energy food. Weather at altitude can change quickly.',
+    'faq.q8.question': 'What are the record times?',
+    'faq.q8.answer': 'Best times are around 1 hour for Trail and 2:30 hours for Andarines. But remember, the goal is to enjoy and finish safely.',
+    'faq.q9.question': 'Are there prizes and trophies?',
+    'faq.q9.answer': 'Yes, we have prizes for top finishers in each category. All finishers receive a diploma and a special event memento.',
+
+    // Reglamento
+    'reglamento.title': 'Race Regulations',
+    'reglamento.schedule.title': 'Schedule and Bib Pickup',
+    'reglamento.schedule.bibPickup': 'Bib Pickup',
+    'reglamento.schedule.bibDate': 'Saturday, July 25, 2026',
+    'reglamento.schedule.bibTime': '9:00 to 11:15 AM',
+    'reglamento.schedule.bibLocation': 'Collected at the start line (estate near Mogrovejo village)',
+    'reglamento.schedule.startTimes': 'Start Times',
+    'reglamento.schedule.startTrail': '🏃 Trail 10km: 11:30 AM',
+    'reglamento.schedule.startAndarines': '🚶 Andarines 10km: 11:35 AM',
+    'reglamento.schedule.startKids': '👶 Kids races: between 10:30 and 11:00 AM (flexible schedule)',
+    'reglamento.prices': 'Prices and Registration',
+    'reglamento.prices.colModality': 'Modality',
+    'reglamento.prices.colBefore': 'Until Jun 25',
+    'reglamento.prices.colAfter': 'After Jun 25',
+    'reglamento.prices.includes': 'Includes: accident insurance, bib, runner\'s kit and access to aid stations.',
+    'reglamento.prices.register': 'Registration: www.gedsports.com/race/mogrovejo-trail-2026',
+    'reglamento.prices.modal10k': '10K Trail',
+    'reglamento.prices.andarines10k': '10K Walkers',
+    'reglamento.prices.early': '€15',
+    'reglamento.prices.late': '€20',
+    'reglamento.important.title': 'Important Information',
+    'reglamento.important.bib': '✓ Mandatory bib: Must be worn visibly at all times',
+    'reglamento.important.clothing': '✓ Mandatory clothing: Running without shirt or pants prohibited',
+    'reglamento.important.animals': '✓ In the hike (Andarines): Animals allowed (leashed)',
+    'reglamento.important.noAnimals': '✓ In the Trail: Animal participation prohibited',
+    'reglamento.important.insurance': '✓ Insurance: Included for all participants',
+    'reglamento.important.minors': '✓ Minors: Can participate with responsible adult',
+    'reglamento.supplies.title': 'Aid Stations',
+    'reglamento.supplies.trail': 'Trail 10km',
+    'reglamento.supplies.at5km': '~5km: Liquid station',
+    'reglamento.supplies.atFinish': 'Finish: Solids and liquids',
+    'reglamento.supplies.andarines': 'Andarines Hike',
+    'reglamento.supplies.andarinesText': 'One aid station at start/finish of the race',
+    'reglamento.supplies.tip': '💡 We recommend bringing a reusable container to avoid plastic waste',
+    'reglamento.refund.title': 'Refund Policy',
+    'reglamento.refund.noRefund': 'Registrations are final and no refund will be issued if you cannot participate.',
+    'reglamento.refund.exceptions': 'Exceptions: Refund will be considered in case of race cancellation due to:',
+    'reglamento.refund.noPermit': 'Lack of required permits',
+    'reglamento.refund.authority': 'Prohibitions by competent authorities',
+    'reglamento.refund.traffic': 'Traffic restrictions',
+    'reglamento.cta': 'Register on GedSports',
+    'reglamento.readyToRace': 'Ready to race? Complete your registration on GedSports',
+
+    // Supply Points
+    'modalities.supply.start': 'Start',
+    'modalities.supply.startLabel': 'Start',
+    'modalities.supply.liquids': 'Liquids',
+    'modalities.supply.at4km': '4km',
+    'modalities.supply.solidsLiquids': 'Solids & Liquids',
+    'modalities.supply.finish': 'Finish',
+
+    // Gallery
+    'gallery.title': 'Gallery Memories of MogrovejoTrail 2025',
+
+    // Team
+    'team.role.raceDirector': 'Race Director',
+    'team.role.supplyCoordinator': 'Supply Coordinator',
+    'team.role.securityManager': 'Safety Manager',
+    'team.role.volunteersCoordinator': 'Volunteers Coordinator',
+    'team.role.technicalDirector': 'Technical Director',
+    'team.role.medicalManager': 'Medical Manager',
+    'team.volunteers.title': 'Volunteers',
+    'team.volunteers.text': 'Thanks to over 50 volunteers who make each edition of Mogrovejo Trail possible.',
+
+    // Video Section
+    'videoSection.title': 'Mogrovejo Trail 2025',
   },
   fr: {
     // Navigation
@@ -424,6 +672,17 @@ const translations = {
     'modalities.supplies': 'Ravitaillement',
     'modalities.max': 'Altitude Max',
     'modalities.min': 'Altitude Min',
+
+    // Modalities Section Short Info
+    'modalities.trail.shortTitle': '10K Trail',
+    'modalities.trail.shortDesc': 'Pour coureurs',
+    'modalities.andarines.shortTitle': '10K Randonneurs',
+    'modalities.andarines.shortDesc': 'Pour randonneurs',
+    'modalities.infantiles.shortTitle': 'Courses Enfants',
+    'modalities.infantiles.shortDesc': 'Pour enfants (3-16 ans)',
+    'modalities.routeCard.distance': 'Distance',
+    'modalities.routeCard.elevation': 'Dénivelé',
+    'modalities.routeCard.wikiloc': 'Voir le parcours sur Wikiloc →',
 
     // Information
     'info.title': 'Le Parcours',
@@ -493,24 +752,12 @@ const translations = {
     'acceso.train': 'En Train',
     'acceso.capacity': 'Capacité',
 
-    // Regulation / Reglamento
-    'reglamento.title': 'Règlement',
-    'reglamento.gear': 'Équipement Obligatoire',
-    'reglamento.prices': 'Prix et Inscription',
-    'reglamento.cutoffs': 'Barrières Horaires',
-    'reglamento.cta': 'S\'inscrire sur GedSports',
-
     // Supply / Avituallamiento
     'avit.title': 'Ravitaillement',
     'avit.water': 'Eau',
     'avit.food': 'Aliments',
     'avit.medical': 'Médical',
     'avit.dropbag': 'Drop Bag',
-
-    // FAQ
-    'faq.title': 'Questions Fréquemment Posées',
-    'faq.contact': 'Plus de questions? Écrivez-nous',
-    'faq.email': 'Mogrovejo10ktrail@gmail.com',
 
     // Volunteers / Voluntarios
     'volunteers.title': 'Nos Bénévoles',
@@ -559,6 +806,130 @@ const translations = {
     'contact.box.topicsLabel': 'Sujets fréquents',
     'contact.box.topics': 'Inscription, presse, sponsoring, bénévolat et logistique de course',
     'contact.box.cta': 'Aller à l\'inscription',
+
+    // Contact Form
+    'contact.form.title': 'Envoyez-nous un message',
+    'contact.form.name': 'Nom',
+    'contact.form.namePlaceholder': 'Votre prénom',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'votre@email.com',
+    'contact.form.message': 'Message',
+    'contact.form.messagePlaceholder': 'Dites-nous...',
+    'contact.form.success': 'Merci ! Votre message a bien été envoyé.',
+    'contact.form.sending': 'Envoi...',
+    'contact.form.submit': 'Envoyer le message',
+
+    // Hero Countdown
+    'hero.countdown.days': 'Jours',
+    'hero.countdown.hours': 'Heures',
+    'hero.countdown.minutes': 'Minutes',
+    'hero.countdown.seconds': 'Secondes',
+
+    // Modalities Start Times
+    'modalities.trail.startTime': 'Avant la course : 11h30',
+    'modalities.andarines.startTime': 'Avant la course : 11h35',
+    'modalities.infantiles.startTime': 'Avant la course : 10h30 - 11h00',
+
+    // Workshop
+    'workshop.title': 'Conférence Technique Préalable',
+    'workshop.subtitle': 'Technique de Course, Échauffement et Foulée',
+    'workshop.date': '25 juillet 2026',
+    'workshop.time': '09h00',
+    'workshop.location': 'Ligne d\'Arrivée',
+    'workshop.description': 'Apprenez les techniques essentielles du trail running directement auprès d\'un instructeur spécialisé. Cette conférence pré-course couvre l\'échauffement approprié, la technique de foulée en montagne et des conseils pratiques pour optimiser votre performance. Parfait pour les participants de toutes les modalités.',
+    'workshop.instructor': 'Instructeur spécialisé en trail running',
+    'workshop.cta': 'S\'inscrire à la Conférence',
+    'workshop.form.name': 'Votre inscription est importante pour nous',
+    'workshop.label.date': 'Date',
+    'workshop.label.time': 'Heure',
+    'workshop.label.location': 'Lieu',
+    'workshop.label.instructor': 'Instructeur',
+    'workshop.noLimit': '✓ Sans limite d\'inscription',
+
+    // FAQ
+    'faq.title': 'Questions Fréquemment Posées',
+    'faq.contact': 'Plus de questions ? Contactez-nous',
+    'faq.email': 'Mogrovejo10ktrail@gmail.com',
+    'faq.q4.question': 'Que se passe-t-il si je rate la barrière horaire ?',
+    'faq.q4.answer': 'Nous comprenons que le trail peut être exigeant. Si vous n\'atteignez pas un contrôle dans le temps établi, notre équipe de sécurité vous accompagnera au point suivant. Votre sécurité est notre priorité.',
+    'faq.q5.question': 'Puis-je amener un chien ou un animal ?',
+    'faq.q5.answer': 'Dans la modalité Andarines oui, tant que votre animal est sous contrôle. En Trail ce n\'est pas autorisé pour la sécurité de tous.',
+    'faq.q6.question': 'Y a-t-il une limite d\'âge ?',
+    'faq.q6.answer': 'Les mineurs de moins de 18 ans doivent être accompagnés d\'un adulte responsable. Il n\'y a pas de limite d\'âge maximum, nous sommes inclusifs !',
+    'faq.q7.question': 'Quel équipement recommandé dois-je apporter pour les Andarines ?',
+    'faq.q7.answer': 'Chaussures de montagne confortables, vêtements en couches, protection solaire, eau et nourriture énergétique. La météo en altitude peut changer rapidement.',
+    'faq.q8.question': 'Quels sont les temps records ?',
+    'faq.q8.answer': 'Les meilleurs temps sont autour d\'1 heure pour Trail et 2:30 heures pour Andarines. Mais n\'oubliez pas, l\'objectif est de profiter et de terminer en toute sécurité.',
+    'faq.q9.question': 'Y a-t-il des prix et des trophées ?',
+    'faq.q9.answer': 'Oui, nous avons des prix pour les premiers classés dans chaque catégorie. Tous les finishers reçoivent un diplôme et un souvenir spécial de l\'événement.',
+
+    // Reglamento
+    'reglamento.title': 'Règlement',
+    'reglamento.schedule.title': 'Horaires et Retrait des Dossards',
+    'reglamento.schedule.bibPickup': 'Retrait des Dossards',
+    'reglamento.schedule.bibDate': 'Samedi 25 juillet 2026',
+    'reglamento.schedule.bibTime': 'De 9h00 à 11h15',
+    'reglamento.schedule.bibLocation': 'Retiré à la ligne de départ (domaine près du village de Mogrovejo)',
+    'reglamento.schedule.startTimes': 'Horaires de Départ',
+    'reglamento.schedule.startTrail': '🏃 Trail 10km: 11h30',
+    'reglamento.schedule.startAndarines': '🚶 Andarines 10km: 11h35',
+    'reglamento.schedule.startKids': '👶 Courses enfants: entre 10h30 et 11h00 (horaire flexible)',
+    'reglamento.prices': 'Tarifs et Inscription',
+    'reglamento.prices.colModality': 'Modalité',
+    'reglamento.prices.colBefore': 'Jusqu\'au 25 juin',
+    'reglamento.prices.colAfter': 'Après le 25 juin',
+    'reglamento.prices.includes': 'Inclut: assurance accidents, dossard, kit coureur et accès aux ravitaillements.',
+    'reglamento.prices.register': 'Inscription: www.gedsports.com/race/mogrovejo-trail-2026',
+    'reglamento.prices.modal10k': '10K Trail',
+    'reglamento.prices.andarines10k': '10K Randonneurs',
+    'reglamento.prices.early': '15€',
+    'reglamento.prices.late': '20€',
+    'reglamento.important.title': 'Informations Importantes',
+    'reglamento.important.bib': '✓ Dossard obligatoire: Doit être porté visiblement à tout moment',
+    'reglamento.important.clothing': '✓ Tenue obligatoire: Interdiction de courir sans t-shirt ni pantalon',
+    'reglamento.important.animals': '✓ Dans la marche (Andarines): Animaux autorisés (en laisse)',
+    'reglamento.important.noAnimals': '✓ En Trail: Participation avec animaux interdite',
+    'reglamento.important.insurance': '✓ Assurance: Incluse pour tous les participants',
+    'reglamento.important.minors': '✓ Mineurs: Peuvent participer avec un adulte responsable',
+    'reglamento.supplies.title': 'Ravitaillements',
+    'reglamento.supplies.trail': 'Trail 10km',
+    'reglamento.supplies.at5km': '~5km: Point de liquides',
+    'reglamento.supplies.atFinish': 'Arrivée: Solides et liquides',
+    'reglamento.supplies.andarines': 'Marche Andarines',
+    'reglamento.supplies.andarinesText': 'Un point de ravitaillement au départ/arrivée de la course',
+    'reglamento.supplies.tip': '💡 Nous recommandons d\'apporter un récipient réutilisable pour éviter les déchets plastiques',
+    'reglamento.refund.title': 'Politique de Remboursement',
+    'reglamento.refund.noRefund': 'Les inscriptions sont définitives et aucun remboursement ne sera accordé en cas d\'impossibilité de participer.',
+    'reglamento.refund.exceptions': 'Exceptions: Le remboursement sera envisagé en cas d\'annulation de la course en raison de:',
+    'reglamento.refund.noPermit': 'Manque de permis nécessaires',
+    'reglamento.refund.authority': 'Interdictions par les autorités compétentes',
+    'reglamento.refund.traffic': 'Restrictions de circulation',
+    'reglamento.cta': 'S\'inscrire sur GedSports',
+    'reglamento.readyToRace': 'Prêt à courir ? Complétez votre inscription sur GedSports',
+
+    // Supply Points
+    'modalities.supply.start': 'Départ',
+    'modalities.supply.startLabel': 'Départ',
+    'modalities.supply.liquids': 'Liquides',
+    'modalities.supply.at4km': '4km',
+    'modalities.supply.solidsLiquids': 'Solides & Liquides',
+    'modalities.supply.finish': 'Arrivée',
+
+    // Gallery
+    'gallery.title': 'Galerie Souvenirs de MogrovejoTrail 2025',
+
+    // Team
+    'team.role.raceDirector': 'Directeur de Course',
+    'team.role.supplyCoordinator': 'Coordinatrice Ravitaillement',
+    'team.role.securityManager': 'Responsable Sécurité',
+    'team.role.volunteersCoordinator': 'Coordinatrice Bénévoles',
+    'team.role.technicalDirector': 'Directeur Technique',
+    'team.role.medicalManager': 'Responsable Médical',
+    'team.volunteers.title': 'Bénévoles',
+    'team.volunteers.text': 'Merci à plus de 50 bénévoles qui rendent possible chaque édition du Mogrovejo Trail.',
+
+    // Video Section
+    'videoSection.title': 'Mogrovejo Trail 2025',
   },
 };
 
