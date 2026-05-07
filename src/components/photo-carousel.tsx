@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -69,22 +68,16 @@ export function PhotoCarousel() {
   return (
     <section className="relative w-full h-screen bg-black overflow-hidden">
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.img
           key={currentIndex}
+          src={currentPhoto.url}
+          alt={currentPhoto.alt}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={currentPhoto.url}
-            alt={currentPhoto.alt}
-            fill
-            className="object-cover"
-            priority
-          />
-        </motion.div>
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </AnimatePresence>
 
       {/* Overlay oscuro */}
