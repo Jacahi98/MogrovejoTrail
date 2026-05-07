@@ -80,7 +80,7 @@ export function Hero() {
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2C4A6F] via-[#1a2f4a] to-[#0f1820] py-20">
       {/* Video de fondo */}
       <video
-        src="/video/DJI_20240520125121_0011_D.MOV"
+        src="/video/Fondo.mov"
         autoPlay
         muted
         loop
