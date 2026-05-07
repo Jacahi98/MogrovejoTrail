@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, User } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
 
 export function ContactForm() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -41,13 +43,13 @@ export function ContactForm() {
       viewport={{ once: true }}
     >
       <h3 className="font-roboto-condensed text-2xl font-bold text-[var(--text-primary)] mb-6">
-        Envíanos un mensaje
+        {t('contact.form.title')}
       </h3>
 
       <div className="space-y-4 mb-6">
         {/* Name */}
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">Nombre</label>
+          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.name')}</label>
           <div className="relative">
             <User className="absolute left-3 top-3 w-5 h-5 text-[var(--text-secondary)]" />
             <input
@@ -57,14 +59,14 @@ export function ContactForm() {
               onChange={handleChange}
               required
               className="w-full pl-10 pr-4 py-2.5 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
-              placeholder="Tu nombre"
+              placeholder={t('contact.form.namePlaceholder')}
             />
           </div>
         </motion.div>
 
         {/* Email */}
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.05 }}>
-          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">Email</label>
+          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.email')}</label>
           <div className="relative">
             <Mail className="absolute left-3 top-3 w-5 h-5 text-[var(--text-secondary)]" />
             <input
@@ -74,14 +76,14 @@ export function ContactForm() {
               onChange={handleChange}
               required
               className="w-full pl-10 pr-4 py-2.5 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
-              placeholder="tu@email.com"
+              placeholder={t('contact.form.emailPlaceholder')}
             />
           </div>
         </motion.div>
 
         {/* Message */}
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">Mensaje</label>
+          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.message')}</label>
           <div className="relative">
             <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-[var(--text-secondary)]" />
             <textarea
@@ -91,7 +93,7 @@ export function ContactForm() {
               required
               rows={5}
               className="w-full pl-10 pr-4 py-2.5 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent-primary)] transition-colors resize-none"
-              placeholder="Cuéntanos..."
+              placeholder={t('contact.form.messagePlaceholder')}
             />
           </div>
         </motion.div>
@@ -103,7 +105,7 @@ export function ContactForm() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-4 p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-700 text-sm"
         >
-          ¡Gracias! Tu mensaje ha sido enviado correctamente.
+          {t('contact.form.success')}
         </motion.div>
       )}
 
@@ -114,7 +116,7 @@ export function ContactForm() {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        {loading ? 'Enviando...' : 'Enviar mensaje'}
+        {loading ? t('contact.form.sending') : t('contact.form.submit')}
       </motion.button>
     </motion.form>
   );

@@ -12,9 +12,9 @@ export function ModalitiesSection() {
   const { t } = useLanguage();
 
   const modalities = [
-    { id: 1, title: '10K Trail', description: 'Para corredores', modalityId: 'trail' },
-    { id: 2, title: '10K Andarines', description: 'Para senderistas', modalityId: 'andarines' },
-    { id: 3, title: 'Carreras Infantiles', description: 'Para niños (3-16 años)', modalityId: 'infantiles' },
+    { id: 1, title: t('modalities.trail.shortTitle'), description: t('modalities.trail.shortDesc'), modalityId: 'trail' },
+    { id: 2, title: t('modalities.andarines.shortTitle'), description: t('modalities.andarines.shortDesc'), modalityId: 'andarines' },
+    { id: 3, title: t('modalities.infantiles.shortTitle'), description: t('modalities.infantiles.shortDesc'), modalityId: 'infantiles' },
   ];
 
   const itemVariants = {
@@ -60,7 +60,7 @@ export function ModalitiesSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
             <div className="flex flex-col items-center sm:items-start">
               <p className="text-[var(--text-secondary)] text-sm uppercase tracking-wide mb-2">
-                Distancia
+                {t('modalities.routeCard.distance')}
               </p>
               <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
                 9 km
@@ -68,7 +68,7 @@ export function ModalitiesSection() {
             </div>
             <div className="flex flex-col items-center sm:items-start">
               <p className="text-[var(--text-secondary)] text-sm uppercase tracking-wide mb-2">
-                Desnivel
+                {t('modalities.routeCard.elevation')}
               </p>
               <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
                 +800m
@@ -81,7 +81,7 @@ export function ModalitiesSection() {
                 rel="noopener noreferrer"
                 className="px-5 py-2 bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold rounded transition-colors text-sm"
               >
-                Ver ruta en Wikiloc →
+                {t('modalities.routeCard.wikiloc')}
               </a>
             </div>
           </div>

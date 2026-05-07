@@ -18,24 +18,24 @@ export function RegulationSection() {
   const regulationPanels: RegulationPanel[] = [
     {
       id: 0,
-      title: 'Horarios y Recogida de Dorsales',
+      title: t('reglamento.schedule.title'),
       content: (
         <div className="space-y-4">
           <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
-            <h4 className="font-bold text-[var(--text-primary)] mb-3">Recogida de Dorsales</h4>
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">{t('reglamento.schedule.bibPickup')}</h4>
             <p className="text-[var(--text-secondary)] text-sm mb-3">
-              <strong>Sábado 25 de julio de 2026</strong> de <strong>09:00 a 11:15 h.</strong>
+              <strong>{t('reglamento.schedule.bibDate')}</strong> de <strong>{t('reglamento.schedule.bibTime')}</strong>
             </p>
             <p className="text-[var(--text-secondary)] text-sm">
-              Se retiran en el arco de salida (finca junto al pueblo de Mogrovejo)
+              {t('reglamento.schedule.bibLocation')}
             </p>
           </div>
           <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
-            <h4 className="font-bold text-[var(--text-primary)] mb-3">Horarios de Salida</h4>
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">{t('reglamento.schedule.startTimes')}</h4>
             <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-              <li>🏃 <strong>Trail 10km:</strong> 11:30 h.</li>
-              <li>🚶 <strong>Andarines 10km:</strong> 11:35 h.</li>
-              <li>👶 <strong>Carreras infantiles:</strong> entre 10:30 y 11:00 h. (horario flexible)</li>
+              <li>{t('reglamento.schedule.startTrail')}</li>
+              <li>{t('reglamento.schedule.startAndarines')}</li>
+              <li>{t('reglamento.schedule.startKids')}</li>
             </ul>
           </div>
         </div>
@@ -49,88 +49,88 @@ export function RegulationSection() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-[var(--border-color)]">
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Modalidad</th>
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Hasta 25 jun</th>
-                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">Después 25 jun</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">{t('reglamento.prices.colModality')}</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">{t('reglamento.prices.colBefore')}</th>
+                <th className="text-left py-2 font-semibold text-[var(--text-primary)]">{t('reglamento.prices.colAfter')}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="py-3">10K Trail</td>
-                <td className="py-3">15€</td>
-                <td className="py-3">20€</td>
+                <td className="py-3">{t('reglamento.prices.modal10k')}</td>
+                <td className="py-3">{t('reglamento.prices.early')}</td>
+                <td className="py-3">{t('reglamento.prices.late')}</td>
               </tr>
               <tr>
-                <td className="py-3">10K Andarines</td>
-                <td className="py-3">15€</td>
-                <td className="py-3">20€</td>
+                <td className="py-3">{t('reglamento.prices.andarines10k')}</td>
+                <td className="py-3">{t('reglamento.prices.early')}</td>
+                <td className="py-3">{t('reglamento.prices.late')}</td>
               </tr>
             </tbody>
           </table>
           <p className="text-[var(--text-secondary)] text-sm mt-4">
-            <strong>Incluye:</strong> seguro de accidentes, dorsal, bolsa del corredor y acceso a avituallamiento.
+            <strong>{t('reglamento.prices.includes')}</strong>
           </p>
           <p className="text-[var(--text-secondary)] text-sm">
-            Inscripción: <strong>www.gedsports.com/race/mogrovejo-trail-2026</strong>
+            {t('reglamento.prices.register')}
           </p>
         </div>
       ),
     },
     {
       id: 2,
-      title: 'Información Importante',
+      title: t('reglamento.important.title'),
       content: (
         <div className="space-y-4">
           <div className="bg-[var(--bg-primary)] p-3 rounded border border-[var(--border-color)] text-sm text-[var(--text-secondary)]">
-            <p className="mb-2"><strong>✓ Dorsal obligatorio:</strong> Debe llevarse visible en todo momento</p>
-            <p className="mb-2"><strong>✓ Ropa obligatoria:</strong> Prohibido correr sin camiseta ni pantalón</p>
-            <p className="mb-2"><strong>✓ En la marcha (Andarines):</strong> Se permite participar con animales (atados)</p>
-            <p className="mb-2"><strong>✓ En el Trail:</strong> Prohibida la participación con animales</p>
-            <p className="mb-2"><strong>✓ Seguro:</strong> Incluido en la inscripción para todos los participantes</p>
-            <p><strong>✓ Menores:</strong> Pueden participar acompañados por un adulto responsable</p>
+            <p className="mb-2">{t('reglamento.important.bib')}</p>
+            <p className="mb-2">{t('reglamento.important.clothing')}</p>
+            <p className="mb-2">{t('reglamento.important.animals')}</p>
+            <p className="mb-2">{t('reglamento.important.noAnimals')}</p>
+            <p className="mb-2">{t('reglamento.important.insurance')}</p>
+            <p>{t('reglamento.important.minors')}</p>
           </div>
         </div>
       ),
     },
     {
       id: 3,
-      title: 'Avituallamientos',
+      title: t('reglamento.supplies.title'),
       content: (
         <div className="space-y-4">
           <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
-            <h4 className="font-bold text-[var(--text-primary)] mb-3">Trail 10km</h4>
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">{t('reglamento.supplies.trail')}</h4>
             <ul className="space-y-1 text-sm text-[var(--text-secondary)]">
-              <li>• <strong>~5km:</strong> Punto de líquidos</li>
-              <li>• <strong>Meta:</strong> Sólidos y líquidos</li>
+              <li>• <strong>{t('reglamento.supplies.at5km')}</strong></li>
+              <li>• <strong>{t('reglamento.supplies.atFinish')}</strong></li>
             </ul>
           </div>
           <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
-            <h4 className="font-bold text-[var(--text-primary)] mb-3">Marcha Andarines</h4>
+            <h4 className="font-bold text-[var(--text-primary)] mb-3">{t('reglamento.supplies.andarines')}</h4>
             <p className="text-sm text-[var(--text-secondary)]">
-              Un punto de avituallamiento al inicio/fin de la prueba
+              {t('reglamento.supplies.andarinesText')}
             </p>
           </div>
           <p className="text-xs text-[var(--text-secondary)] italic">
-            💡 Se recomienda llevar un recipiente reutilizable para evitar residuos plásticos
+            {t('reglamento.supplies.tip')}
           </p>
         </div>
       ),
     },
     {
       id: 4,
-      title: 'Política de Devoluciones',
+      title: t('reglamento.refund.title'),
       content: (
         <div className="space-y-4 text-sm text-[var(--text-secondary)]">
           <p className="leading-relaxed">
-            <strong>Las inscripciones son definitivas</strong> y no se realizará devolución en caso de no poder participar.
+            <strong>{t('reglamento.refund.noRefund')}</strong>
           </p>
           <p className="leading-relaxed">
-            <strong>Excepciones:</strong> Se considerará devolución en caso de suspensión de la prueba por:
+            <strong>{t('reglamento.refund.exceptions')}</strong>
           </p>
           <ul className="space-y-1 list-disc list-inside">
-            <li>Falta de permisos necesarios</li>
-            <li>Prohibiciones de autoridades competentes</li>
-            <li>Restricciones de tráfico</li>
+            <li>{t('reglamento.refund.noPermit')}</li>
+            <li>{t('reglamento.refund.authority')}</li>
+            <li>{t('reglamento.refund.traffic')}</li>
           </ul>
         </div>
       ),
@@ -205,7 +205,7 @@ export function RegulationSection() {
           viewport={{ once: true }}
         >
           <p className="text-[var(--text-secondary)] mb-6">
-            ¿Listo para correr? Completa tu inscripción en GedSports
+            {t('reglamento.readyToRace')}
           </p>
           <a
             href="https://www.gedsports.com/race/mogrovejo-trail-2026"

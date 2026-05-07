@@ -78,19 +78,16 @@ export function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2C4A6F] via-[#1a2f4a] to-[#0f1820] py-20">
-      {/* Vídeo de fondo */}
+      {/* Video de fondo */}
       <video
+        src="/video/DJI_20240520125121_0011_D.MOV"
         autoPlay
         muted
         loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
-      >
-        <source src="/media/MOGROVEJO TRAIL '25 4K v2.mov" type="video/quicktime" />
-        <source src="/media/MOGROVEJO TRAIL '25 4K v2.mov" type="video/mp4" />
-      </video>
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-      {/* Overlay para oscurecer el vídeo */}
+      {/* Overlay para oscurecer el fondo */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#2C4A6F]/80 via-[#1a2f4a]/80 to-[#0f1820]/80"></div>
 
       {/* Contenido */}
@@ -138,10 +135,10 @@ export function Hero() {
         <motion.div variants={itemVariants}>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
             {[
-              { label: 'Días', value: countdown.days },
-              { label: 'Horas', value: countdown.hours },
-              { label: 'Minutos', value: countdown.minutes },
-              { label: 'Segundos', value: countdown.seconds },
+              { label: t('hero.countdown.days'), value: countdown.days },
+              { label: t('hero.countdown.hours'), value: countdown.hours },
+              { label: t('hero.countdown.minutes'), value: countdown.minutes },
+              { label: t('hero.countdown.seconds'), value: countdown.seconds },
             ].map((item) => (
               <motion.div
                 key={item.label}

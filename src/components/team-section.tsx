@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/language-context';
 interface TeamMember {
   id: number;
   name: string;
-  role: string;
+  role: 'team.role.raceDirector' | 'team.role.supplyCoordinator' | 'team.role.securityManager' | 'team.role.volunteersCoordinator' | 'team.role.technicalDirector' | 'team.role.medicalManager';
   initials: string;
   color: string;
 }
@@ -15,42 +15,42 @@ const teamMembers: TeamMember[] = [
   {
     id: 1,
     name: 'Javier Morales',
-    role: 'Director de Carrera',
+    role: 'team.role.raceDirector',
     initials: 'JM',
     color: 'bg-blue-500',
   },
   {
     id: 2,
     name: 'María González',
-    role: 'Coordinadora Avituallamiento',
+    role: 'team.role.supplyCoordinator',
     initials: 'MG',
     color: 'bg-purple-500',
   },
   {
     id: 3,
     name: 'Carlos Ruiz',
-    role: 'Responsable Seguridad',
+    role: 'team.role.securityManager',
     initials: 'CR',
     color: 'bg-red-500',
   },
   {
     id: 4,
     name: 'Ana Pérez',
-    role: 'Coordinadora Voluntarios',
+    role: 'team.role.volunteersCoordinator',
     initials: 'AP',
     color: 'bg-green-500',
   },
   {
     id: 5,
     name: 'Roberto López',
-    role: 'Director Técnico',
+    role: 'team.role.technicalDirector',
     initials: 'RL',
     color: 'bg-amber-500',
   },
   {
     id: 6,
     name: 'Teresa Sánchez',
-    role: 'Responsable Médico',
+    role: 'team.role.medicalManager',
     initials: 'TS',
     color: 'bg-pink-500',
   },
@@ -120,7 +120,7 @@ export function TeamSection() {
 
               {/* Rol */}
               <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">
-                {member.role}
+                {t(member.role)}
               </p>
 
               {/* Separador visual */}
@@ -137,11 +137,10 @@ export function TeamSection() {
           viewport={{ once: true }}
         >
           <h3 className="font-roboto-condensed text-2xl font-bold text-[var(--text-primary)] mb-3">
-            Voluntarios
+            {t('team.volunteers.title')}
           </h3>
           <p className="text-[var(--text-secondary)] leading-relaxed">
-            Gracias a más de 50 voluntarios que dedican su tiempo para hacer posible Mogrovejo Trail. Sin su esfuerzo
-            y entusiasmo, esta carrera no sería posible. ¡Sois la base del evento!
+            {t('team.volunteers.text')}
           </p>
         </motion.div>
       </div>

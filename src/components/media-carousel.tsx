@@ -1,0 +1,138 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+interface MediaItem {
+  id: number;
+  url: string;
+  type: 'video';
+}
+
+const mediaItems: MediaItem[] = [
+  { id: 1, url: 'Fondo.MOV', type: 'video' },
+];
+
+const BLOB_BASE_URL = '/video/';
+
+export function MediaCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % mediaItems.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [autoPlay]);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + mediaItems.length) % mediaItems.length);
+    setAutoPlay(false);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % mediaItems.length);
+    setAutoPlay(false);
+  };
+
+  const currentMedia = mediaItems[currentIndex];
+
+  return (
+    <section className="relative w-full h-screen bg-black overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          className="absolute inset-0"
+        >
+          <video
+            src={`${BLOB_BASE_URL}${currentMedia.url}`}
+            autoPlay
+            muted
+            loop={false}
+            className="w-full h-full object-cover"
+            onEnded={() => goToNext()}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+      {/* Controles */}
+      <div className="absolute inset-0 flex items-center justify-between p-6 z-10">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={goToPrevious}
+          className="bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={goToNext}
+          className="bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </motion.button>
+      </div>
+
+      {/* Indicadores */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        {mediaItems.map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => {
+              setCurrentIndex(index);
+              setAutoPlay(false);
+            }}
+            className={`w-2 h-2 rounded-full transition-all ${
+              index === currentIndex
+                ? 'bg-white w-8'
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+            whileHover={{ scale: 1.2 }}
+          />
+        ))}
+      </div>
+
+      {/* Info */}
+      <div className="absolute bottom-20 left-8 z-10 text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <p className="text-sm font-semibold text-white/80 mb-2">
+            {currentIndex + 1} / {mediaItems.length}
+          </p>
+          <h3 className="text-3xl font-bold font-roboto-condensed">
+            Mogrovejo Trail 2025
+          </h3>
+          <p className="text-white/70 mt-2">Momentos destacados de la carrera</p>
+        </motion.div>
+      </div>
+
+      {/* Auto-play toggle */}
+      <motion.button
+        onClick={() => setAutoPlay(!autoPlay)}
+        className="absolute top-8 right-8 z-10 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm transition-all flex items-center gap-2"
+        whileHover={{ scale: 1.05 }}
+      >
+        <div className={`w-2 h-2 rounded-full ${autoPlay ? 'bg-green-400' : 'bg-red-400'}`} />
+        {autoPlay ? 'Auto' : 'Manual'}
+      </motion.button>
+    </section>
+  );
+}

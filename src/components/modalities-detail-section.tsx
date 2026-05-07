@@ -32,6 +32,7 @@ interface Modality {
   id: string;
   titleKey: string;
   descriptionKey: string;
+  startTimeKey: string;
   route: RouteData;
   supplies: SupplyPoint[];
 }
@@ -41,6 +42,7 @@ const modalities: Modality[] = [
     id: 'trail',
     titleKey: 'modalities.trail.title',
     descriptionKey: 'modalities.trail.description',
+    startTimeKey: 'modalities.trail.startTime',
     route: {
       distance: '10K',
       totalDistance: 8.77,
@@ -108,6 +110,7 @@ const modalities: Modality[] = [
     id: 'andarines',
     titleKey: 'modalities.andarines.title',
     descriptionKey: 'modalities.andarines.description',
+    startTimeKey: 'modalities.andarines.startTime',
     route: {
       distance: '10K',
       totalDistance: 8.77,
@@ -175,6 +178,7 @@ const modalities: Modality[] = [
     id: 'infantiles',
     titleKey: 'modalities.infantiles.title',
     descriptionKey: 'modalities.infantiles.description',
+    startTimeKey: 'modalities.infantiles.startTime',
     route: {
       distance: 'Variable',
       totalDistance: 0,
@@ -259,6 +263,23 @@ export function ModilitiesDetailSection({ initialModality }: ModilitiesDetailSec
                       <p className="text-[var(--text-secondary)]">
                         {t(modality.descriptionKey)}
                       </p>
+
+                      {/* Hora de salida */}
+                      <motion.div
+                        className="flex items-center gap-3 p-4 bg-[var(--bg-primary)] border-l-4 border-[var(--accent-primary)] rounded-r-lg"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <div className="text-2xl">🚀</div>
+                        <div>
+                          <p className="text-xs font-semibold text-[var(--accent-primary)] uppercase tracking-wide">
+                            Horario de Salida
+                          </p>
+                          <p className="text-lg font-bold text-[var(--text-primary)]">
+                            {t(modality.startTimeKey)}
+                          </p>
+                        </div>
+                      </motion.div>
 
                       {/* Perfil de la carrera - solo si hay datos */}
                       {modality.route.elevationProfile.length > 0 && (

@@ -14,78 +14,28 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  {
-    id: 1,
-    src: 'https://images.unsplash.com/photo-1552674605-5defe6aa44bb?w=600&h=600&fit=crop',
-    alt: 'Trail runner en montaña',
-    category: 'carrera',
-  },
-  {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=600&fit=crop',
-    alt: 'Picos de Europa paisaje',
-    category: 'paisaje',
-  },
-  {
-    id: 3,
-    src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=600&fit=crop',
-    alt: 'Participantes en carrera',
-    category: 'participantes',
-  },
-  {
-    id: 4,
-    src: 'https://images.unsplash.com/photo-1606941614221-2667e55a3d81?w=600&h=600&fit=crop',
-    alt: 'Equipo voluntarios',
-    category: 'equipo',
-  },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=600&h=600&fit=crop',
-    alt: 'Montaña con nieve',
-    category: 'paisaje',
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1601422407692-d81b3417c5eb?w=600&h=600&fit=crop',
-    alt: 'Corredor en competencia',
-    category: 'carrera',
-  },
-  {
-    id: 7,
-    src: 'https://images.unsplash.com/photo-1625432898548-e8c5822f7ce6?w=600&h=600&fit=crop',
-    alt: 'Voluntario ayudando',
-    category: 'equipo',
-  },
-  {
-    id: 8,
-    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=600&fit=crop',
-    alt: 'Vista panorámica montaña',
-    category: 'paisaje',
-  },
-  {
-    id: 9,
-    src: 'https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=600&h=600&fit=crop',
-    alt: 'Grupo de participantes',
-    category: 'participantes',
-  },
-  {
-    id: 10,
-    src: 'https://images.unsplash.com/photo-1449066990857-887d1054e545?w=600&h=600&fit=crop',
-    alt: 'Sendero en bosque',
-    category: 'paisaje',
-  },
-  {
-    id: 11,
-    src: 'https://images.unsplash.com/photo-1552674605-5defe6aa44bb?w=600&h=600&fit=crop',
-    alt: 'Competidor finalizando',
-    category: 'carrera',
-  },
-  {
-    id: 12,
-    src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=600&fit=crop',
-    alt: 'Premiación ganadores',
-    category: 'equipo',
-  },
+  { id: 1, src: '/img/IMG_7659.jpg', alt: 'Mogrovejo Trail 1', category: 'carrera' },
+  { id: 2, src: '/img/IMG_7699.jpg', alt: 'Mogrovejo Trail 2', category: 'carrera' },
+  { id: 3, src: '/img/IMG_7701.jpg', alt: 'Mogrovejo Trail 3', category: 'participantes' },
+  { id: 4, src: '/img/IMG_7702.jpg', alt: 'Mogrovejo Trail 4', category: 'paisaje' },
+  { id: 5, src: '/img/IMG_7706.jpg', alt: 'Mogrovejo Trail 5', category: 'carrera' },
+  { id: 6, src: '/img/IMG_7722.jpg', alt: 'Mogrovejo Trail 6', category: 'paisaje' },
+  { id: 7, src: '/img/IMG_7730.jpg', alt: 'Mogrovejo Trail 7', category: 'participantes' },
+  { id: 8, src: '/img/IMG_7736.jpg', alt: 'Mogrovejo Trail 8', category: 'equipo' },
+  { id: 9, src: '/img/IMG_7761.jpg', alt: 'Mogrovejo Trail 9', category: 'carrera' },
+  { id: 10, src: '/img/IMG_7785.jpg', alt: 'Mogrovejo Trail 10', category: 'paisaje' },
+  { id: 11, src: '/img/IMG_7791.jpg', alt: 'Mogrovejo Trail 11', category: 'participantes' },
+  { id: 12, src: '/img/IMG_7807.jpg', alt: 'Mogrovejo Trail 12', category: 'equipo' },
+  { id: 13, src: '/img/IMG_7818.jpg', alt: 'Mogrovejo Trail 13', category: 'carrera' },
+  { id: 14, src: '/img/IMG_7819.jpg', alt: 'Mogrovejo Trail 14', category: 'paisaje' },
+  { id: 15, src: '/img/IMG_7829.jpg', alt: 'Mogrovejo Trail 15', category: 'participantes' },
+  { id: 16, src: '/img/IMG_7833.jpg', alt: 'Mogrovejo Trail 16', category: 'equipo' },
+  { id: 17, src: '/img/IMG_7852.jpg', alt: 'Mogrovejo Trail 17', category: 'carrera' },
+  { id: 18, src: '/img/IMG_7868.jpg', alt: 'Mogrovejo Trail 18', category: 'paisaje' },
+  { id: 19, src: '/img/IMG_7873.jpg', alt: 'Mogrovejo Trail 19', category: 'participantes' },
+  { id: 20, src: '/img/IMG_7882.jpg', alt: 'Mogrovejo Trail 20', category: 'equipo' },
+  { id: 21, src: '/img/IMG_7890.jpg', alt: 'Mogrovejo Trail 21', category: 'carrera' },
+  { id: 22, src: '/img/IMG_7897.jpg', alt: 'Mogrovejo Trail 22', category: 'paisaje' },
 ];
 
 export function GallerySection() {
@@ -176,11 +126,10 @@ export function GallerySection() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded transition-all font-semibold whitespace-nowrap ${
-                  selectedCategory === cat.id
-                    ? 'bg-[var(--accent-primary)] text-white'
-                    : 'bg-[var(--bg-secondary)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--text-primary)]'
-                }`}
+                className={selectedCategory === cat.id
+                  ? 'px-4 py-2 rounded transition-all font-semibold whitespace-nowrap bg-[var(--accent-primary)] text-white'
+                  : 'px-4 py-2 rounded transition-all font-semibold whitespace-nowrap bg-[var(--bg-secondary)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--text-primary)]'
+                }
               >
                 {cat.label}
               </button>

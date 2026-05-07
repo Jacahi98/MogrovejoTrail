@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
+import { useLanguage } from '@/contexts/language-context';
 
 export function VideoSection() {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +42,7 @@ export function VideoSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         >
-          Mogrovejo Trail 2025
+          {t('videoSection.title')}
         </motion.h2>
         <motion.div
           className="relative w-full aspect-video rounded-lg overflow-hidden"

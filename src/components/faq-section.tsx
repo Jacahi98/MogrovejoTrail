@@ -11,48 +11,42 @@ interface FAQItem {
   answer: string;
 }
 
-const faqData: FAQItem[] = [
-  {
-    id: 4,
-    question: '¿Qué pasa si no hago el corte de tiempo?',
-    answer:
-      'La organización se reserva el derecho a retirar de la prueba a los corredores y andarines que no cumplan con las expectativas de los tiempos en los controles de cronometraje, por razones de seguridad.',
-  },
-  {
-    id: 5,
-    question: '¿Puedo llevar perro o mascota?',
-    answer:
-      'En la modalidad de Andarines (marcha a pie), sí se pueden llevar animales atados, siempre que no molesten al resto de participantes. En el Trail de 10km está prohibida la participación con animales.',
-  },
-  {
-    id: 6,
-    question: '¿Hay límite de edad?',
-    answer:
-      'Debes ser mayor de 18 años para participar. Los menores de edad pueden participar en ambas modalidades (Trail y Andarines) siempre acompañados de un adulto responsable que firme una autorización previa.',
-  },
-  {
-    id: 7,
-    question: '¿Qué material recomendado debo llevar en Andarines?',
-    answer:
-      'Para la marcha de Andarines (9km) recomendamos: Agua: Lleva una botella reutilizable (recomendado en nuestro reglamento para evitar residuos plásticos). Comida: Energéticos como frutos secos, barras energéticas, frutas o sandwiches ligeros. Protección solar: Protector solar, gorro o gafas de sol. Ropa cómoda: Ropa transpirable y calzado de montaña cómodo. Mochila ligera: Para llevar tus pertenencias. Botiquín básico: Tiritas, analgésicos y vendas. Identificación: Lleva tu DNI o documento de identidad. El dorsal es obligatorio y debe estar visible en todo momento.',
-  },
-  {
-    id: 8,
-    question: '¿Cuáles son los tiempos récord del Mogrovejo Trail?',
-    answer:
-      'Los tiempos récord en la modalidad de 10K Trail son: Masculino: 0:34:48 y Femenino: 0:44:46. Si consigues batir estos tiempos, ¡podrías ganar un premio especial! Consulta con la organización para más detalles sobre los premios a tiempo récord.',
-  },
-  {
-    id: 9,
-    question: '¿Hay premios y trofeos?',
-    answer:
-      'En la modalidad de 10K Trail hay reconocimientos en las siguientes categorías: Categoría Absoluta (masculino y femenino): 1º, 2º y 3º puesto. Categoría Sub-21 (masculino y femenino): 1º, 2º y 3º puesto. Categoría Veteranos +45 años (masculino y femenino): 1º, 2º y 3º puesto. Además, hay un premio especial de 100€ patrocinado por Materiales de Construcción Zurro para quien bata el récord en 10K. En cambio, la marcha de Andarines no tiene reconocimientos por posiciones, ya que es una actividad lúdica enfocada en el disfrute y la convivencia, no en la competencia.',
-  },
-];
-
 export function FAQSection() {
   const { t } = useLanguage();
   const [openId, setOpenId] = useState<number | null>(0);
+
+  const faqData: FAQItem[] = [
+    {
+      id: 4,
+      question: t('faq.q4.question'),
+      answer: t('faq.q4.answer'),
+    },
+    {
+      id: 5,
+      question: t('faq.q5.question'),
+      answer: t('faq.q5.answer'),
+    },
+    {
+      id: 6,
+      question: t('faq.q6.question'),
+      answer: t('faq.q6.answer'),
+    },
+    {
+      id: 7,
+      question: t('faq.q7.question'),
+      answer: t('faq.q7.answer'),
+    },
+    {
+      id: 8,
+      question: t('faq.q8.question'),
+      answer: t('faq.q8.answer'),
+    },
+    {
+      id: 9,
+      question: t('faq.q9.question'),
+      answer: t('faq.q9.answer'),
+    },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -26,9 +26,9 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-roboto-condensed text-2xl font-bold tracking-wide text-[var(--text-primary)]"
+          className="font-roboto-condensed text-xl font-bold tracking-wide text-[var(--text-primary)] whitespace-nowrap"
         >
-          MOGROVEJO<span className="text-[var(--accent-primary)]">TRAIL</span>
+          MOGROVEJO<span className="text-[var(--accent-primary)]">TRAIL</span> 2026
         </Link>
 
         <nav className="hidden items-center gap-2 md:flex">
@@ -79,7 +79,7 @@ export function Header() {
             href="https://www.gedsports.com/race/mogrovejo-trail-2026"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[var(--accent-primary)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)]"
+            className="rounded-full bg-[var(--accent-primary)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)] whitespace-nowrap"
           >
             {t('hero.cta')}
           </a>
@@ -150,7 +150,7 @@ export function Header() {
                 href="https://www.gedsports.com/race/mogrovejo-trail-2026"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-lg bg-[var(--accent-primary)] px-4 py-3 text-center text-sm font-semibold text-white"
+                className="block rounded-lg bg-[var(--accent-primary)] px-4 py-3 text-center text-sm font-semibold text-white whitespace-nowrap"
               >
                 {t('hero.cta')}
               </a>
