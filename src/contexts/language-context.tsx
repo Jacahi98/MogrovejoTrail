@@ -222,20 +222,22 @@ const translations = {
     'modalities.infantiles.startTime': 'Antes de la carrera: 10:30 - 11:00 h.',
 
     // Workshop
-    'workshop.title': 'Charla Técnica Previa',
+    'workshop.title': 'Entrenamiento Previo',
     'workshop.subtitle': 'Técnica de Carrera, Calentamiento y Pisada',
     'workshop.date': '25 de julio de 2026',
-    'workshop.time': '09:00 h.',
+    'workshop.time': '10:40 h.',
     'workshop.location': 'Arco de Salida',
     'workshop.description': 'Aprende técnicas esenciales de trail running directamente de un instructor especializado. Esta charla previa a la carrera cubre calentamiento adecuado, técnica de pisada en montaña y consejos prácticos para optimizar tu rendimiento. Perfecta para participantes de todas las modalidades.',
     'workshop.instructor': 'Instructor especializado en trail running',
-    'workshop.cta': 'Inscribirse a la Charla',
+    'workshop.cta': 'Inscribirse al Entreno',
     'workshop.form.name': 'Tu inscripción es importante para nosotros',
     'workshop.label.date': 'Fecha',
     'workshop.label.time': 'Hora',
     'workshop.label.location': 'Ubicación',
     'workshop.label.instructor': 'Instructor',
+    'workshop.label.free': 'Precio',
     'workshop.noLimit': '✓ Sin límite de inscripciones',
+    'workshop.free': 'Gratis',
 
     // FAQ with extended Q&A
     'faq.q4.question': '¿Qué pasa si no hago el corte de tiempo?',
@@ -525,20 +527,22 @@ const translations = {
     'modalities.infantiles.startTime': 'Before the race: 10:30 - 11:00 AM',
 
     // Workshop
-    'workshop.title': 'Pre-Race Technical Talk',
+    'workshop.title': 'Pre-Race Training',
     'workshop.subtitle': 'Running Technique, Warmup and Footwork',
     'workshop.date': 'July 25th, 2026',
-    'workshop.time': '9:00 AM',
+    'workshop.time': '10:40 AM',
     'workshop.location': 'Start Line',
     'workshop.description': 'Learn essential trail running techniques directly from a specialized instructor. This pre-race talk covers proper warmup, mountain running footwork, and practical tips to optimize your performance. Perfect for participants of all modalities.',
     'workshop.instructor': 'Trail running specialist instructor',
-    'workshop.cta': 'Register for the Talk',
+    'workshop.cta': 'Register for Training',
     'workshop.form.name': 'Your registration is important to us',
     'workshop.label.date': 'Date',
     'workshop.label.time': 'Time',
     'workshop.label.location': 'Location',
     'workshop.label.instructor': 'Instructor',
+    'workshop.label.free': 'Price',
     'workshop.noLimit': '✓ No registration limit',
+    'workshop.free': 'Free',
 
     // FAQ
     'faq.title': 'Frequently Asked Questions',
@@ -831,20 +835,22 @@ const translations = {
     'modalities.infantiles.startTime': 'Avant la course : 10h30 - 11h00',
 
     // Workshop
-    'workshop.title': 'Conférence Technique Préalable',
+    'workshop.title': 'Entraînement Préalable',
     'workshop.subtitle': 'Technique de Course, Échauffement et Foulée',
     'workshop.date': '25 juillet 2026',
-    'workshop.time': '09h00',
+    'workshop.time': '10h40',
     'workshop.location': 'Ligne d\'Arrivée',
     'workshop.description': 'Apprenez les techniques essentielles du trail running directement auprès d\'un instructeur spécialisé. Cette conférence pré-course couvre l\'échauffement approprié, la technique de foulée en montagne et des conseils pratiques pour optimiser votre performance. Parfait pour les participants de toutes les modalités.',
     'workshop.instructor': 'Instructeur spécialisé en trail running',
-    'workshop.cta': 'S\'inscrire à la Conférence',
+    'workshop.cta': 'S\'inscrire à l\'Entraînement',
     'workshop.form.name': 'Votre inscription est importante pour nous',
     'workshop.label.date': 'Date',
     'workshop.label.time': 'Heure',
     'workshop.label.location': 'Lieu',
     'workshop.label.instructor': 'Instructeur',
+    'workshop.label.free': 'Tarif',
     'workshop.noLimit': '✓ Sans limite d\'inscription',
+    'workshop.free': 'Gratuit',
 
     // FAQ
     'faq.title': 'Questions Fréquemment Posées',

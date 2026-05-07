@@ -74,7 +74,7 @@ export function WorkshopSection() {
               </motion.div>
 
               <motion.div
-                className="flex items-start gap-4 p-4 bg-[var(--bg-primary)] rounded-lg border border-[var(--border-color)] sm:col-span-2"
+                className="flex items-start gap-4 p-4 bg-[var(--bg-primary)] rounded-lg border border-[var(--border-color)]"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
@@ -85,6 +85,24 @@ export function WorkshopSection() {
                   </p>
                   <p className="text-[var(--text-primary)] font-semibold">
                     {t('workshop.location')}
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-start gap-4 p-4 bg-[linear-gradient(135deg,rgba(44,74,111,0.1),rgba(44,74,111,0.05))] rounded-lg border border-[var(--accent-primary)] border-opacity-30"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="w-5 h-5 text-[var(--accent-primary)] flex-shrink-0 mt-1 flex items-center justify-center text-sm font-bold">
+                  ✓
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-[var(--accent-primary)] uppercase tracking-wide">
+                    {t('workshop.label.free')}
+                  </p>
+                  <p className="text-[var(--text-primary)] font-semibold">
+                    {t('workshop.free')}
                   </p>
                 </div>
               </motion.div>
