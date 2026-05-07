@@ -36,7 +36,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className="h-full scroll-smooth antialiased"
     >
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         <ThemeProvider>
           <LanguageProvider>
             <Header />
