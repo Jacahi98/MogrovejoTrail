@@ -268,8 +268,8 @@ export function Footer() {
         </div>
 
         {/* Separador y copyright */}
-        <div className="border-t border-gray-700 pt-8 flex justify-between items-center text-gray-300 text-sm px-4">
-          <p className="text-xs text-gray-400">v0.1.7</p>
+        <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-gray-300 text-sm px-4 text-center sm:text-left">
+          <p className="text-xs text-gray-400">v0.2.0</p>
           <p>{t('footer.copyright')}</p>
         </div>
       </div>

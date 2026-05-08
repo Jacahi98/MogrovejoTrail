@@ -186,6 +186,7 @@ export function GallerySection() {
               {/* Botón cerrar */}
               <button
                 onClick={() => setSelectedImage(null)}
+                aria-label="Cerrar imagen"
                 className="absolute top-4 right-4 z-20 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all"
               >
                 <X className="w-6 h-6 text-white" />
@@ -213,6 +214,7 @@ export function GallerySection() {
               {filteredImages.findIndex((img) => img.id === selectedImage.id) > 0 && (
                 <button
                   onClick={handlePrevImage}
+                  aria-label="Imagen anterior"
                   className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 rounded-full p-3 transition-all z-10"
                 >
                   <ChevronLeft className="w-6 h-6 text-white" />
@@ -223,6 +225,7 @@ export function GallerySection() {
               {filteredImages.findIndex((img) => img.id === selectedImage.id) < filteredImages.length - 1 && (
                 <button
                   onClick={handleNextImage}
+                  aria-label="Imagen siguiente"
                   className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 rounded-full p-3 transition-all z-10"
                 >
                   <ChevronRight className="w-6 h-6 text-white" />

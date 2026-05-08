@@ -27,8 +27,8 @@ export function ContactForm() {
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setSubmitted(false), 5000);
-    } catch (error) {
-      console.error('Error sending form:', error);
+    } catch {
+      // mailto errors are non-fatal
     } finally {
       setLoading(false);
     }
@@ -49,10 +49,11 @@ export function ContactForm() {
       <div className="space-y-4 mb-6">
         {/* Name */}
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.name')}</label>
+          <label htmlFor="name" className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.name')}</label>
           <div className="relative">
             <User className="absolute left-3 top-3 w-5 h-5 text-[var(--text-secondary)]" />
             <input
+              id="name"
               type="text"
               name="name"
               value={formData.name}
@@ -66,10 +67,11 @@ export function ContactForm() {
 
         {/* Email */}
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.05 }}>
-          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.email')}</label>
+          <label htmlFor="email" className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.email')}</label>
           <div className="relative">
             <Mail className="absolute left-3 top-3 w-5 h-5 text-[var(--text-secondary)]" />
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -83,10 +85,11 @@ export function ContactForm() {
 
         {/* Message */}
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-          <label className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.message')}</label>
+          <label htmlFor="message" className="block text-sm font-semibold text-[var(--text-primary)] mb-2">{t('contact.form.message')}</label>
           <div className="relative">
             <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-[var(--text-secondary)]" />
             <textarea
+              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}

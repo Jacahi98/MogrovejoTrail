@@ -68,6 +68,7 @@ export function Header() {
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value as 'es' | 'en' | 'fr')}
+            aria-label="Seleccionar idioma"
             className="rounded-lg border border-[var(--border-color)] bg-[var(--bg-secondary)] px-3 py-2 text-sm text-[var(--text-primary)]"
           >
             <option value="es">ES</option>

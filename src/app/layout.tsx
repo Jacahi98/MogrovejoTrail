@@ -15,13 +15,22 @@ export const spaceGrotesk = Space_Grotesk({ weight: "700", subsets: ["latin"] })
 export const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MogrovejoTrail 2026 | Carrera de Trail Running",
-  description: "Únete a la carrera de trail más espectacular de las montañas de Mogrovejo. 25 de julio de 2026. Varias modalidades para todos los niveles.",
-  keywords: ["trail running", "carrera de montaña", "mogrovejo", "trail"],
+  metadataBase: new URL('https://mogrovejo-trail.vercel.app'),
+  title: "Mogrovejo Trail 2026 | Carrera de Trail Running",
+  description: "Únete a la carrera de trail más espectacular de las montañas de Mogrovejo. 25 de julio de 2026. 10K Trail, Andarines y Carreras Infantiles.",
+  keywords: ["trail running", "carrera de montaña", "mogrovejo", "trail", "cantabria", "picos de europa"],
   openGraph: {
-    title: "MogrovejoTrail 2026",
-    description: "La carrera de trail más emocionante del verano",
+    title: "Mogrovejo Trail 2026",
+    description: "25 de julio de 2026 · Mogrovejo, Cantabria · 10K Trail, Andarines y Carreras Infantiles",
     type: "website",
+    url: "https://mogrovejo-trail.vercel.app",
+    images: [{ url: "/logos/nuevo logo mogrovejo trail CIRCULO 3.png", width: 800, height: 800, alt: "Mogrovejo Trail 2026" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mogrovejo Trail 2026",
+    description: "25 de julio de 2026 · Mogrovejo, Cantabria · 10K Trail, Andarines y Carreras Infantiles",
+    images: ["/logos/nuevo logo mogrovejo trail CIRCULO 3.png"],
   },
 };
 

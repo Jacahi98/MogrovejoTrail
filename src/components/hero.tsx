@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
 import { Calendar, MapPin, Mountain, ArrowRight } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface CountdownTime {
   days: number;
@@ -18,12 +18,25 @@ interface CountdownTime {
  */
 export function Hero() {
   const { t } = useLanguage();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [countdown, setCountdown] = useState<CountdownTime>({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
+
+  // Reanuda el vídeo si el navegador móvil lo pausa al salir del viewport
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && video.paused) video.play().catch(() => {}); },
+      { threshold: 0.1 }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   // Calcula la cuenta atrás en tiempo real
   useEffect(() => {
@@ -80,10 +93,12 @@ export function Hero() {
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#2C4A6F] via-[#1a2f4a] to-[#0f1820] py-20">
       {/* Video de fondo */}
       <video
+        ref={videoRef}
         src="/video/Fondo.mp4"
         autoPlay
         muted
         loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
       />
 

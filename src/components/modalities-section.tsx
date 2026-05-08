@@ -12,9 +12,9 @@ export function ModalitiesSection() {
   const { t } = useLanguage();
 
   const modalities = [
-    { id: 1, title: t('modalities.trail.shortTitle'), description: t('modalities.trail.shortDesc'), modalityId: 'trail' },
-    { id: 2, title: t('modalities.andarines.shortTitle'), description: t('modalities.andarines.shortDesc'), modalityId: 'andarines' },
-    { id: 3, title: t('modalities.infantiles.shortTitle'), description: t('modalities.infantiles.shortDesc'), modalityId: 'infantiles' },
+    { id: 1, title: t('modalities.trail.shortTitle'), description: t('modalities.trail.shortDesc'), startTime: t('modalities.trail.startTime'), modalityId: 'trail' },
+    { id: 2, title: t('modalities.andarines.shortTitle'), description: t('modalities.andarines.shortDesc'), startTime: t('modalities.andarines.startTime'), modalityId: 'andarines' },
+    { id: 3, title: t('modalities.infantiles.shortTitle'), description: t('modalities.infantiles.shortDesc'), startTime: t('modalities.infantiles.startTime'), modalityId: 'infantiles' },
   ];
 
   const itemVariants = {
@@ -105,8 +105,11 @@ export function ModalitiesSection() {
                 <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)] mb-2 hover:text-[var(--accent-primary)] transition-colors">
                   {modality.title}
                 </p>
-                <p className="text-[var(--text-secondary)]">
+                <p className="text-[var(--text-secondary)] mb-3">
                   {modality.description}
+                </p>
+                <p className="text-sm font-semibold text-[var(--accent-primary)]">
+                  {modality.startTime}
                 </p>
               </motion.div>
             </Link>

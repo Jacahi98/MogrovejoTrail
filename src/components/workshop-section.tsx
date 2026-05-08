@@ -8,8 +8,7 @@ export function WorkshopSection() {
   const { t } = useLanguage();
 
   const handleRegister = () => {
-    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc_placeholder/viewform';
-    window.open(googleFormUrl, '_blank');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSe-2m5LMOD4dR4XEvWtHlx2x4ZO-D1xiJFBJMyifkpJJTcIHg/viewform', '_blank');
   };
 
   return (

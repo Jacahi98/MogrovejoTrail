@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Droplets, UtensilsCrossed, MapPin } from 'lucide-react';
+import { Droplets, UtensilsCrossed } from 'lucide-react';
 
 interface SupplyPoint {
   name: string;
@@ -20,64 +20,36 @@ interface SupplyTimelineProps {
 
 export function SupplyTimeline({ supplies }: SupplyTimelineProps) {
   return (
-    <motion.div
-      className="relative"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      {/* Línea conectora horizontal */}
-      <motion.div
-        className="absolute top-6 left-0 right-0 h-1 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] origin-left"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        transition={{ duration: 1.5, ease: 'easeInOut' }}
-        viewport={{ once: true }}
-      />
+    <div className="flex flex-col gap-2">
+      {supplies.map((supply, index) => (
+        <motion.div
+          key={index}
+          className="flex items-center gap-3 px-4 py-2.5 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg"
+          initial={{ opacity: 0, x: -12 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: index * 0.08 }}
+        >
+          {/* Badge km */}
+          <span className="shrink-0 px-2 py-0.5 rounded-full bg-[var(--accent-primary)] text-white text-xs font-bold">
+            {supply.label}
+          </span>
 
-      {/* Puntos de avituallamiento */}
-      <div className={`relative flex ${supplies.length === 1 ? 'justify-center' : 'justify-between'}`}>
-        {supplies.map((supply, index) => (
-          <motion.div
-            key={index}
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
-            {/* Círculo del punto */}
-            <div className="w-12 h-12 rounded-full bg-[var(--accent-primary)] border-4 border-[var(--bg-primary)] flex items-center justify-center text-white font-bold text-xs z-10 text-center px-1">
-              {supply.label}
-            </div>
+          {/* Nombre */}
+          <span className="font-roboto-condensed font-bold text-[var(--text-primary)] text-sm">
+            {supply.name}
+          </span>
 
-            {/* Info del punto */}
-            <div className="mt-6 text-center max-w-xs">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                {supply.services.water && (
-                  <Droplets className="w-4 h-4 text-blue-500" />
-                )}
-                {supply.services.food && (
-                  <UtensilsCrossed className="w-4 h-4 text-orange-500" />
-                )}
-                <h4 className="font-roboto-condensed font-bold text-[var(--text-primary)] text-sm">
-                  {supply.name}
-                </h4>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs text-[var(--text-secondary)]">
-                {supply.location && (
-                  <>
-                    <MapPin className="w-3 h-3" />
-                    <span>{supply.location}</span>
-                    <span>•</span>
-                  </>
-                )}
-                <span>↑ {supply.elevation}m</span>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
+          {/* Altitud */}
+          <span className="text-xs text-[var(--text-secondary)] ml-auto shrink-0">
+            ↑ {supply.elevation} m
+          </span>
+
+          {/* Servicios */}
+          {supply.services.water && <Droplets className="w-3.5 h-3.5 text-blue-500 shrink-0" />}
+          {supply.services.food && <UtensilsCrossed className="w-3.5 h-3.5 text-orange-500 shrink-0" />}
+        </motion.div>
+      ))}
+    </div>
   );
 }

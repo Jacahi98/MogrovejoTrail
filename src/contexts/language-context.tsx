@@ -217,9 +217,9 @@ const translations = {
     'hero.countdown.seconds': 'Segundos',
 
     // Modalities Start Times
-    'modalities.trail.startTime': 'Antes de la carrera: 11:30 h.',
-    'modalities.andarines.startTime': 'Antes de la carrera: 11:35 h.',
-    'modalities.infantiles.startTime': 'Antes de la carrera: 10:30 - 11:00 h.',
+    'modalities.trail.startTime': 'Salida: 11:30 h.',
+    'modalities.andarines.startTime': 'Salida: 11:35 h.',
+    'modalities.infantiles.startTime': 'Salida: 10:30 - 11:00 h.',
 
     // Workshop
     'workshop.title': 'Entrenamiento Previo',
@@ -522,9 +522,9 @@ const translations = {
     'hero.countdown.seconds': 'Seconds',
 
     // Modalities Start Times
-    'modalities.trail.startTime': 'Before the race: 11:30 AM',
-    'modalities.andarines.startTime': 'Before the race: 11:35 AM',
-    'modalities.infantiles.startTime': 'Before the race: 10:30 - 11:00 AM',
+    'modalities.trail.startTime': 'Start: 11:30 AM',
+    'modalities.andarines.startTime': 'Start: 11:35 AM',
+    'modalities.infantiles.startTime': 'Start: 10:30 - 11:00 AM',
 
     // Workshop
     'workshop.title': 'Pre-Race Training',
@@ -830,9 +830,9 @@ const translations = {
     'hero.countdown.seconds': 'Secondes',
 
     // Modalities Start Times
-    'modalities.trail.startTime': 'Avant la course : 11h30',
-    'modalities.andarines.startTime': 'Avant la course : 11h35',
-    'modalities.infantiles.startTime': 'Avant la course : 10h30 - 11h00',
+    'modalities.trail.startTime': 'Départ : 11h30',
+    'modalities.andarines.startTime': 'Départ : 11h35',
+    'modalities.infantiles.startTime': 'Départ : 10h30 - 11h00',
 
     // Workshop
     'workshop.title': 'Entraînement Préalable',
