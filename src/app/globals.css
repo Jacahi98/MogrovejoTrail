@@ -26,6 +26,8 @@
   --bg-accent-orange-dark: #3a2a1a;
   --text-primary-dark: #ffffff;
   --text-secondary-dark: #b0b0b0;
+  --accent-primary-dark: #6BA3D4;
+  --accent-secondary-dark: #8EBEE8;
   --border-color-dark: #3a3a3a;
 
   /* DEFAULTS */
@@ -47,6 +49,8 @@ html.dark {
   --bg-accent-orange: var(--bg-accent-orange-dark);
   --text-primary: var(--text-primary-dark);
   --text-secondary: var(--text-secondary-dark);
+  --accent-primary: var(--accent-primary-dark);
+  --accent-secondary: var(--accent-secondary-dark);
   --border-color: var(--border-color-dark);
 }
 
