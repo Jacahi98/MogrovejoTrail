@@ -11,23 +11,23 @@ interface PhotoItem {
 }
 
 const photoItems: PhotoItem[] = [
-  { id: 1, url: '/img/IMG_7722.jpg', alt: 'Mogrovejo Trail 1' },
-  { id: 2, url: '/img/IMG_7730.jpg', alt: 'Mogrovejo Trail 2' },
-  { id: 3, url: '/img/IMG_7736.jpg', alt: 'Mogrovejo Trail 3' },
-  { id: 4, url: '/img/IMG_7761.jpg', alt: 'Mogrovejo Trail 4' },
-  { id: 5, url: '/img/IMG_7785.jpg', alt: 'Mogrovejo Trail 5' },
-  { id: 6, url: '/img/IMG_7791.jpg', alt: 'Mogrovejo Trail 6' },
-  { id: 7, url: '/img/IMG_7807.jpg', alt: 'Mogrovejo Trail 7' },
-  { id: 8, url: '/img/IMG_7818.jpg', alt: 'Mogrovejo Trail 8' },
-  { id: 9, url: '/img/IMG_7819.jpg', alt: 'Mogrovejo Trail 9' },
-  { id: 10, url: '/img/IMG_7829.jpg', alt: 'Mogrovejo Trail 10' },
-  { id: 11, url: '/img/IMG_7833.jpg', alt: 'Mogrovejo Trail 11' },
-  { id: 12, url: '/img/IMG_7852.jpg', alt: 'Mogrovejo Trail 12' },
-  { id: 13, url: '/img/IMG_7868.jpg', alt: 'Mogrovejo Trail 13' },
-  { id: 14, url: '/img/IMG_7873.jpg', alt: 'Mogrovejo Trail 14' },
-  { id: 15, url: '/img/IMG_7882.jpg', alt: 'Mogrovejo Trail 15' },
-  { id: 16, url: '/img/IMG_7890.jpg', alt: 'Mogrovejo Trail 16' },
-  { id: 17, url: '/img/IMG_7897.jpg', alt: 'Mogrovejo Trail 17' },
+  { id: 1, url: '/img/IMG_7722.webp', alt: 'Mogrovejo Trail 1' },
+  { id: 2, url: '/img/IMG_7730.webp', alt: 'Mogrovejo Trail 2' },
+  { id: 3, url: '/img/IMG_7736.webp', alt: 'Mogrovejo Trail 3' },
+  { id: 4, url: '/img/IMG_7761.webp', alt: 'Mogrovejo Trail 4' },
+  { id: 5, url: '/img/IMG_7785.webp', alt: 'Mogrovejo Trail 5' },
+  { id: 6, url: '/img/IMG_7791.webp', alt: 'Mogrovejo Trail 6' },
+  { id: 7, url: '/img/IMG_7807.webp', alt: 'Mogrovejo Trail 7' },
+  { id: 8, url: '/img/IMG_7818.webp', alt: 'Mogrovejo Trail 8' },
+  { id: 9, url: '/img/IMG_7819.webp', alt: 'Mogrovejo Trail 9' },
+  { id: 10, url: '/img/IMG_7829.webp', alt: 'Mogrovejo Trail 10' },
+  { id: 11, url: '/img/IMG_7833.webp', alt: 'Mogrovejo Trail 11' },
+  { id: 12, url: '/img/IMG_7852.webp', alt: 'Mogrovejo Trail 12' },
+  { id: 13, url: '/img/IMG_7868.webp', alt: 'Mogrovejo Trail 13' },
+  { id: 14, url: '/img/IMG_7873.webp', alt: 'Mogrovejo Trail 14' },
+  { id: 15, url: '/img/IMG_7882.webp', alt: 'Mogrovejo Trail 15' },
+  { id: 16, url: '/img/IMG_7890.webp', alt: 'Mogrovejo Trail 16' },
+  { id: 17, url: '/img/IMG_7897.webp', alt: 'Mogrovejo Trail 17' },
 ];
 
 export function PhotoCarousel() {
@@ -84,6 +84,7 @@ export function PhotoCarousel() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={goToPrevious}
+          aria-label="Foto anterior"
           className="bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
@@ -93,6 +94,7 @@ export function PhotoCarousel() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={goToNext}
+          aria-label="Foto siguiente"
           className="bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
         >
           <ChevronRight className="w-6 h-6 text-white" />
@@ -108,6 +110,8 @@ export function PhotoCarousel() {
               setCurrentIndex(index);
               setAutoPlay(false);
             }}
+            aria-label={`Ir a foto ${index + 1}`}
+            aria-current={index === currentIndex ? 'true' : undefined}
             className={`w-2 h-2 rounded-full transition-all ${
               index === currentIndex
                 ? 'bg-white w-8'
@@ -138,6 +142,8 @@ export function PhotoCarousel() {
       {/* Auto-play toggle */}
       <motion.button
         onClick={() => setAutoPlay(!autoPlay)}
+        aria-label={autoPlay ? 'Pausar reproducción automática' : 'Activar reproducción automática'}
+        aria-pressed={autoPlay}
         className="absolute top-8 right-8 z-10 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm transition-all flex items-center gap-2"
         whileHover={{ scale: 1.05 }}
       >

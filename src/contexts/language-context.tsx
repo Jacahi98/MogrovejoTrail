@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from 'react';
 
 type Language = 'es' | 'en' | 'fr';
 
@@ -197,18 +197,6 @@ const translations = {
     'contact.box.topicsLabel': 'Temas habituales',
     'contact.box.topics': 'Inscripciones, prensa, patrocinio, voluntariado y logística de carrera',
     'contact.box.cta': 'Ir a inscripciones',
-
-    // Contact Form
-    'contact.form.title': 'Envíanos un mensaje',
-    'contact.form.name': 'Nombre',
-    'contact.form.namePlaceholder': 'Tu nombre',
-    'contact.form.email': 'Email',
-    'contact.form.emailPlaceholder': 'tu@email.com',
-    'contact.form.message': 'Mensaje',
-    'contact.form.messagePlaceholder': 'Cuéntanos...',
-    'contact.form.success': '¡Gracias! Tu mensaje ha sido enviado correctamente.',
-    'contact.form.sending': 'Enviando...',
-    'contact.form.submit': 'Enviar mensaje',
 
     // Hero Countdown
     'hero.countdown.days': 'Días',
@@ -503,17 +491,6 @@ const translations = {
     'contact.box.topics': 'Registration, press, sponsorship, volunteering, and race logistics',
     'contact.box.cta': 'Go to registration',
 
-    // Contact Form
-    'contact.form.title': 'Send us a message',
-    'contact.form.name': 'Name',
-    'contact.form.namePlaceholder': 'Your name',
-    'contact.form.email': 'Email',
-    'contact.form.emailPlaceholder': 'your@email.com',
-    'contact.form.message': 'Message',
-    'contact.form.messagePlaceholder': 'Tell us...',
-    'contact.form.success': 'Thank you! Your message has been sent.',
-    'contact.form.sending': 'Sending...',
-    'contact.form.submit': 'Send message',
 
     // Hero Countdown
     'hero.countdown.days': 'Days',
@@ -811,17 +788,6 @@ const translations = {
     'contact.box.topics': 'Inscription, presse, sponsoring, bénévolat et logistique de course',
     'contact.box.cta': 'Aller à l\'inscription',
 
-    // Contact Form
-    'contact.form.title': 'Envoyez-nous un message',
-    'contact.form.name': 'Nom',
-    'contact.form.namePlaceholder': 'Votre prénom',
-    'contact.form.email': 'Email',
-    'contact.form.emailPlaceholder': 'votre@email.com',
-    'contact.form.message': 'Message',
-    'contact.form.messagePlaceholder': 'Dites-nous...',
-    'contact.form.success': 'Merci ! Votre message a bien été envoyé.',
-    'contact.form.sending': 'Envoi...',
-    'contact.form.submit': 'Envoyer le message',
 
     // Hero Countdown
     'hero.countdown.days': 'Jours',
@@ -959,17 +925,22 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return () => window.cancelAnimationFrame(frame);
   }, []);
 
-  const setLanguage = (lang: Language) => {
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem('mgt-language', lang);
-  };
+  }, []);
 
-  const t = (key: string): string => {
+  const t = useCallback((key: string): string => {
     return translations[language][key as keyof typeof translations['es']] || key;
-  };
+  }, [language]);
+
+  const value = useMemo(
+    () => ({ language, setLanguage, t }),
+    [language, setLanguage, t]
+  );
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

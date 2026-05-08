@@ -86,6 +86,9 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav"
             className="md:hidden text-white hover:bg-white/10 p-2 rounded-lg transition-colors"
           >
             {isMenuOpen ? (
@@ -99,6 +102,7 @@ export function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.div
+            id="mobile-nav"
             className="md:hidden overflow-hidden bg-slate-900/50 border-t border-white/10"
             variants={menuVariants}
             initial="hidden"

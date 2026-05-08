@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Oswald, Righteous, Space_Grotesk, Roboto_Flex } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/theme-context";
 import { LanguageProvider } from "@/contexts/language-context";
 import { Header } from "@/components/header";
@@ -55,6 +57,8 @@ export default function RootLayout({
             <FloatingCTA />
           </LanguageProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
