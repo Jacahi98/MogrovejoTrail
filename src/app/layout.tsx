@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     description: "25 de julio de 2026 · Mogrovejo, Cantabria · 10K Trail, Andarines y Carreras Infantiles",
     type: "website",
     url: "https://mogrovejo-trail.vercel.app",
-    images: [{ url: "/logos/nuevo logo mogrovejo trail CIRCULO 3.png", width: 800, height: 800, alt: "Mogrovejo Trail 2026" }],
+    images: [{ url: "/logos/logoinicio.png", width: 800, height: 800, alt: "Mogrovejo Trail 2026" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mogrovejo Trail 2026",
     description: "25 de julio de 2026 · Mogrovejo, Cantabria · 10K Trail, Andarines y Carreras Infantiles",
-    images: ["/logos/nuevo logo mogrovejo trail CIRCULO 3.png"],
+    images: ["/logos/logoinicio.png"],
   },
 };
 

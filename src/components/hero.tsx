@@ -114,7 +114,7 @@ export function Hero() {
       >
         {/* Logo */}
         <motion.img
-          src="/logos/nuevo logo mogrovejo trail CIRCULO 3.png"
+          src="/logos/logoinicio.png"
           alt="Mogrovejo Trail Logo"
           className="w-full max-w-sm h-auto -mt-4 mb-4"
           variants={itemVariants}
