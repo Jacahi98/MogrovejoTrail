@@ -23,9 +23,12 @@ export function WorkshopSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-roboto-condensed text-4xl font-bold text-[var(--text-primary)] mb-6">
-            {t('workshop.title')}
-          </h2>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <img src="/logos/AbilityRun.png" alt="Ability Run" className="h-24 sm:h-32" />
+            <h2 className="font-roboto-condensed text-4xl font-bold text-[var(--text-primary)]">
+              {t('workshop.title')}
+            </h2>
+          </div>
         </motion.div>
 
         <motion.div

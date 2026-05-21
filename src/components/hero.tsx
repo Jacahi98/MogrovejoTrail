@@ -184,6 +184,23 @@ export function Hero() {
           {t('hero.cta')}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </motion.a>
+
+        {/* Logos del ayuntamiento y escudo */}
+        <motion.div
+          variants={itemVariants}
+          className="flex items-center justify-center gap-6 mt-8"
+        >
+          <img
+            src="/logos/AyuntamientodeCamaleño.png"
+            alt="Ayuntamiento de Camaleño"
+            className="h-14 sm:h-16 object-contain"
+          />
+          <img
+            src="/logos/Escudo_de_Camaleño_(Cantabria).png"
+            alt="Escudo de Camaleño"
+            className="h-14 sm:h-16 object-contain"
+          />
+        </motion.div>
       </motion.div>
 
       {/* Overlay degradado inferior */}
