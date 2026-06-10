@@ -185,10 +185,10 @@ export function Hero() {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </motion.a>
 
-        {/* Logos del ayuntamiento y escudo */}
+        {/* Logos de colaboradores */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-6 mt-8"
+          className="flex items-center justify-center gap-4 sm:gap-6 mt-8 flex-wrap"
         >
           <img
             src="/logos/AyuntamientodeCamaleño.png"
@@ -198,6 +198,21 @@ export function Hero() {
           <img
             src="/logos/Escudo_de_Camaleño_(Cantabria).png"
             alt="Escudo de Camaleño"
+            className="h-14 sm:h-16 object-contain"
+          />
+          <img
+            src="/logos/02_Caja Rural de Asturias_horizontal_color.png"
+            alt="Caja Rural de Asturias"
+            className="h-14 sm:h-16 object-contain"
+          />
+          <img
+            src="/logos/liebana2.jpg"
+            alt="Liébana"
+            className="h-14 sm:h-16 object-contain"
+          />
+          <img
+            src="/logos/logo-CL-FUNDACION-Horizontal.png"
+            alt="CL Fundación"
             className="h-14 sm:h-16 object-contain"
           />
         </motion.div>
