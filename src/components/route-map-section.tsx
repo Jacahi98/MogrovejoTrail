@@ -18,8 +18,8 @@ interface RouteData {
 
 const routeData: RouteData = {
   distance: '10K',
-  totalDistance: 8.77,
-  elevationGain: 410,
+  totalDistance: 10,
+  elevationGain: 400,
   maxAltitude: 956,
   minAltitude: 546,
   wikiloc: 'https://www.wikiloc.com/running-trails/mogrovejo-10k-trail-141347749?h=3p7yarw26p&wa=so&la=en',

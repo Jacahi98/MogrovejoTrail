@@ -63,7 +63,7 @@ export function ModalitiesSection() {
                 {t('modalities.routeCard.distance')}
               </p>
               <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
-                9 km
+                10 km
               </p>
             </div>
             <div className="flex flex-col items-center sm:items-start">
@@ -71,7 +71,7 @@ export function ModalitiesSection() {
                 {t('modalities.routeCard.elevation')}
               </p>
               <p className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
-                +800m
+                +400m
               </p>
             </div>
             <div className="flex justify-center sm:justify-end">

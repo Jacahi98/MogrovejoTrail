@@ -37,10 +37,10 @@ const supplyPoints: SupplyPoint[] = [
   },
   {
     id: 2,
-    km: 9,
+    km: 10,
     name: 'Sólidos y Líquidos',
     elevation: 546,
-    label: 'Meta · 9 km',
+    label: 'Meta · 10 km',
     services: { water: true, food: true, medical: false, dropbag: false },
   },
 ];
