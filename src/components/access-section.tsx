@@ -146,6 +146,12 @@ export function AccessSection() {
             {t('acceso.parking')}
           </h3>
 
+          <img
+            src="/img/PARKING.png"
+            alt={t('acceso.parking')}
+            className="w-full h-auto rounded-lg mb-6"
+          />
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex gap-4">
               <MapPin className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1" />
