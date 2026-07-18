@@ -130,12 +130,7 @@ const translations = {
     'videos.featured': 'Videos Destacados',
 
     // Access / Acceso
-    'acceso.title': 'Cómo Llegar',
     'acceso.parking': 'Aparcamiento',
-    'acceso.maps': 'Abrir en Google Maps',
-    'acceso.car': 'En Coche',
-    'acceso.bus': 'En Autobús',
-    'acceso.train': 'En Tren',
     'acceso.capacity': 'Capacidad',
 
     // Supply / Avituallamiento
@@ -207,7 +202,7 @@ const translations = {
     // Modalities Start Times
     'modalities.trail.startTime': 'Salida: 11:30 h.',
     'modalities.andarines.startTime': 'Salida: 11:35 h.',
-    'modalities.infantiles.startTime': 'Salida: 10:30 - 11:00 h.',
+    'modalities.infantiles.startTime': 'Salida: 10:30 - 11:20 h.',
 
     // Workshop
     'workshop.title': 'Entrenamiento Ability Run',
@@ -249,9 +244,13 @@ const translations = {
     'reglamento.schedule.bibTime': '09:00 a 11:15 h.',
     'reglamento.schedule.bibLocation': 'Se retiran en el arco de salida (finca junto al pueblo de Mogrovejo)',
     'reglamento.schedule.startTimes': 'Horarios de Salida',
+    'reglamento.schedule.market': '🎪 Mercadillo artesanal: 10:00 - 16:00 h.',
+    'reglamento.schedule.abilityTraining': '🏋️ Entrenamiento Ability: 10:40 - 11:20 h.',
     'reglamento.schedule.startTrail': '🏃 Trail 10km: 11:30 h.',
     'reglamento.schedule.startAndarines': '🚶 Andarines 10km: 11:35 h.',
-    'reglamento.schedule.startKids': '👶 Carreras infantiles: entre 10:30 y 11:00 h. (horario flexible)',
+    'reglamento.schedule.startKids': '👶 Carreras infantiles: entre 10:30 y 11:20 h. (horario flexible)',
+    'reglamento.schedule.awards': '🏆 Entrega de premios: 13:30 h.',
+    'reglamento.schedule.paella': '🥘 Gran paellada: 14:15 h.',
     'reglamento.prices': 'Precios e Inscripción',
     'reglamento.prices.colModality': 'Modalidad',
     'reglamento.prices.colBefore': 'Hasta 25 jun',
@@ -428,12 +427,7 @@ const translations = {
     'videos.featured': 'Featured Videos',
 
     // Access / Acceso
-    'acceso.title': 'How to Get There',
     'acceso.parking': 'Parking',
-    'acceso.maps': 'Open in Google Maps',
-    'acceso.car': 'By Car',
-    'acceso.bus': 'By Bus',
-    'acceso.train': 'By Train',
     'acceso.capacity': 'Capacity',
 
     // Supply / Avituallamiento
@@ -501,7 +495,7 @@ const translations = {
     // Modalities Start Times
     'modalities.trail.startTime': 'Start: 11:30 AM',
     'modalities.andarines.startTime': 'Start: 11:35 AM',
-    'modalities.infantiles.startTime': 'Start: 10:30 - 11:00 AM',
+    'modalities.infantiles.startTime': 'Start: 10:30 - 11:20 AM',
 
     // Workshop
     'workshop.title': 'Ability Run Training',
@@ -546,9 +540,13 @@ const translations = {
     'reglamento.schedule.bibTime': '9:00 to 11:15 AM',
     'reglamento.schedule.bibLocation': 'Collected at the start line (estate near Mogrovejo village)',
     'reglamento.schedule.startTimes': 'Start Times',
+    'reglamento.schedule.market': '🎪 Craft market: 10:00 - 16:00',
+    'reglamento.schedule.abilityTraining': '🏋️ Ability Training: 10:40 - 11:20 AM',
     'reglamento.schedule.startTrail': '🏃 Trail 10km: 11:30 AM',
     'reglamento.schedule.startAndarines': '🚶 Andarines 10km: 11:35 AM',
-    'reglamento.schedule.startKids': '👶 Kids races: between 10:30 and 11:00 AM (flexible schedule)',
+    'reglamento.schedule.startKids': '👶 Kids races: between 10:30 and 11:20 AM (flexible schedule)',
+    'reglamento.schedule.awards': '🏆 Awards ceremony: 1:30 PM',
+    'reglamento.schedule.paella': '🥘 Community paella: 2:15 PM',
     'reglamento.prices': 'Prices and Registration',
     'reglamento.prices.colModality': 'Modality',
     'reglamento.prices.colBefore': 'Until Jun 25',
@@ -727,10 +725,6 @@ const translations = {
     // Access / Acceso
     'acceso.title': 'Comment Venir',
     'acceso.parking': 'Stationnement',
-    'acceso.maps': 'Ouvrir dans Google Maps',
-    'acceso.car': 'En Voiture',
-    'acceso.bus': 'En Bus',
-    'acceso.train': 'En Train',
     'acceso.capacity': 'Capacité',
 
     // Supply / Avituallamiento
@@ -798,7 +792,7 @@ const translations = {
     // Modalities Start Times
     'modalities.trail.startTime': 'Départ : 11h30',
     'modalities.andarines.startTime': 'Départ : 11h35',
-    'modalities.infantiles.startTime': 'Départ : 10h30 - 11h00',
+    'modalities.infantiles.startTime': 'Départ : 10h30 - 11h20',
 
     // Workshop
     'workshop.title': 'Entraînement Ability Run',
@@ -843,9 +837,13 @@ const translations = {
     'reglamento.schedule.bibTime': 'De 9h00 à 11h15',
     'reglamento.schedule.bibLocation': 'Retiré à la ligne de départ (domaine près du village de Mogrovejo)',
     'reglamento.schedule.startTimes': 'Horaires de Départ',
+    'reglamento.schedule.market': '🎪 Marché artisanal: 10h00 - 16h00',
+    'reglamento.schedule.abilityTraining': '🏋️ Entraînement Ability: 10h40 - 11h20',
     'reglamento.schedule.startTrail': '🏃 Trail 10km: 11h30',
     'reglamento.schedule.startAndarines': '🚶 Andarines 10km: 11h35',
-    'reglamento.schedule.startKids': '👶 Courses enfants: entre 10h30 et 11h00 (horaire flexible)',
+    'reglamento.schedule.startKids': '👶 Courses enfants: entre 10h30 et 11h20 (horaire flexible)',
+    'reglamento.schedule.awards': '🏆 Remise des prix: 13h30',
+    'reglamento.schedule.paella': '🥘 Grande paella: 14h15',
     'reglamento.prices': 'Tarifs et Inscription',
     'reglamento.prices.colModality': 'Modalité',
     'reglamento.prices.colBefore': 'Jusqu\'au 25 juin',

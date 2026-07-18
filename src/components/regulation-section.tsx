@@ -33,9 +33,13 @@ export function RegulationSection() {
           <div className="bg-[var(--bg-primary)] p-4 rounded border border-[var(--border-color)]">
             <h4 className="font-bold text-[var(--text-primary)] mb-3">{t('reglamento.schedule.startTimes')}</h4>
             <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+              <li>{t('reglamento.schedule.market')}</li>
+              <li>{t('reglamento.schedule.startKids')}</li>
+              <li>{t('reglamento.schedule.abilityTraining')}</li>
               <li>{t('reglamento.schedule.startTrail')}</li>
               <li>{t('reglamento.schedule.startAndarines')}</li>
-              <li>{t('reglamento.schedule.startKids')}</li>
+              <li>{t('reglamento.schedule.awards')}</li>
+              <li>{t('reglamento.schedule.paella')}</li>
             </ul>
           </div>
         </div>
