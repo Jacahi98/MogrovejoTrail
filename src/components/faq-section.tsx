@@ -13,14 +13,9 @@ interface FAQItem {
 
 export function FAQSection() {
   const { t } = useLanguage();
-  const [openId, setOpenId] = useState<number | null>(0);
+  const [openId, setOpenId] = useState<number | null>(5);
 
   const faqData: FAQItem[] = [
-    {
-      id: 4,
-      question: t('faq.q4.question'),
-      answer: t('faq.q4.answer'),
-    },
     {
       id: 5,
       question: t('faq.q5.question'),
@@ -35,16 +30,6 @@ export function FAQSection() {
       id: 7,
       question: t('faq.q7.question'),
       answer: t('faq.q7.answer'),
-    },
-    {
-      id: 8,
-      question: t('faq.q8.question'),
-      answer: t('faq.q8.answer'),
-    },
-    {
-      id: 9,
-      question: t('faq.q9.question'),
-      answer: t('faq.q9.answer'),
     },
   ];
 

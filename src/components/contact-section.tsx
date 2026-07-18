@@ -106,15 +106,6 @@ export function ContactSection() {
           <div className="mt-8 space-y-4">
             <div className="rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] p-5">
               <p className="text-sm font-semibold uppercase tracking-wide text-[var(--text-secondary)]">
-                {t('contact.box.scheduleLabel')}
-              </p>
-              <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
-                {t('contact.box.schedule')}
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] p-5">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[var(--text-secondary)]">
                 {t('contact.box.topicsLabel')}
               </p>
               <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">

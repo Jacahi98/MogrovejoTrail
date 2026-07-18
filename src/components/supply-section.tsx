@@ -29,10 +29,10 @@ const supplyPoints: SupplyPoint[] = [
   },
   {
     id: 1,
-    km: 5,
+    km: 4,
     name: 'Líquidos',
     elevation: 850,
-    label: '5 km',
+    label: '4 km',
     services: { water: true, food: false, medical: false, dropbag: false },
   },
   {
