@@ -146,8 +146,7 @@ const translations = {
 
     // Volunteers / Voluntarios
     'volunteers.title': 'Nuestros Voluntarios',
-    'volunteers.count': '15 voluntarios',
-    'volunteers.text1': 'El Mogrovejo Trail es posible gracias a la dedicación y entrega de aproximadamente __COUNT__ que hacen posible este evento cada año.',
+    'volunteers.text1': 'El Mogrovejo Trail es posible gracias a la dedicación y entrega de nuestros voluntarios, que hacen posible este evento cada año.',
     'volunteers.text2': 'Desde la organización previa, pasando por la señalización del recorrido, los avituallamientos, la seguridad en los controles, hasta el montaje y desmontaje del evento, estos voluntarios son el corazón de la prueba. Les expresamos nuestro más profundo agradecimiento por su compromiso con la montaña, la comunidad de Mogrovejo y la promoción de eventos sostenibles en la región.',
     'volunteers.cta': 'Si quieres sumarte como voluntario en futuras ediciones, ¡contáctanos!',
 
@@ -294,16 +293,6 @@ const translations = {
     // Gallery
     'gallery.title': 'Galería Memorias de MogrovejoTrail 2025',
 
-    // Team
-    'team.role.raceDirector': 'Director de Carrera',
-    'team.role.supplyCoordinator': 'Coordinadora Avituallamiento',
-    'team.role.securityManager': 'Responsable Seguridad',
-    'team.role.volunteersCoordinator': 'Coordinadora Voluntarios',
-    'team.role.technicalDirector': 'Director Técnico',
-    'team.role.medicalManager': 'Responsable Médico',
-    'team.volunteers.title': 'Voluntarios',
-    'team.volunteers.text': 'Gracias a más de 50 voluntarios que hacen posible cada edición del Mogrovejo Trail.',
-
     // Video Section
     'videoSection.title': 'Mogrovejo Trail 2025',
   },
@@ -437,8 +426,7 @@ const translations = {
 
     // Volunteers / Voluntarios
     'volunteers.title': 'Our Volunteers',
-    'volunteers.count': '15 volunteers',
-    'volunteers.text1': 'Mogrovejo Trail is possible thanks to the dedication and commitment of approximately __COUNT__ who make this event possible every year.',
+    'volunteers.text1': 'Mogrovejo Trail is possible thanks to the dedication and commitment of our volunteers, who make this event possible every year.',
     'volunteers.text2': 'From prior organization, route marking, aid stations, safety at control points, to event setup and takedown, these volunteers are the heart of the race. We express our deepest gratitude for their commitment to the mountains, the Mogrovejo community, and the promotion of sustainable events in the region.',
     'volunteers.cta': 'If you want to join us as a volunteer in future editions, contact us!',
 
@@ -732,8 +720,7 @@ const translations = {
 
     // Volunteers / Voluntarios
     'volunteers.title': 'Nos Bénévoles',
-    'volunteers.count': '15 bénévoles',
-    'volunteers.text1': 'Le Mogrovejo Trail est possible grâce au dévouement et à l\'engagement d\'environ __COUNT__ qui rendent cet événement possible chaque année.',
+    'volunteers.text1': 'Le Mogrovejo Trail est possible grâce au dévouement et à l\'engagement de nos bénévoles, qui rendent cet événement possible chaque année.',
     'volunteers.text2': 'De l\'organisation préalable, en passant par le balisage du parcours, les ravitaillements, la sécurité aux postes de contrôle, jusqu\'à la mise en place et au démontage de l\'événement, ces bénévoles sont le cœur de la course. Nous leur exprimons notre plus profonde gratitude pour leur engagement envers la montagne, la communauté de Mogrovejo et la promotion d\'événements durables dans la région.',
     'volunteers.cta': 'Si tu veux nous rejoindre en tant que bénévole pour les éditions futures, contacte-nous!',
 

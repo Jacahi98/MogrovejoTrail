@@ -21,7 +21,7 @@ export function VolunteersSection() {
 
           <div className="mt-8 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg p-8">
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
-              {t('volunteers.text1').replace('__COUNT__', t('volunteers.count'))}
+              {t('volunteers.text1')}
             </p>
             <p className="text-[var(--text-secondary)] leading-relaxed">
               {t('volunteers.text2')}

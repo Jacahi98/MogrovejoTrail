@@ -13,7 +13,6 @@ interface RouteData {
   wikiloc: string;
   elevationProfile: Array<{ distance: number; altitude: number }>;
   location: string;
-  date: string;
 }
 
 const routeData: RouteData = {
@@ -24,7 +23,6 @@ const routeData: RouteData = {
   minAltitude: 546,
   wikiloc: 'https://www.wikiloc.com/running-trails/mogrovejo-10k-trail-141347749?h=3p7yarw26p&wa=so&la=en',
   location: 'Mogrovejo, Cantabria',
-  date: '30 de junio de 2024',
   elevationProfile: [
     { distance: 0.0, altitude: 643 },
     { distance: 0.3, altitude: 647 },
@@ -79,37 +77,15 @@ export function RouteMapSection() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-          {/* Calendario Mensual */}
-          <div className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-4 sm:p-6 border-3 border-[#2C4A6F]">
-            <h3 className="text-center font-roboto-condensed text-lg sm:text-xl font-bold text-[#2C4A6F] dark:text-[#2C4A6F] mb-4 sm:mb-5">AGOSTO 2026</h3>
-            <div className="grid grid-cols-7 gap-1 sm:gap-2">
-              {/* Encabezados de días */}
-              {['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((day, idx) => (
-                <div key={`header-${idx}`} className="text-center text-[10px] sm:text-xs font-bold text-[#2C4A6F] py-1 sm:py-2 uppercase">
-                  {day}
-                </div>
-              ))}
-              {/* Espacios vacíos para antes del 1 (jueves = 3) */}
-              {[...Array(3)].map((_, i) => (
-                <div key={`empty-${i}`} className="text-center py-1 sm:py-2"></div>
-              ))}
-              {/* Días del mes */}
-              {[...Array(31)].map((_, i) => {
-                const day = i + 1;
-                const isFirstDay = day === 1;
-                return (
-                  <div
-                    key={day}
-                    className={`text-center py-2 sm:py-3 px-1 rounded font-bold transition-all ${
-                      isFirstDay
-                        ? 'bg-[#2C4A6F] text-white text-sm sm:text-base shadow-lg'
-                        : 'text-[#2C4A6F] dark:text-[#2C4A6F] text-xs sm:text-sm hover:bg-[#e8f3f8]'
-                    }`}
-                  >
-                    {day}
-                  </div>
-                );
-              })}
+          {/* Fecha y Ubicación */}
+          <div className="bg-white dark:bg-[#fafafa] rounded-xl shadow-lg p-4 sm:p-6 border-3 border-[#2C4A6F] flex flex-col justify-center gap-6">
+            <div>
+              <p className="text-xs sm:text-sm font-bold text-[#2C4A6F] uppercase tracking-wide mb-1">Fecha</p>
+              <p className="font-roboto-condensed text-xl sm:text-2xl font-bold text-[#2C4A6F]">25 de julio de 2026</p>
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm font-bold text-[#2C4A6F] uppercase tracking-wide mb-1">Ubicación</p>
+              <p className="font-roboto-condensed text-xl sm:text-2xl font-bold text-[#2C4A6F]">{routeData.location}</p>
             </div>
           </div>
 
@@ -122,7 +98,7 @@ export function RouteMapSection() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.4821394842906!2d-3.1619450!3d43.15988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4166e3f3c3c3c3d%3A0x1234567890abcdef!2sMogrovejo%2C%20Cantabria!5e0!3m2!1ses!2ses!4v1234567890"
+              src="https://maps.google.com/maps?q=43.1827,-4.8477&z=14&output=embed"
             ></iframe>
           </div>
         </motion.div>
