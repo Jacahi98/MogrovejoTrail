@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { ModilitiesDetailSection } from '@/components/modalities-detail-section';
 import { WorkshopSection } from '@/components/workshop-section';
 import { RegulationSection } from '@/components/regulation-section';
+import { AccessSection } from '@/components/access-section';
 import { FAQSection } from '@/components/faq-section';
 import { VolunteersSection } from '@/components/volunteers-section';
 
@@ -17,6 +18,7 @@ function InfoPageContent() {
       <ModilitiesDetailSection initialModality={initialModality || undefined} />
       <WorkshopSection />
       <RegulationSection />
+      <AccessSection />
       <FAQSection />
       <VolunteersSection />
     </>
