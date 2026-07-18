@@ -215,6 +215,11 @@ export function Hero() {
             alt="CL Fundación"
             className="h-14 sm:h-16 object-contain"
           />
+          <img
+            src="/logos/cropped-liebana-picos.png"
+            alt="Liébana Picos de Europa"
+            className="h-14 sm:h-16 object-contain"
+          />
         </motion.div>
       </motion.div>
 
