@@ -131,7 +131,6 @@ const translations = {
 
     // Access / Acceso
     'acceso.parking': 'Aparcamiento',
-    'acceso.capacity': 'Capacidad',
 
     // Supply / Avituallamiento
     'avit.title': 'Avituallamiento',
@@ -428,7 +427,6 @@ const translations = {
 
     // Access / Acceso
     'acceso.parking': 'Parking',
-    'acceso.capacity': 'Capacity',
 
     // Supply / Avituallamiento
     'avit.title': 'Aid Stations',
@@ -723,9 +721,7 @@ const translations = {
     'videos.featured': 'Vidéos en Vedette',
 
     // Access / Acceso
-    'acceso.title': 'Comment Venir',
     'acceso.parking': 'Stationnement',
-    'acceso.capacity': 'Capacité',
 
     // Supply / Avituallamiento
     'avit.title': 'Ravitaillement',

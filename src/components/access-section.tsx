@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
-import { MapPin, Clock } from 'lucide-react';
 
 export function AccessSection() {
   const { t } = useLanguage();
@@ -30,40 +29,8 @@ export function AccessSection() {
           <img
             src="/img/PARKING.png"
             alt={t('acceso.parking')}
-            className="w-full h-auto rounded-lg mb-6"
+            className="w-full h-auto rounded-lg"
           />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex gap-4">
-              <MapPin className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-semibold text-[var(--text-primary)] mb-1">Ubicación</p>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Aparcamiento principal junto a la salida en Mogrovejo. Zona habilitada con líneas de estacionamiento.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <Clock className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-semibold text-[var(--text-primary)] mb-1">Horario</p>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Acceso a partir de las 6:00 AM el día de la carrera. Salida hasta 2 horas post-cierre de cortes.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="w-6 h-6 text-[var(--accent-primary)] flex-shrink-0 mt-1 font-bold">P</div>
-              <div>
-                <p className="font-semibold text-[var(--text-primary)] mb-1">{t('acceso.capacity')}</p>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Aproximadamente 250 plazas. En caso de lleno se habilitará zona secundaria a 500m.
-                </p>
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
