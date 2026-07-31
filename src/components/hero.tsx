@@ -2,29 +2,19 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
-import { Calendar, MapPin, Mountain, ArrowRight } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { Calendar, CheckCircle2, MapPin, Mountain, ArrowRight } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
-interface CountdownTime {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
 
 /**
- * Hero section compacto (400px) con cuenta atrás dinámica
- * Incluye montañas SVG animadas, datos dinámicos y countdown en tiempo real
+ * Hero section compacto (400px)
+ * Incluye montañas SVG animadas y datos dinámicos
  */
 export function Hero() {
   const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [countdown, setCountdown] = useState<CountdownTime>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
 
   // Reanuda el vídeo si el navegador móvil lo pausa al salir del viewport
   useEffect(() => {
@@ -36,28 +26,6 @@ export function Hero() {
     );
     observer.observe(video);
     return () => observer.disconnect();
-  }, []);
-
-  // Calcula la cuenta atrás en tiempo real
-  useEffect(() => {
-    const updateCountdown = () => {
-      const eventDate = new Date('2026-07-25').getTime();
-      const now = new Date().getTime();
-      const distance = eventDate - now;
-
-      if (distance > 0) {
-        setCountdown({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((distance / 1000 / 60) % 60),
-          seconds: Math.floor((distance / 1000) % 60),
-        });
-      }
-    };
-
-    updateCountdown();
-    const timer = setInterval(updateCountdown, 1000);
-    return () => clearInterval(timer);
   }, []);
 
   const containerVariants = {
@@ -77,15 +45,6 @@ export function Hero() {
       opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  };
-
-  const countdownVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.6 },
     },
   };
 
@@ -146,34 +105,20 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Cuenta atrás */}
-        <motion.div variants={itemVariants}>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
-            {[
-              { label: t('hero.countdown.days'), value: countdown.days },
-              { label: t('hero.countdown.hours'), value: countdown.hours },
-              { label: t('hero.countdown.minutes'), value: countdown.minutes },
-              { label: t('hero.countdown.seconds'), value: countdown.seconds },
-            ].map((item) => (
-              <motion.div
-                key={item.label}
-                variants={countdownVariants}
-                className="bg-white/25 backdrop-blur-md rounded-lg p-4 border border-white/30 hover:bg-white/35 transition-colors"
-              >
-                <div className="text-4xl sm:text-5xl font-bold text-white">
-                  {String(item.value).padStart(2, '0')}
-                </div>
-                <div className="text-xs text-white uppercase tracking-wider mt-2">
-                  {item.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        {/* Carrera finalizada */}
+        <motion.div
+          variants={itemVariants}
+          className="flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-5 py-2 text-white backdrop-blur-md"
+        >
+          <CheckCircle2 className="h-5 w-5 text-[var(--accent-primary)]" />
+          <span className="font-semibold uppercase tracking-wide text-sm">
+            {t('hero.finished')}
+          </span>
         </motion.div>
 
         {/* CTA Button */}
         <motion.a
-          href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+          href={RESULTS_URL}
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}

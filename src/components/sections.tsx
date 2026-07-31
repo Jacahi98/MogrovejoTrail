@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
 import { useEffect, useState } from 'react';
 import { Mail, Phone, Instagram } from 'lucide-react';
+import packageJson from '../../package.json';
 
 /**
  * Sección de Información sobre el recorrido
@@ -269,7 +270,7 @@ export function Footer() {
 
         {/* Separador y copyright */}
         <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-gray-300 text-sm px-4 text-center sm:text-left">
-          <p className="text-xs text-gray-400">v0.4.1</p>
+          <p className="text-xs text-gray-400">v{packageJson.version}</p>
           <p>{t('footer.copyright')}</p>
         </div>
       </div>

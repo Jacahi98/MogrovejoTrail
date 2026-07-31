@@ -15,16 +15,20 @@ beforeAll(() => {
   }
 });
 
-describe('Hero countdown', () => {
-  it('muestra los 4 paneles del countdown con valores formateados a 2 dígitos', () => {
+describe('Hero', () => {
+  it('muestra el indicador de carrera finalizada y el enlace a la clasificación', () => {
     render(
       <LanguageProvider>
         <Hero />
       </LanguageProvider>
     );
 
-    // Cada panel renderiza un número de 2 dígitos (días/horas/minutos/segundos).
-    const panels = screen.getAllByText(/^\d{2}$/);
-    expect(panels.length).toBeGreaterThanOrEqual(4);
+    expect(screen.getByText('Carrera finalizada')).toBeInTheDocument();
+
+    const link = screen.getByRole('link', { name: /Ver clasificación/i });
+    expect(link).toHaveAttribute(
+      'href',
+      'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings'
+    );
   });
 });

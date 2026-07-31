@@ -1,8 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, TimerReset } from 'lucide-react';
+import { ExternalLink, Trophy } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
+
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
 
 export function ResultsSection() {
   const { t } = useLanguage();
@@ -26,7 +29,7 @@ export function ResultsSection() {
           viewport={{ once: true }}
         >
           <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--bg-primary)] text-[var(--accent-primary)]">
-            <TimerReset className="h-6 w-6" />
+            <Trophy className="h-6 w-6" />
           </div>
 
           <h3 className="font-roboto-condensed text-3xl font-bold text-[var(--text-primary)]">
@@ -37,7 +40,7 @@ export function ResultsSection() {
           </p>
 
           <a
-            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+            href={RESULTS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[var(--accent-primary)] px-6 py-3 font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)]"

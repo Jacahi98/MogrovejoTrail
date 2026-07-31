@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/contexts/language-context';
 import { ChevronDown } from 'lucide-react';
 
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
+
 interface RegulationPanel {
   id: number;
   title: string;
@@ -212,7 +215,7 @@ export function RegulationSection() {
             {t('reglamento.readyToRace')}
           </p>
           <a
-            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+            href={RESULTS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-[var(--accent-primary)] hover:bg-[var(--accent-secondary)] text-white font-semibold rounded transition-all uppercase tracking-wide"

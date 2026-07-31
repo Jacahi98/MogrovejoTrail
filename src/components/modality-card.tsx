@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap } from 'lucide-react';
 
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
+
 interface ModalityCardProps {
   title: string;
   distance: string;
@@ -116,14 +119,14 @@ export function ModalityCard({
           </span>
 
           <motion.a
-            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+            href={RESULTS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={`flex items-center gap-2 text-sm font-semibold ${colors.text} hover:gap-3 transition-all`}
             whileHover={{ x: 2 }}
             whileTap={{ x: 0 }}
           >
-            Ver más
+            Ver clasificación
             <ArrowRight className="w-4 h-4" />
           </motion.a>
         </div>

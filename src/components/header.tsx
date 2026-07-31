@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Menu, Moon, Shirt, Sun, X } from 'lucide-react';
 import { useTheme } from '@/contexts/theme-context';
 import { useLanguage } from '@/contexts/language-context';
 
@@ -15,6 +15,9 @@ const navItems = [
   { key: 'nav.contactPage', href: '/contacto' },
 ] as const;
 
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
+
 export function Header() {
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
@@ -22,7 +25,22 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border-color)] bg-[color-mix(in_srgb,var(--bg-primary)_86%,transparent)] backdrop-blur">
+    <>
+      <div className="bg-[var(--accent-primary)] text-white">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-2 text-center text-sm sm:px-6 lg:px-8">
+          <span className="font-semibold">🏁 {t('race.finishedBanner')}</span>
+          <a
+            href={RESULTS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 whitespace-nowrap"
+          >
+            {t('race.viewResults')} →
+          </a>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-50 border-b border-[var(--border-color)] bg-[color-mix(in_srgb,var(--bg-primary)_86%,transparent)] backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <span className="font-roboto-condensed text-sm sm:text-xl font-bold tracking-wide text-[var(--text-primary)] whitespace-nowrap">
@@ -51,6 +69,15 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
+          <Link
+            href="/#reserva-camiseta"
+            className="rounded-lg p-2 transition-colors hover:bg-[var(--bg-secondary)]"
+            aria-label={t('nav.tshirt')}
+            title={t('nav.tshirt')}
+          >
+            <Shirt className="h-5 w-5 text-[var(--text-primary)]" />
+          </Link>
+
           <motion.button
             onClick={toggleTheme}
             className="rounded-lg p-2 transition-colors hover:bg-[var(--bg-secondary)]"
@@ -76,7 +103,7 @@ export function Header() {
           </select>
 
           <a
-            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+            href={RESULTS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-[var(--accent-primary)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)] whitespace-nowrap"
@@ -85,13 +112,25 @@ export function Header() {
           </a>
         </div>
 
-        <button
-          onClick={() => setIsOpen((open) => !open)}
-          className="rounded-lg p-2 text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-secondary)] md:hidden"
-          aria-label="Abrir menu"
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <Link
+            href="/#reserva-camiseta"
+            onClick={() => setIsOpen(false)}
+            className="rounded-lg p-2 text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-secondary)]"
+            aria-label={t('nav.tshirt')}
+            title={t('nav.tshirt')}
+          >
+            <Shirt className="h-6 w-6" />
+          </Link>
+
+          <button
+            onClick={() => setIsOpen((open) => !open)}
+            className="rounded-lg p-2 text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-secondary)]"
+            aria-label="Abrir menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -147,7 +186,7 @@ export function Header() {
               </div>
 
               <a
-                href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+                href={RESULTS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block rounded-lg bg-[var(--accent-primary)] px-4 py-3 text-center text-sm font-semibold text-white whitespace-nowrap"
@@ -159,5 +198,6 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 }

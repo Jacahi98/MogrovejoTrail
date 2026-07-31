@@ -14,6 +14,7 @@ const translations = {
   es: {
     // Navigation
     'nav.modalidades': 'Modalidades',
+    'nav.tshirt': 'Camiseta',
     'nav.home': 'Inicio',
     'nav.infoPage': 'Info',
     'nav.mediaPage': 'Media',
@@ -32,7 +33,12 @@ const translations = {
     'hero.date': '25 de julio',
     'hero.location': 'Mogrovejo, Cantabria',
     'hero.distances': '10K Trail',
-    'hero.cta': 'Inscribirse',
+    'hero.cta': 'Ver clasificación',
+    'hero.finished': 'Carrera finalizada',
+
+    // Race finished banner
+    'race.finishedBanner': 'La carrera ya se ha celebrado',
+    'race.viewResults': 'Ver clasificación',
 
     // Modalidades
     'modalidades.title': 'El Recorrido',
@@ -121,9 +127,9 @@ const translations = {
     'resultados.runner': 'Corredor',
     'resultados.time': 'Tiempo',
     'resultados.year': 'Año',
-    'resultados.pendingTitle': 'Pendiente de publicación',
-    'resultados.pendingBody': 'Los resultados oficiales se enlazarán aquí cuando GedSports los publique.',
-    'resultados.pendingCta': 'Ver GedSports',
+    'resultados.pendingTitle': 'Clasificación disponible',
+    'resultados.pendingBody': 'La carrera ya se ha celebrado. Consulta la clasificación oficial completa en Sportmaniacs.',
+    'resultados.pendingCta': 'Ver clasificación completa',
 
     // Videos
     'videos.title': 'Videos',
@@ -156,7 +162,7 @@ const translations = {
     'equipo.volunteers': 'Voluntarios',
 
     // Floating CTA
-    'floatingcta.text': 'Inscríbete',
+    'floatingcta.text': 'Ver clasificación',
     'floatingcta.register': 'Ir a Inscripciones',
 
     // Overview
@@ -186,14 +192,17 @@ const translations = {
     'contact.box.title': 'Antes de escribirnos',
     'contact.box.description': 'Para recorridos, material obligatorio y accesos, consulta la información de carrera. Para incidencias o colaboraciones, escríbenos.',
     'contact.box.topicsLabel': 'Temas habituales',
-    'contact.box.topics': 'Inscripciones, prensa, patrocinio, voluntariado y logística de carrera',
-    'contact.box.cta': 'Ir a inscripciones',
+    'contact.box.topics': 'Prensa, patrocinio, voluntariado y futuras ediciones',
+    'contact.box.cta': 'Ver clasificación',
+
+    // Tshirt order form
+    'tshirtOrder.eyebrow': 'Reserva anticipada',
+    'tshirtOrder.title': 'Reserva tu camiseta oficial Mogrovejo Trail 2026',
+    'tshirtOrder.description': 'Rellena el formulario con tus datos y las tallas que necesites para reservar tu camiseta.',
+    'tshirtOrder.button': 'Ir al formulario de reserva',
+    'tshirtOrder.deadline': 'La preventa se cierra el 15 de agosto',
 
     // Hero Countdown
-    'hero.countdown.days': 'Días',
-    'hero.countdown.hours': 'Horas',
-    'hero.countdown.minutes': 'Minutos',
-    'hero.countdown.seconds': 'Segundos',
 
     // Modalities Start Times
     'modalities.trail.startTime': 'Salida: 11:30 h.',
@@ -246,7 +255,7 @@ const translations = {
     'reglamento.prices.colBefore': 'Hasta 25 jun',
     'reglamento.prices.colAfter': 'Después 25 jun',
     'reglamento.prices.includes': 'Incluye: seguro de accidentes, dorsal, bolsa del corredor y acceso a avituallamiento.',
-    'reglamento.prices.register': 'Inscripción: www.gedsports.com/race/mogrovejo-trail-2026',
+    'reglamento.prices.register': 'Inscripciones cerradas (edición 2026 finalizada).',
     'reglamento.prices.modal10k': '10K Trail',
     'reglamento.prices.andarines10k': '10K Andarines',
     'reglamento.prices.early': '15€',
@@ -271,8 +280,8 @@ const translations = {
     'reglamento.refund.noPermit': 'Falta de permisos necesarios',
     'reglamento.refund.authority': 'Prohibiciones de autoridades competentes',
     'reglamento.refund.traffic': 'Restricciones de tráfico',
-    'reglamento.cta': 'Inscribirse en GedSports',
-    'reglamento.readyToRace': '¿Listo para correr? Completa tu inscripción en GedSports',
+    'reglamento.cta': 'Ver clasificación',
+    'reglamento.readyToRace': 'La carrera ya se ha celebrado. Consulta la clasificación oficial.',
 
     // Supply Points
     'modalities.supply.start': 'Inicio',
@@ -291,6 +300,7 @@ const translations = {
   en: {
     // Navigation
     'nav.modalidades': 'Routes',
+    'nav.tshirt': 'T-shirt',
     'nav.home': 'Home',
     'nav.infoPage': 'Info',
     'nav.mediaPage': 'Media',
@@ -309,7 +319,12 @@ const translations = {
     'hero.date': 'July 25th',
     'hero.location': 'Mogrovejo, Cantabria',
     'hero.distances': '10K Trail',
-    'hero.cta': 'Register Now',
+    'hero.cta': 'View results',
+    'hero.finished': 'Race finished',
+
+    // Race finished banner
+    'race.finishedBanner': 'The race has already taken place',
+    'race.viewResults': 'View results',
 
     // Modalidades
     'modalidades.title': 'The Race',
@@ -398,9 +413,9 @@ const translations = {
     'resultados.runner': 'Runner',
     'resultados.time': 'Time',
     'resultados.year': 'Year',
-    'resultados.pendingTitle': 'Pending publication',
-    'resultados.pendingBody': 'Official results will be linked here once GedSports publishes them.',
-    'resultados.pendingCta': 'Open GedSports',
+    'resultados.pendingTitle': 'Results available',
+    'resultados.pendingBody': 'The race has already taken place. Check the full official results on Sportmaniacs.',
+    'resultados.pendingCta': 'View full results',
 
     // Videos
     'videos.title': 'Videos',
@@ -428,7 +443,7 @@ const translations = {
     'equipo.volunteers': 'Volunteers',
 
     // Floating CTA
-    'floatingcta.text': 'Register',
+    'floatingcta.text': 'View results',
     'floatingcta.register': 'Go to Registration',
 
     // Overview
@@ -458,15 +473,18 @@ const translations = {
     'contact.box.title': 'Before you write',
     'contact.box.description': 'For routes, mandatory gear, and access, check the race information. For issues or partnerships, write to us.',
     'contact.box.topicsLabel': 'Common topics',
-    'contact.box.topics': 'Registration, press, sponsorship, volunteering, and race logistics',
-    'contact.box.cta': 'Go to registration',
+    'contact.box.topics': 'Press, sponsorship, volunteering, and future editions',
+    'contact.box.cta': 'View results',
+
+    // Tshirt order form
+    'tshirtOrder.eyebrow': 'Pre-order',
+    'tshirtOrder.title': 'Reserve your official Mogrovejo Trail 2026 t-shirt',
+    'tshirtOrder.description': 'Fill in the form with your details and the sizes you need to reserve your t-shirt.',
+    'tshirtOrder.button': 'Go to reservation form',
+    'tshirtOrder.deadline': 'Pre-orders close on August 15',
 
 
     // Hero Countdown
-    'hero.countdown.days': 'Days',
-    'hero.countdown.hours': 'Hours',
-    'hero.countdown.minutes': 'Minutes',
-    'hero.countdown.seconds': 'Seconds',
 
     // Modalities Start Times
     'modalities.trail.startTime': 'Start: 11:30 AM',
@@ -522,7 +540,7 @@ const translations = {
     'reglamento.prices.colBefore': 'Until Jun 25',
     'reglamento.prices.colAfter': 'After Jun 25',
     'reglamento.prices.includes': 'Includes: accident insurance, bib, runner\'s kit and access to aid stations.',
-    'reglamento.prices.register': 'Registration: www.gedsports.com/race/mogrovejo-trail-2026',
+    'reglamento.prices.register': 'Registration closed (2026 edition finished).',
     'reglamento.prices.modal10k': '10K Trail',
     'reglamento.prices.andarines10k': '10K Walkers',
     'reglamento.prices.early': '€15',
@@ -547,8 +565,8 @@ const translations = {
     'reglamento.refund.noPermit': 'Lack of required permits',
     'reglamento.refund.authority': 'Prohibitions by competent authorities',
     'reglamento.refund.traffic': 'Traffic restrictions',
-    'reglamento.cta': 'Register on GedSports',
-    'reglamento.readyToRace': 'Ready to race? Complete your registration on GedSports',
+    'reglamento.cta': 'View results',
+    'reglamento.readyToRace': 'The race has already taken place. Check the official results.',
 
     // Supply Points
     'modalities.supply.start': 'Start',
@@ -577,6 +595,7 @@ const translations = {
   fr: {
     // Navigation
     'nav.modalidades': 'Parcours',
+    'nav.tshirt': 'T-shirt',
     'nav.home': 'Accueil',
     'nav.infoPage': 'Info',
     'nav.mediaPage': 'Media',
@@ -595,7 +614,12 @@ const translations = {
     'hero.date': '25 juillet',
     'hero.location': 'Mogrovejo, Cantabria',
     'hero.distances': '10K Trail',
-    'hero.cta': 'S\'inscrire',
+    'hero.cta': 'Voir les résultats',
+    'hero.finished': 'Course terminée',
+
+    // Race finished banner
+    'race.finishedBanner': 'La course a déjà eu lieu',
+    'race.viewResults': 'Voir les résultats',
 
     // Modalidades
     'modalidades.title': 'La Course',
@@ -684,9 +708,9 @@ const translations = {
     'resultados.runner': 'Coureur',
     'resultados.time': 'Temps',
     'resultados.year': 'Année',
-    'resultados.pendingTitle': 'Publication en attente',
-    'resultados.pendingBody': 'Les résultats officiels seront liés ici dès que GedSports les publiera.',
-    'resultados.pendingCta': 'Voir GedSports',
+    'resultados.pendingTitle': 'Résultats disponibles',
+    'resultados.pendingBody': 'La course a déjà eu lieu. Consultez les résultats officiels complets sur Sportmaniacs.',
+    'resultados.pendingCta': 'Voir les résultats complets',
 
     // Videos
     'videos.title': 'Vidéos',
@@ -714,7 +738,7 @@ const translations = {
     'equipo.volunteers': 'Bénévoles',
 
     // Floating CTA
-    'floatingcta.text': 'S\'inscrire',
+    'floatingcta.text': 'Voir les résultats',
     'floatingcta.register': 'Aller à l\'Inscription',
 
     // Overview
@@ -744,15 +768,18 @@ const translations = {
     'contact.box.title': 'Avant de nous écrire',
     'contact.box.description': 'Pour les parcours, le matériel obligatoire et l\'accès, consultez les informations de course. Pour les incidents ou collaborations, écrivez-nous.',
     'contact.box.topicsLabel': 'Sujets fréquents',
-    'contact.box.topics': 'Inscription, presse, sponsoring, bénévolat et logistique de course',
-    'contact.box.cta': 'Aller à l\'inscription',
+    'contact.box.topics': 'Presse, sponsoring, bénévolat et futures éditions',
+    'contact.box.cta': 'Voir les résultats',
+
+    // Tshirt order form
+    'tshirtOrder.eyebrow': 'Précommande',
+    'tshirtOrder.title': 'Réservez votre t-shirt officiel Mogrovejo Trail 2026',
+    'tshirtOrder.description': 'Remplissez le formulaire avec vos coordonnées et les tailles souhaitées pour réserver votre t-shirt.',
+    'tshirtOrder.button': 'Aller au formulaire de réservation',
+    'tshirtOrder.deadline': 'La précommande se termine le 15 août',
 
 
     // Hero Countdown
-    'hero.countdown.days': 'Jours',
-    'hero.countdown.hours': 'Heures',
-    'hero.countdown.minutes': 'Minutes',
-    'hero.countdown.seconds': 'Secondes',
 
     // Modalities Start Times
     'modalities.trail.startTime': 'Départ : 11h30',
@@ -808,7 +835,7 @@ const translations = {
     'reglamento.prices.colBefore': 'Jusqu\'au 25 juin',
     'reglamento.prices.colAfter': 'Après le 25 juin',
     'reglamento.prices.includes': 'Inclut: assurance accidents, dossard, kit coureur et accès aux ravitaillements.',
-    'reglamento.prices.register': 'Inscription: www.gedsports.com/race/mogrovejo-trail-2026',
+    'reglamento.prices.register': 'Inscriptions closes (édition 2026 terminée).',
     'reglamento.prices.modal10k': '10K Trail',
     'reglamento.prices.andarines10k': '10K Randonneurs',
     'reglamento.prices.early': '15€',
@@ -833,8 +860,8 @@ const translations = {
     'reglamento.refund.noPermit': 'Manque de permis nécessaires',
     'reglamento.refund.authority': 'Interdictions par les autorités compétentes',
     'reglamento.refund.traffic': 'Restrictions de circulation',
-    'reglamento.cta': 'S\'inscrire sur GedSports',
-    'reglamento.readyToRace': 'Prêt à courir ? Complétez votre inscription sur GedSports',
+    'reglamento.cta': 'Voir les résultats',
+    'reglamento.readyToRace': 'La course a déjà eu lieu. Consultez les résultats officiels.',
 
     // Supply Points
     'modalities.supply.start': 'Départ',

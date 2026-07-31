@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, TimerReset } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
+
 const contactCards = [
   {
     icon: Mail,
@@ -114,7 +117,7 @@ export function ContactSection() {
             </div>
 
             <a
-              href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+              href={RESULTS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center rounded-lg bg-[var(--accent-primary)] px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-[var(--accent-secondary)]"

@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/language-context';
 
+const RESULTS_URL =
+  'https://sportmaniacs.com/es/races/mogrovejo-trail-2026/6a64b778-a614-46e2-9dc6-43f7ac1f2075/results#rankings';
+
 export function FloatingCTA() {
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
@@ -57,7 +60,7 @@ export function FloatingCTA() {
           className="fixed bottom-8 right-8 z-40"
         >
           <motion.a
-            href="https://www.gedsports.com/race/mogrovejo-trail-2026"
+            href={RESULTS_URL}
             target="_blank"
             rel="noopener noreferrer"
             variants={pulseVariants}
