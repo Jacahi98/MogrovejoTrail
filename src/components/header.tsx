@@ -24,6 +24,21 @@ export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Next.js Link no siempre vuelve a hacer scroll a un hash si la URL
+  // resultante es idéntica a la actual (p. ej. si ya estás en /#reserva-camiseta
+  // y vuelves a pinchar, o si ya estás en / sin hash y el navegador no dispara
+  // el scroll nativo). Forzamos el scroll a mano cuando ya estamos en home.
+  const handleTshirtClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      const el = document.getElementById('reserva-camiseta');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.pushState(null, '', '/#reserva-camiseta');
+      }
+    }
+  };
+
   return (
     <>
       <div className="bg-[var(--accent-primary)] text-white">
@@ -71,6 +86,7 @@ export function Header() {
         <div className="hidden items-center gap-2 md:flex">
           <Link
             href="/#reserva-camiseta"
+            onClick={handleTshirtClick}
             className="rounded-lg p-2 transition-colors hover:bg-[var(--bg-secondary)]"
             aria-label={t('nav.tshirt')}
             title={t('nav.tshirt')}
@@ -115,7 +131,10 @@ export function Header() {
         <div className="flex items-center gap-1 md:hidden">
           <Link
             href="/#reserva-camiseta"
-            onClick={() => setIsOpen(false)}
+            onClick={(e) => {
+              handleTshirtClick(e);
+              setIsOpen(false);
+            }}
             className="rounded-lg p-2 text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-secondary)]"
             aria-label={t('nav.tshirt')}
             title={t('nav.tshirt')}

@@ -295,6 +295,7 @@ const translations = {
     'gallery.title': 'Galería Memorias de MogrovejoTrail 2025',
 
     // Video Section
+    'videoSection.title2026': 'Mogrovejo Trail 2026',
     'videoSection.title': 'Mogrovejo Trail 2025',
   },
   en: {
@@ -590,6 +591,7 @@ const translations = {
     'team.volunteers.text': 'Thanks to over 50 volunteers who make each edition of Mogrovejo Trail possible.',
 
     // Video Section
+    'videoSection.title2026': 'Mogrovejo Trail 2026',
     'videoSection.title': 'Mogrovejo Trail 2025',
   },
   fr: {
@@ -885,6 +887,7 @@ const translations = {
     'team.volunteers.text': 'Merci à plus de 50 bénévoles qui rendent possible chaque édition du Mogrovejo Trail.',
 
     // Video Section
+    'videoSection.title2026': 'Mogrovejo Trail 2026',
     'videoSection.title': 'Mogrovejo Trail 2025',
   },
 };

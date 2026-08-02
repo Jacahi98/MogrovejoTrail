@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <Hero />
       <ModalitiesSection />
-      <VideoSection />
       <TshirtOrderSection />
+      <VideoSection />
       <CookieBanner />
       <FloatingCTA />
     </>
