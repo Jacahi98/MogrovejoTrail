@@ -120,6 +120,14 @@ const translations = {
     // Gallery / Galería
     'galeria.title': 'Galería',
     'galeria.all': 'Todas',
+    'galeria.2026.title': 'Galería Mogrovejo Trail 2026',
+    'galeria.2026.subtitle': 'Momentos captados en la carrera',
+    'galeria.allPhotos': 'Todas las fotos',
+    'galeria.openPhoto': 'Abrir la foto en grande',
+    'galeria.downloadAll': 'Descargar todas las fotos',
+    'galeria.downloadAllHint': '76 fotos en calidad original, en Google Drive',
+    'galeria.2025.title': 'Edición 2025',
+    'galeria.2025.subtitle': 'Fotos de la edición anterior del Mogrovejo Trail',
 
     // Results / Resultados
     'resultados.title': 'Resultados',
@@ -407,6 +415,14 @@ const translations = {
     // Gallery / Galería
     'galeria.title': 'Gallery',
     'galeria.all': 'All',
+    'galeria.2026.title': 'Mogrovejo Trail 2026 Gallery',
+    'galeria.2026.subtitle': 'Moments from the race',
+    'galeria.allPhotos': 'All photos',
+    'galeria.openPhoto': 'Open larger photo',
+    'galeria.downloadAll': 'Download all photos',
+    'galeria.downloadAllHint': '76 full-resolution photos on Google Drive',
+    'galeria.2025.title': '2025 edition',
+    'galeria.2025.subtitle': 'Photos from the previous Mogrovejo Trail',
 
     // Results / Resultados
     'resultados.title': 'Results',
@@ -703,6 +719,14 @@ const translations = {
     // Gallery / Galería
     'galeria.title': 'Galerie',
     'galeria.all': 'Toutes',
+    'galeria.2026.title': 'Galerie Mogrovejo Trail 2026',
+    'galeria.2026.subtitle': 'Moments de la course',
+    'galeria.allPhotos': 'Toutes les photos',
+    'galeria.openPhoto': 'Ouvrir la photo en grand',
+    'galeria.downloadAll': 'Télécharger toutes les photos',
+    'galeria.downloadAllHint': '76 photos en qualité originale sur Google Drive',
+    'galeria.2025.title': 'Édition 2025',
+    'galeria.2025.subtitle': 'Photos de la précédente édition du Mogrovejo Trail',
 
     // Results / Resultados
     'resultados.title': 'Résultats',

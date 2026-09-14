@@ -2,35 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
+import { DRIVE_ALBUM_2026, FEATURED_2026 } from '@/data/photos-2026';
 
-interface PhotoItem {
-  id: number;
-  url: string;
-  alt: string;
-}
-
-const photoItems: PhotoItem[] = [
-  { id: 1, url: '/img/IMG_7722.webp', alt: 'Mogrovejo Trail 1' },
-  { id: 2, url: '/img/IMG_7730.webp', alt: 'Mogrovejo Trail 2' },
-  { id: 3, url: '/img/IMG_7736.webp', alt: 'Mogrovejo Trail 3' },
-  { id: 4, url: '/img/IMG_7761.webp', alt: 'Mogrovejo Trail 4' },
-  { id: 5, url: '/img/IMG_7785.webp', alt: 'Mogrovejo Trail 5' },
-  { id: 6, url: '/img/IMG_7791.webp', alt: 'Mogrovejo Trail 6' },
-  { id: 7, url: '/img/IMG_7807.webp', alt: 'Mogrovejo Trail 7' },
-  { id: 8, url: '/img/IMG_7818.webp', alt: 'Mogrovejo Trail 8' },
-  { id: 9, url: '/img/IMG_7819.webp', alt: 'Mogrovejo Trail 9' },
-  { id: 10, url: '/img/IMG_7829.webp', alt: 'Mogrovejo Trail 10' },
-  { id: 11, url: '/img/IMG_7833.webp', alt: 'Mogrovejo Trail 11' },
-  { id: 12, url: '/img/IMG_7852.webp', alt: 'Mogrovejo Trail 12' },
-  { id: 13, url: '/img/IMG_7868.webp', alt: 'Mogrovejo Trail 13' },
-  { id: 14, url: '/img/IMG_7873.webp', alt: 'Mogrovejo Trail 14' },
-  { id: 15, url: '/img/IMG_7882.webp', alt: 'Mogrovejo Trail 15' },
-  { id: 16, url: '/img/IMG_7890.webp', alt: 'Mogrovejo Trail 16' },
-  { id: 17, url: '/img/IMG_7897.webp', alt: 'Mogrovejo Trail 17' },
-];
+const photoItems = FEATURED_2026;
 
 export function PhotoCarousel() {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
 
@@ -63,29 +42,45 @@ export function PhotoCarousel() {
   return (
     <section className="relative w-full h-screen bg-black overflow-hidden">
       <AnimatePresence mode="wait">
-        <motion.img
+        <motion.div
           key={currentIndex}
-          src={currentPhoto.url}
-          alt={currentPhoto.alt}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0"
+        >
+          {/* 73 de las 76 fotos son verticales: a pantalla completa un
+              object-cover las recortaria a una franja central y se perderian
+              cabezas y dorsales. Se muestran enteras con object-contain y se
+              rellenan los laterales con una copia desenfocada de la propia
+              foto, que es el recurso habitual cuando el formato de la imagen
+              no coincide con el del contenedor. */}
+          <img
+            src={currentPhoto.src}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-40"
+          />
+          <img
+            src={currentPhoto.src}
+            alt={currentPhoto.alt}
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+        </motion.div>
       </AnimatePresence>
 
       {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
 
       {/* Controles */}
-      <div className="absolute inset-0 flex items-center justify-between p-6 z-10">
+      <div className="absolute inset-0 flex items-center justify-between p-6 z-10 pointer-events-none">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={goToPrevious}
           aria-label="Foto anterior"
-          className="bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
+          className="pointer-events-auto bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
         </motion.button>
@@ -95,7 +90,7 @@ export function PhotoCarousel() {
           whileTap={{ scale: 0.95 }}
           onClick={goToNext}
           aria-label="Foto siguiente"
-          className="bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
+          className="pointer-events-auto bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all"
         >
           <ChevronRight className="w-6 h-6 text-white" />
         </motion.button>
@@ -123,19 +118,32 @@ export function PhotoCarousel() {
       </div>
 
       {/* Info */}
-      <div className="absolute bottom-20 left-8 z-10 text-white">
+      <div className="absolute bottom-20 left-8 right-8 z-10 text-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
+          className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
         >
-          <p className="text-sm font-semibold text-white/80 mb-2">
-            {currentIndex + 1} / {photoItems.length}
-          </p>
-          <h3 className="text-3xl font-bold font-roboto-condensed">
-            Galería Mogrovejo Trail 2025
-          </h3>
-          <p className="text-white/70 mt-2">Momentos captados en la carrera</p>
+          <div>
+            <p className="text-sm font-semibold text-white/80 mb-2">
+              {currentIndex + 1} / {photoItems.length}
+            </p>
+            <h3 className="text-3xl font-bold font-roboto-condensed">
+              {t('galeria.2026.title')}
+            </h3>
+            <p className="text-white/70 mt-2">{t('galeria.2026.subtitle')}</p>
+          </div>
+
+          <a
+            href={DRIVE_ALBUM_2026}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-white/20 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/40 sm:self-auto"
+          >
+            <Download className="w-4 h-4" aria-hidden="true" />
+            {t('galeria.downloadAll')}
+          </a>
         </motion.div>
       </div>
 
