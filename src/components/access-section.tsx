@@ -27,8 +27,12 @@ export function AccessSection() {
           viewport={{ once: true }}
         >
           <img
-            src="/img/PARKING.png"
+            src="/img/PARKING.webp"
             alt={t('acceso.parking')}
+            width={2368}
+            height={1494}
+            loading="lazy"
+            decoding="async"
             className="w-full h-auto rounded-lg"
           />
         </motion.div>

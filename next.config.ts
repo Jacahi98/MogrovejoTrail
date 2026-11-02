@@ -16,6 +16,9 @@ const csp = [
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  // Solo desarrollo: sin esto Next bloquea su conexión de desarrollo si abres la web por 127.0.0.1 (en vez de localhost),
+  // React no llega a engancharse y las animaciones de entrada dejan toda la portada invisible. No afecta a producción.
+  allowedDevOrigins: ['127.0.0.1'],
   async headers() {
     return [
       {

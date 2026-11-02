@@ -136,12 +136,12 @@ export function Hero() {
           className="flex items-center justify-center gap-4 sm:gap-6 mt-8 flex-wrap"
         >
           <img
-            src="/logos/AyuntamientodeCamaleño.png"
+            src="/logos/ayuntamiento-camaleno.png"
             alt="Ayuntamiento de Camaleño"
             className="h-14 sm:h-16 object-contain"
           />
           <img
-            src="/logos/Escudo_de_Camaleño_(Cantabria).png"
+            src="/logos/escudo-camaleno.png"
             alt="Escudo de Camaleño"
             className="h-14 sm:h-16 object-contain"
           />
